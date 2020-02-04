@@ -11,12 +11,14 @@
 		<!--positional coordinates: position='horizontally right,depth forward,vertically downward' (in terms of marker size)-->
 		<!-- define your gltf asset -->
 		<a-assets>
-		<a-asset-item id="tree" src="https://sujit1618.github.io/tree.gltf"></a-asset-item>
+
+		<video id="mcdonalds" autoplay loop="true" src="https://sujit1618.github.io/McDonalds.mp4"></video>
 		</a-assets>
 		<!-- use your gltf model -->
-		<a-entity gltf-model="#tree" scale="0.5 0.5 0.5" position='1,1,-1'></a-entity>
 
-    <a-box position='3,1,1' color='yellow' material='opacity: 0.8;'></a-box>
+		<a-video src="#mcdonalds" width="1.6" height="0.9" position="0 0.5 -1"></a-video>
+
+
     <!-- define a camera which will move according to the marker position -->
   	<a-marker-camera type='pattern' url='https://sujit1618.github.io/patterns/chitale_test_v2.patt'>
 
