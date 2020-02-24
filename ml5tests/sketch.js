@@ -1,29 +1,28 @@
-// Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
-let classifier;
+// Extract the already learned features from MobileNet
+const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded);
 
-// A variable to hold the image we want to classify
-let img;
-
-function preload() {
-  classifier = ml5.imageClassifier('MobileNet');
-  img = loadImage('images/cat.jpg');
+// When the model is loaded
+function modelLoaded() {
+  console.log('Model Loaded!');
 }
 
-function setup() {
-  createCanvas(400, 400);
-  classifier.classify(img, gotResult);
-  image(img, 0, 0);
+// Create a new classifier using those features and with a video element
+const classifier = featureExtractor.classification(video, videoReady);
+
+// Triggers when the video is ready
+function videoReady() {
+  console.log('The video is ready!');
 }
 
-// A function to run when we get any errors and the results
-function gotResult(error, results) {
-  // Display error in the console
-  if (error) {
-    console.error(error);
-  } else {
-    // The results are in an array ordered by confidence.
-    console.log(results);
-    createDiv(`Label: ${results[0].label}`);
-    createDiv(`Confidence: ${nf(results[0].confidence, 0, 2)}`);
-  }
-}
+// Add a new image with a label
+classifier.addImage(document.getElementById('dogA'), 'dog');
+
+// Retrain the network
+classifier.train((lossValue) => {
+  console.log('Loss is', lossValue);
+});
+
+// Get a prediction for that image
+classifier.classify(document.getElementById('dogB'), (err, result) => {
+  console.log(result); // Should output 'dog'
+});
