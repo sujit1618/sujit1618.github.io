@@ -7,7 +7,6 @@ var y;
 function setup (){
   createCanvas(400,400);
   background(200);
-  frameRate(0.25);
 }
 
 function draw (){
@@ -18,7 +17,8 @@ function draw (){
                       output=data;
                     },
                     simpleSheet: true } )
-console.log(output);
+console.log(output[2].Event_1_lon);
 background(201);
 //ellipse(output[20].Event_1_lat,200,200,200);
+frameRate(0.25);
 }
