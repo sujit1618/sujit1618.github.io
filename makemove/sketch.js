@@ -21,5 +21,5 @@ function draw (){
 console.log(output[2].Event_1_count); //data[0].Name
 background(201);
 ellipse(output[2].Event_1_count,200,200,200);
-frameRate(0.25);
+frameRate(0.0166*2);
 }
