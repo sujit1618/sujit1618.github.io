@@ -13,7 +13,7 @@ function draw (){
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
                     callback: function(data, tabletop) {
-                      let data_20 = data[2].Event_2_timestamp;
+                      let data_20 = data[20].Event_2_timestamp;
                       console.log(data_20)
                       output=data;
                     },
