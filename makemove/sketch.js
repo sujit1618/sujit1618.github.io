@@ -19,4 +19,6 @@ function draw (){
                     },
                     simpleSheet: true } )
 console.log(output)
+background(200);
+ellipse(output.Event_2_count[20],100,100,100);
 }
