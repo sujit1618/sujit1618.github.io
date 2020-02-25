@@ -18,6 +18,6 @@ function gotData(stuff,tabletop){
   data=stuff;
   let totalCount = Number(data[3].Event_2_lon)+Number(data[2].Event_2_lon);
   console.log(totalCount);
-  console.log(data[3].Event_2_lon;
+  console.log(data[3].Event_2_lon);
   console.log(data[2].Event_2_lon);
 }
