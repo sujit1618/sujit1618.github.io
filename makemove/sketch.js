@@ -20,5 +20,5 @@ function draw (){
                     simpleSheet: true } )
 console.log(output[20]);
 background(200);
-ellipse(output[20].Event_1_lat,200,200,200);
+//ellipse(output[20].Event_1_lat,200,200,200);
 }
