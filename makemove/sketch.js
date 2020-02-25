@@ -8,13 +8,8 @@ function setup (){
 function draw (){
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
-                    callback: function(pub) {
-
+                   callback: function(data,tabletop) {
+                     console.log(data)
                     },
                     simpleSheet: true } )
-}
-
-function pub(data, tabletop) {
- // do something with the data
- console.log(data);
 }
