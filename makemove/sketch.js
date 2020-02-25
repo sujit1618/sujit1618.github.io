@@ -7,6 +7,7 @@ var y;
 function setup (){
   createCanvas(400,400);
   background(200);
+  frameRate(0.25);
 }
 
 function draw (){
