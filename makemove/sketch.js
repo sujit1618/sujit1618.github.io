@@ -13,8 +13,8 @@ function draw (){
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
                     callback: function(data, tabletop) {
-                      let data_20 = data[0].Event_2_lon;
-                      console.log(data_20)
+                      //let data_20 = data[0].Event_2_lon;
+                      console.log(data)
                       output=data;
                     },
                     simpleSheet: true } )
