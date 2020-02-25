@@ -14,12 +14,8 @@ function draw (){
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
                     callback: function(data, tabletop) {
                       //let data_20 = data[20].Event_2_timestamp;
-                      //console.log(data_20)
+                      console.log(data)
                       output=data;
                     },
                     simpleSheet: true } )
-console.log(output[2].Event_1_lon);
-background(201);
-//ellipse(output[2].Event_1_count,200,200,200);
-frameRate(0.0166*2);
 }
