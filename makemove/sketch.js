@@ -18,7 +18,7 @@ function draw (){
                       output=data;
                     },
                     simpleSheet: true } )
-console.log(output)
+console.log(output.Event_2_count[20]);
 background(200);
 ellipse(output.Event_2_count[20],100,100,100);
 }
