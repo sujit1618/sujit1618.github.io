@@ -2,7 +2,7 @@
 // Device_name Device_ID	User_number	Event_1_count	Event_1_timestamp	Event_1_lon	Event_1_lat	Event_1_duration_start	Event_1_duration_end	Event_1_duration_lon	Event_1_duration_lat	Event_2_count	Event_2_timestamp	Event_2_lon	Event_2_lat	Event_2_duration_start	Event_2_duration_end	Event_2_duration_lon	Event_2_duration_lat		random_1	random_2	lon	lat	blanks
 var data;
 function setup (){
-
+frameRate(1);
 }
 
 function draw (){
@@ -11,7 +11,7 @@ function draw (){
                    callback: gotData,
                     simpleSheet: true
                   } );
-frameRate(0.15);
+frameRate(0.75);
 }
 
 function gotData(stuff,tabletop){
