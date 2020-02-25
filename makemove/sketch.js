@@ -13,13 +13,13 @@ function draw (){
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
                     callback: function(data, tabletop) {
-                      let data_20 = data[20].Event_2_timestamp;
-                      console.log(data_20)
+                      //let data_20 = data[20].Event_2_timestamp;
+                      //console.log(data_20)
                       output=data;
                     },
                     simpleSheet: true } )
-//console.log(output[2].Event_1_lon); //data[0].Name
+console.log(output[2].Event_1_count); //data[0].Name
 background(201);
-//ellipse(output[20].Event_1_lat,200,200,200);
+ellipse(output[2].Event_1_count,200,200,200);
 frameRate(0.25);
 }
