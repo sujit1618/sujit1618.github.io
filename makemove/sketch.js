@@ -18,7 +18,7 @@ function draw (){
                       output=data;
                     },
                     simpleSheet: true } )
-console.log(output.Event_2_count[20]);
+console.log(output[20].Event_1_lat);
 background(200);
-ellipse(output.Event_2_count[20],100,100,100);
+ellipse(output[20].Event_1_lat,200,200,200);
 }
