@@ -18,8 +18,8 @@ function draw (){
                       output=data;
                     },
                     simpleSheet: true } )
-console.log(output[2].Event_1_count); //data[0].Name
+console.log(output[2].Event_1_lon);
 background(201);
-ellipse(output[2].Event_1_count,200,200,200);
+//ellipse(output[2].Event_1_count,200,200,200);
 frameRate(0.0166*2);
 }
