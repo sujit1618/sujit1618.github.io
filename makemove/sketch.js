@@ -16,5 +16,7 @@ frameRate(0.15);
 
 function gotData(stuff,tabletop){
   data=stuff;
-  console.log(data);
+
+  let totalCount = data[1].Event_1_count+data[1].Event_2_count;
+  console.log(totalCount);
 }
