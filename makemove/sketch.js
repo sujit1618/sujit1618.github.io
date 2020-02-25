@@ -16,6 +16,6 @@ frameRate(0.15);
 
 function gotData(stuff,tabletop){
   data=stuff;
-  let totalCount = data[1].Device_ID+data[2].Device_ID;
+  let totalCount = int(data[1].Device_ID)+int(data[2].Device_ID);
   console.log(totalCount);
 }
