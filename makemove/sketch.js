@@ -13,6 +13,7 @@ function draw (){
                     simpleSheet: true
                   } );
   ellipse(200,200,Number(data[1].Event_1_count),Number(data[1].Event_2_count));
+  fill(255,255,255);
   frameRate(0.75);
 }
 
