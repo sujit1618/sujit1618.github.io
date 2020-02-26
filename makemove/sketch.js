@@ -13,7 +13,7 @@ function draw (){
                     simpleSheet: true
                   } );
 
-  frameRate(12);
+  frameRate(2);
 }
 
 function gotData(stuff,tabletop){
