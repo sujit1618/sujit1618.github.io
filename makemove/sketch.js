@@ -24,6 +24,5 @@ function gotData(stuff,tabletop){
   data[1].Event_2_lat=Number(data[1].Event_2_lat);
   let y = data[1].Event_1_lat+data[1].Event_2_lat;
   console.log(y);
-    }
-  }
+    
 }
