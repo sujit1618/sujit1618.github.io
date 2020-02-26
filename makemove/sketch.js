@@ -12,8 +12,7 @@ function draw (){
                    callback: gotData,
                     simpleSheet: true
                   } );
-  ellipse(200,200,Number(data[1].Event_1_count),Number(data[1].Event_2_count));
-  fill(255,255,255);
+  
   frameRate(0.75);
 }
 
@@ -25,5 +24,7 @@ function gotData(stuff,tabletop){
   data[1].Event_2_lat=Number(data[1].Event_2_lat);
   let y = data[1].Event_1_lat+data[1].Event_2_lat;
   console.log(y);
+  ellipse(200,200,Number(data[1].Event_1_count),Number(data[1].Event_2_count));
+  fill(255,255,255);
 
 }
