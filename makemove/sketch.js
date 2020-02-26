@@ -7,7 +7,7 @@ frameRate(1);
 }
 
 function draw (){
-  background(0);
+
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0',
                    callback: gotData,
                     simpleSheet: true
@@ -24,6 +24,7 @@ function gotData(stuff,tabletop){
   data[1].Event_2_lat=Number(data[1].Event_2_lat);
   let y = data[1].Event_1_lat+data[1].Event_2_lat;
   console.log(y);
+  background(0);
   ellipse(200,200,Number(data[1].Event_1_count),Number(data[1].Event_2_count));
   fill(255,179,87);
   triangle(200,200,Number(data[1].Event_1_count));
