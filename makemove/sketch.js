@@ -2,17 +2,24 @@
 
 //spreadsheet link- https://docs.google.com/spreadsheets/d/1qsBf8xvP98dHtfVLfY3CbJwmwojH_Z5wmUc0a0nyT2c/edit#gid=0
 
+// G-Sheet reference:
 // Device_name	Device_ID	User_number	Event_1_count	Event_1_timestamp	Event_1_lat	Event_1_lon	Event_1_duration_start	Event_1_duration_end	Event_1_duration	Event_1_duration_lat	Event_1_duration_lon	Event_2_count	Event_2_timestamp	Event_2_lat	Event_2_lon	Event_2_duration_start	Event_2_duration_end	Event_2_duration	Event_2_duration_lat	Event_2_duration_lon		Referenced	Current_time	random_1	random_2	lon	lat	blanks
 
 //chicago center
 
 let fps = 30;
 let drawCount = 0;
-let sheetRefreshSeconds = 30;
+let sheetRefreshSeconds = 60;
 let sheetDownloadCount = 0;
 
-let baseLat = 41.8748065; // Chicago Latitude
+let baseLat = 41.8748070; // Chicago Latitude
 let baseLon = -87.625219; // Chicago Longitude
+
+let baseLatNorth = 41.887767;
+let baseLatSouth = 41.861846;
+
+let baseLonWest = -87.637190;
+let baseLonEast = -87.613248
 
 let lonRemap = 0.1 * baseLon / baseLat; //Remapping factor
 
@@ -29,29 +36,8 @@ var event2PosY = new Array(200);
 
 //-------- Housekeeping variables start----------
 
-let a=0;
-let deviceID;
-/*
-var userNumber = new Array(200);
+let test = 0;
 
-var event1count = new Array(200);
-var event2count = new Array(200);
-
-var event1lat = new Array(200);
-var event2lat = new Array(200);
-
-var event1lon = new Array(200);
-var event2lon = new Array(200);
-
-var event1Duration = new Array(200);
-var event2Duration = new Array(200);
-
-var event1DurationLat = new Array(200);
-var event2DurationLat = new Array(200);
-
-var event1DurationLon = new Array(200);
-var event2DurationLon = new Array(200);
-*/
 //----------Housekeeping variables end -------------
 
 
@@ -66,41 +52,44 @@ function setup() {
 
 
 function draw() {
-
   background(0);
+  let east = (baseLon - baseLonEast)*10^6;
+  let west = (baseLon - baseLonWest)*10^6;
+  let north = (baseLon - baseLatNorth)*10^6;
+  let south = (baseLon - baseLatSouth)*10^6;
+for(let i=0;i<10;i++){
+  fill(255);
+  stroke(0,145,255);
+  ellipse(100,100,event1Lat(i),event2Lat(i))
+}
+  console.log("East difference= ",east);
+  console.log("West difference= ",west);
+  console.log("north difference= ",north);
+  console.log("south difference= ",south);
 
-  if (a>0){
-  console.log (Number(data[100].Device_ID));
-  //return Number(data[i].Device_ID);
-  }
-
-
-  scheduledMaintenance();
+  scheduledMaintenance();//keep last, manages downloads and reloads
 }
 
 
 
 //--------- declare kelele custom functions ----------
+//====================================================
 
 
-
-function scheduledMaintenance() {//function to periodically trigger downloads and reloads, prevents google from limiting update rate on G-sheets
+function scheduledMaintenance() { //function to periodically trigger downloads and reloads, prevents google from limiting update rate on G-sheets
   drawCount++;
+  console.log("drawCount", drawCount);
   if (drawCount >= fps * sheetRefreshSeconds) {
     downloadSheet();
     drawCount = 0;
   }
 
+  console.log("sheetDownloadCount", sheetDownloadCount);
   if (sheetDownloadCount >= 10) {
     location.reload();
   }
-  //console.log("sheetDownloadCount", sheetDownloadCount);
-  //console.log("drawCount", drawCount);
+
 }
-
-
-
-
 
 function downloadSheet() { //downloads the latest version of G-Sheet
 
@@ -115,52 +104,138 @@ function downloadSheet() { //downloads the latest version of G-Sheet
   console.log("sheet downloaded");
 }
 
-
-
-
 function gotData(stuff, tabletop) { //function which works inside update loop
   data = stuff;
 
-  a=Number(data[190].deviceID);
-  console.log(a);
-  /*
-  console.log("big chunk of arrays");
-  for (let i = 0; i < 200; i++) {
-
-    //deviceName[i]=data[i].Device_name;
-    deviceID[i] = Number(data[i].Device_ID);
-    userNumber[i] = Number(data[i].User_number);
-
-    event1count[i] = Number(data[i].Event_1_count);
-    event1lat[i] = Number(data[i].Event_1_lat);
-    event1lon[i] = Number(data[i].Event_1_lon);
-    event1Duration[i] = Number(data[i].Event_1_duration);
-    event1DurationLat[i] = Number(data[i].Event_1_duration_lat);
-    event1DurationLon[i] = Number(data[i].Event_1_duration_lon);
-
-    event2count[i] = Number(data[i].Event_2_count);
-    event2lat[i] = Number(data[i].Event_2_lat);
-    event2lon[i] = Number(data[i].Event_2_lon);
-    event2Duration[i] = Number(data[i].Event_2_duration);
-    event2DurationLat[i] = Number(data[i].Event_2_duration_lat);
-    event2DurationLon[i] = Number(data[i].Event_2_duration_lon);
-
-  }
-  console.log("finished arraying");
-  */
-
-
-  console.log(data[6].Current_time); //update timestamp of GSheet file
+  test = Number(data[199].Device_ID);
+  console.log(test);
+  console.log("Current file timestamp", data[6].Current_time); //update timestamp of GSheet file
   console.log(millis() / 1000, "seconds since page refresh");
 }
 
-function DeviceID(i){
-  if (a>0){
-  console.log (Number(data[i].Device_ID));
-  return Number(data[i].Device_ID);
-  }
 
+//------------ data functions -----------
+
+function deviceName(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Device_name);
+    console.log("Device_name", bucket);
+    return bucket;
+  }
 }
+
+function deviceID(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Device_ID);
+    console.log("Device_ID", bucket);
+    return bucket;
+  }
+}
+
+function userNumber(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].User_number);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1Count(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_count);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1Lat(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_lat);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1Lon(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_lon);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1Duration(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_duration);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1DurationLat(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_duration_lat);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event1DurationLon(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_1_duration_lon);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2Count(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_count);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2Lat(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_lat);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2Lon(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_lon);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2Duration(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_duration);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2DurationLat(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_duration_lat);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
+function event2DurationLon(i) {
+  if (test > 0) {
+    let bucket = Number(data[i].Event_2_duration_lon);
+    console.log(bucket);
+    return bucket;
+  }
+}
+
 
 //--------- animationiey functions go here ---------------
 
