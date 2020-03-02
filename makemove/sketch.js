@@ -74,21 +74,22 @@ function draw() {
       noFill();
       stroke(white);
       ellipse(halfCanvasX - 46 * f, 35.5 * d, 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2), 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2));
-
       //  fill(2.5*event2Count(gh), random(0,255) + event2Count(gh), random(0,255) + event2Count(gh));
       noFill();
       stroke(white);
       ellipse(halfCanvasX + 46 * f, 35.5 * d, 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2), 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2));
       noStroke();
       fill(white);
-
       //text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d-4.855); text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
-
       gh++;
     }
-
   }
 
+  if (test > 0) {
+    fill(white);
+    text(data[6].Current_time, 50, canvasY - 20);
+    text(fps * sheetRefreshSeconds - drawCount, canvasX-50, canvasY - 20);
+  }
 
 
 
@@ -113,6 +114,10 @@ function scheduledMaintenance() { //function to periodically trigger downloads a
   if (sheetDownloadCount >= 10) {
     location.reload();
   }
+
+
+
+
 
 }
 
