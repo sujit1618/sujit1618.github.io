@@ -8,7 +8,7 @@
 //chicago center
 let white = 255;
 let black = 0;
-let fps = 30;
+let fps = 8;
 let drawCount = 0;
 let sheetRefreshSeconds = 60;
 let sheetDownloadCount = 0;
@@ -59,29 +59,30 @@ function setup() {
 }
 
 function draw() {
+  scheduledMaintenance(); //keep last, manages downloads and reloads
   let halfCanvasX = canvasX / 2;
   let halfCanvasY = canvasY / 2;
   background(0);
 
 
-  ellipse(canvasX / 2, canvasY / 2, 20, 20);
+  //  ellipse(canvasX / 2, canvasY / 2, 20, 20);
 
   let gh = 0;
   for (let f = 1; f <= 8; f++) {
     for (let d = 1; d <= 25; d++) {
+      //fill(2.5*event1Count(gh), random(0,255) + event1Count(gh), random(0,255) + event1Count(gh));
+      noFill();
+      stroke(white);
+      ellipse(halfCanvasX - 46 * f, 35.5 * d, 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2), 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2));
 
-      fill(2.5*event1Count(gh), random(170,255) + event1Count(gh), random(160,255) + event1Count(gh));
-      stroke(black);
-      ellipse(halfCanvasX-46*f, 35.5 * d, 0.6 * event1Count(gh), 0.6 * event1Count(gh));
-
-      fill(2.5*event2Count(gh), random(170,255) + event2Count(gh), random(160,255) + event2Count(gh));
-      stroke(black);
-      ellipse(halfCanvasX + 46 * f, 35.5 * d, 0.6 * event2Count(gh), 0.6 * event2Count(gh));
-
+      //  fill(2.5*event2Count(gh), random(0,255) + event2Count(gh), random(0,255) + event2Count(gh));
+      noFill();
+      stroke(white);
+      ellipse(halfCanvasX + 46 * f, 35.5 * d, 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2), 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2));
+      noStroke();
       fill(white);
-      stroke(black);
-      text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d);
-      text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
+
+      //text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d-4.855); text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
 
       gh++;
     }
@@ -90,7 +91,7 @@ function draw() {
 
 
 
-  //scheduledMaintenance(); //keep last, manages downloads and reloads
+
 
 }
 
@@ -133,9 +134,9 @@ function gotData(stuff, tabletop) { //function which works inside update loop
 
   test = Number(data[199].Device_ID);
   console.log(test);
-  fill(random(0, 255), random(0, 255), random(0, 255));
+  noFill();
   stroke(random(0, 255), random(0, 255), random(0, 255));
-  ellipse(200, 200, 20, 20);
+  ellipse(canvasX / 2, canvasY / 2, 20, 20);
   console.log("Current file timestamp", data[6].Current_time); //update timestamp of GSheet file
   console.log(millis() / 1000, "seconds since page refresh");
 }
