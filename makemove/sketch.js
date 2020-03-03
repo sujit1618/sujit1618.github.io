@@ -59,7 +59,7 @@ function setup() {
 }
 
 function draw() {
-  circlesEvents(10,20);
+  circlesEvents(8,25);
   scheduledMaintenance(); //keep last, manages downloads and reloads
   let halfCanvasX = canvasX / 2;
   let halfCanvasY = canvasY / 2;
@@ -195,7 +195,9 @@ function circlesEvents(i,j) {
       ellipse(canvasX/2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
       noStroke();
       fill(white);
-      text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d-4.855); text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
+      //text(event1Count(gh), (canvasX/2)-46*f - 4.855, 35.5 * d); text(event2Count(gh), canvasX/2 + 46 * f - 4.855, 35.5*d);
+      //fill(255,255,0);
+      //text(gh, canvasX/2-46*f - 4.855, 35.5 * d-4.855); text(gh, canvasX/2 + 46 * f - 4.855, d + 34.5 * d);
       gh++;
     }
   }
