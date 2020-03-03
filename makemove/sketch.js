@@ -59,36 +59,18 @@ function setup() {
 }
 
 function draw() {
+  circlesEvents(10,20);
   scheduledMaintenance(); //keep last, manages downloads and reloads
   let halfCanvasX = canvasX / 2;
   let halfCanvasY = canvasY / 2;
-  background(0);
 
 
-  //  ellipse(canvasX / 2, canvasY / 2, 20, 20);
 
-  let gh = 0;
-  for (let f = 1; f <= 8; f++) {
-    for (let d = 1; d <= 25; d++) {
-      //fill(2.5*event1Count(gh), random(0,255) + event1Count(gh), random(0,255) + event1Count(gh));
-      noFill();
-      stroke(white);
-      ellipse(halfCanvasX - 46 * f, 35.5 * d, 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2), 0.6 * random(2 + event1Count(gh), event1Count(gh) - 2));
-      //  fill(2.5*event2Count(gh), random(0,255) + event2Count(gh), random(0,255) + event2Count(gh));
-      noFill();
-      stroke(white);
-      ellipse(halfCanvasX + 46 * f, 35.5 * d, 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2), 0.6 * random(2 + event2Count(gh), event2Count(gh) - 2));
-      noStroke();
-      fill(white);
-      //text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d-4.855); text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
-      gh++;
-    }
-  }
 
   if (test > 0) {
     fill(white);
     text(data[6].Current_time, 50, canvasY - 20);
-    text(fps * sheetRefreshSeconds - drawCount, canvasX-50, canvasY - 20);
+    text(fps * sheetRefreshSeconds - drawCount, canvasX - 50, canvasY - 20);
   }
 
 
@@ -114,10 +96,6 @@ function scheduledMaintenance() { //function to periodically trigger downloads a
   if (sheetDownloadCount >= 10) {
     location.reload();
   }
-
-
-
-
 
 }
 
@@ -199,29 +177,28 @@ function staticCircles(i, j) {
   }
 }
 
-function circlesEvents() {
+function circlesEvents(i,j) {
+  background(0);
   let gh = 0;
-  for (let f = 1; f <= 8; f++) {
-    for (let d = 1; d <= 25; d++) {
-
-      fill(25 * f, 27 * d, 2 * event1Count(gh));
-      stroke(black);
-      ellipse(46 * f, 35.5 * d, 0.6 * event1Count(gh), 0.6 * event1Count(gh));
-
-      fill(7 * f, 27 * d, 2 * event2Count(gh));
-      stroke(black);
-      ellipse(halfCanvasX + 46 * f, 35.5 * d, 0.6 * event2Count(gh), 0.6 * event2Count(gh));
-
+  let factor = 0.6;
+  for (let f = 1; f <= i; f++) {
+    for (let d = 1; d <= j; d++) {
+      //fill(2.5*event1Count(gh), random(0,255) + event1Count(gh), random(0,255) + event1Count(gh));
+      //noFill();
+      fill(black);
+      stroke(white);
+      ellipse(canvasX/2 - 46 * f, 35.5 * d, factor * random(2 + event1Count(gh), event1Count(gh) - 2), factor * random(2 + event1Count(gh), event1Count(gh) - 2));
+      //  fill(2.5*event2Count(gh), random(0,255) + event2Count(gh), random(0,255) + event2Count(gh));
+      //noFill();
+      stroke(white);
+      fill(black);
+      ellipse(canvasX/2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
+      noStroke();
       fill(white);
-      stroke(black);
-      text(event1Count(gh), 46 * f - 4.855, 35.5 * d);
-      text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
-
+      //text(event1Count(gh), halfCanvasX-46*f - 4.855, 35.5 * d-4.855); text(event2Count(gh), halfCanvasX + 46 * f - 4.855, d + 34.5 * d);
       gh++;
     }
-
   }
-
 }
 
 
