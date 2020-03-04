@@ -1,5 +1,3 @@
-
-
 function setup() {
   canvasX = vw(100);
   canvasY = vh(100);
@@ -13,18 +11,33 @@ function setup() {
 
 
 function draw() {
-  let a = mouseY / 10;
+  console.log(mouseX);
+  console.log(mouseY);
+let b=mouseX;
+let a=mouseY;
+
+if (a>5) {
+    a=mouseY/10;
+  }
+  else if (a<=5) {
+    a=150;
+    b=120;
+  }
+
+
+
   background(0, 0, 250);
-  strokeWeight(mouseX / 100);
+  strokeWeight(b / 100);
   stroke(0);
-  for (let i = 0; i < mouseY / 10; i++) {
+  for (let i = 0; i < a; i++) {
     line(i * a, i * a, canvasX - i * a, i * a);
     line(canvasX - i * a, i * a, canvasX - i * a, canvasY - i * a);
     line(canvasX - i * a, canvasY - i * a, i * a, canvasY - i * a);
     line(i * a, canvasY - i * a, i * a, i * a + a);
     line(i * a, i * a + a, (i + 1) * a, i * a + a);
-
   }
+  text(a,mouseX+10,mouseY+10);
+  text(b,mouseX-10,mouseY-10);
 }
 
 function vh(v) {
