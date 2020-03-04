@@ -194,7 +194,6 @@ function circlesEvents(i, j) {
       //fill(255,56,76);
       ellipse(canvasX / 2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
       noStroke();
-      textSize(20);
       fill(white);
       //text(event1Count(gh), (canvasX/2)-46*f - 4.855, 35.5 * d); text(event2Count(gh), canvasX/2 + 46 * f - 4.855, 35.5*d);
       fill(255, 255, 0);
