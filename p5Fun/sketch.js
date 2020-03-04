@@ -18,10 +18,12 @@ let a=mouseY;
 
 if (a>5) {
     a=mouseY/10;
+    frameRate(30);
   }
   else if (a<=5) {
-    a=150;
-    b=120;
+    frameRate(12);
+    a=canvasY/random(15,17);
+    b=200;
   }
 
 
@@ -36,6 +38,8 @@ if (a>5) {
     line(i * a, canvasY - i * a, i * a, i * a + a);
     line(i * a, i * a + a, (i + 1) * a, i * a + a);
   }
+  fill(255);
+  noStroke();
   text(a,mouseX+10,mouseY+10);
   text(b,mouseX-10,mouseY-10);
 }
