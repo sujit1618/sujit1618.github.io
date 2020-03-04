@@ -55,28 +55,17 @@ function setup() {
   canvasX = vw(100);
   canvasY = vh(100);
   createCanvas(canvasX, canvasY);
-
-
-  //frameRate(fps);
-  //  downloadSheet();
+  frameRate(fps);
+  downloadSheet();
   noFill();
 }
 
 function draw() {
-  background(0, 0, 250);
-  strokeWeight(mouseX / 100);
-  stroke(black);
-  for (let i = 0; i < mouseY / 10; i++) {
-    line(i * a, i * a, canvasX - i * a, i * a);
-    line(canvasX - i * a, i * a, canvasX - i * a, canvasY - i * a);
-    line(canvasX - i * a, canvasY - i * a, i * a, canvasY - i * a);
-    line(i * a, canvasY - i * a, i * a, i * a + a);
-    line(i * a, i * a + a, (i + 1) * a, i * a + a);
-    a = mouseY / 10;
-  }
+  circlesEvents(8, 25);
+  scheduledMaintenance(); //keep last, manages downloads and reloads
 }
 
-//scheduledMaintenance(); //keep last, manages downloads and reloads
+
 
 
 //--------- declare kelele custom functions ----------
@@ -185,7 +174,7 @@ function staticCircles(i, j) {
 }
 
 function circlesEvents(i, j) {
-
+  background(black);
   strokeWeight(2.5);
 
   let gh = 0;
