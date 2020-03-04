@@ -20,7 +20,7 @@ if (a>5) {
     a=mouseY/10;
     frameRate(30);
   }
-  else if (a<=5) {
+  else if (a<=5||b<=5) {
     frameRate(12);
     a=canvasY/random(17,15);
     b=200;
