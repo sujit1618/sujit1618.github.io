@@ -44,7 +44,9 @@ let test = 0;
 
 let vht = 400;
 let vwt = 400;
-
+let x1;
+let y1;
+let a=10;
 //----------Housekeeping variables end -------------
 
 
@@ -53,30 +55,29 @@ function setup() {
   canvasX = vw(100);
   canvasY = vh(100);
   createCanvas(canvasX, canvasY);
-  frameRate(fps);
-  downloadSheet();
+
+
+  //frameRate(fps);
+//  downloadSheet();
   noFill();
 }
 
 function draw() {
-  circlesEvents(8,25);
-  scheduledMaintenance(); //keep last, manages downloads and reloads
-  let halfCanvasX = canvasX / 2;
-  let halfCanvasY = canvasY / 2;
-
-
-
-
-  if (test > 0) {
-    fill(white);
-    text(data[6].Current_time, 50, canvasY - 20);
-    text(fps * sheetRefreshSeconds - drawCount, canvasX - 50, canvasY - 20);
-  }
-
-
-
-
+  background(0, 0, 250);
+  strokeWeight(mouseX/100);
+  stroke(black);
+for(let i=0;i<mouseY/10;i++){
+ line(i*a,i*a,canvasX-i*a,i*a);
+ line(canvasX-i*a,i*a,canvasX-i*a,canvasY-i*a);
+ line(canvasX-i*a,canvasY-i*a,i*a,canvasY-i*a);
+ line(i*a,canvasY-i*a,i*a,i*a+a);
+ line(i*a,i*a+a,(i+1)*a,i*a+a);
+a=mouseY/10;
 }
+}
+
+//scheduledMaintenance(); //keep last, manages downloads and reloads
+
 
 //--------- declare kelele custom functions ----------
 //====================================================
@@ -95,6 +96,12 @@ function scheduledMaintenance() { //function to periodically trigger downloads a
   console.log("sheetDownloadCount", sheetDownloadCount);
   if (sheetDownloadCount >= 10) {
     location.reload();
+  }
+
+  if (test > 0) {
+    fill(white);
+    text(data[6].Current_time, 50, canvasY - 20);
+    text(fps * sheetRefreshSeconds - drawCount, canvasX - 50, canvasY - 20);
   }
 
 }
@@ -177,26 +184,31 @@ function staticCircles(i, j) {
   }
 }
 
-function circlesEvents(i,j) {
-  background(0);
+function circlesEvents(i, j) {
+
+  strokeWeight(2.5);
+
   let gh = 0;
   let factor = 0.6;
   for (let f = 1; f <= i; f++) {
     for (let d = 1; d <= j; d++) {
-      //fill(2.5*event1Count(gh), random(0,255) + event1Count(gh), random(0,255) + event1Count(gh));
+      //fill('#ffa500'); //orange
+      fill(2.5 * event1Count(gh), random(190, 255) + event1Count(gh), random(0, 255) + event1Count(gh));
       //noFill();
-      fill(black);
-      stroke(white);
-      ellipse(canvasX/2 - 46 * f, 35.5 * d, factor * random(2 + event1Count(gh), event1Count(gh) - 2), factor * random(2 + event1Count(gh), event1Count(gh) - 2));
-      //  fill(2.5*event2Count(gh), random(0,255) + event2Count(gh), random(0,255) + event2Count(gh));
-      //noFill();
-      stroke(white);
-      fill(black);
-      ellipse(canvasX/2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
       noStroke();
+      //fill(black);
+      //stroke(white);
+      ellipse(canvasX / 2 - 46 * f, 35.5 * d, factor * random(2 + event1Count(gh), event1Count(gh) - 2), factor * random(2 + event1Count(gh), event1Count(gh) - 2));
+      fill(4 * event2Count(gh), random(190, 255) + event2Count(gh), random(0, 255) + event2Count(gh));
+      //noFill();
+      //stroke(white);
+      //fill(255,56,76);
+      ellipse(canvasX / 2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
+      noStroke();
+      textSize(20);
       fill(white);
       //text(event1Count(gh), (canvasX/2)-46*f - 4.855, 35.5 * d); text(event2Count(gh), canvasX/2 + 46 * f - 4.855, 35.5*d);
-      //fill(255,255,0);
+      fill(255, 255, 0);
       //text(gh, canvasX/2-46*f - 4.855, 35.5 * d-4.855); text(gh, canvasX/2 + 46 * f - 4.855, d + 34.5 * d);
       gh++;
     }
