@@ -22,7 +22,7 @@ if (a>5) {
   }
   else if (a<=5) {
     frameRate(12);
-    a=canvasY/random(15,17);
+    a=canvasY/17
     b=200;
   }
 
