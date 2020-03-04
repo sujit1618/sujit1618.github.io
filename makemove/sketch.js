@@ -188,7 +188,7 @@ function circlesEvents(i, j) {
       //fill(black);
       //stroke(white);
       ellipse(canvasX / 2 - 46 * f, 35.5 * d, factor * random(2 + event1Count(gh), event1Count(gh) - 2), factor * random(2 + event1Count(gh), event1Count(gh) - 2));
-      fill(4 * event2Count(gh), random(190, 255) + event2Count(gh), random(0, 255) + event2Count(gh));
+      fill(4.3 * event2Count(gh), random(50, 140) + event2Count(gh), random(0, 100) + event2Count(gh));
       //noFill();
       //stroke(white);
       //fill(255,56,76);
