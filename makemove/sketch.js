@@ -46,7 +46,7 @@ let vht = 400;
 let vwt = 400;
 let x1;
 let y1;
-let a=10;
+let a = 10;
 //----------Housekeeping variables end -------------
 
 
@@ -58,22 +58,22 @@ function setup() {
 
 
   //frameRate(fps);
-//  downloadSheet();
+  //  downloadSheet();
   noFill();
 }
 
 function draw() {
   background(0, 0, 250);
-  strokeWeight(mouseX/100);
+  strokeWeight(mouseX / 100);
   stroke(black);
-for(let i=0;i<mouseY/10;i++){
- line(i*a,i*a,canvasX-i*a,i*a);
- line(canvasX-i*a,i*a,canvasX-i*a,canvasY-i*a);
- line(canvasX-i*a,canvasY-i*a,i*a,canvasY-i*a);
- line(i*a,canvasY-i*a,i*a,i*a+a);
- line(i*a,i*a+a,(i+1)*a,i*a+a);
-a=mouseY/10;
-}
+  for (let i = 0; i < mouseY / 10; i++) {
+    line(i * a, i * a, canvasX - i * a, i * a);
+    line(canvasX - i * a, i * a, canvasX - i * a, canvasY - i * a);
+    line(canvasX - i * a, canvasY - i * a, i * a, canvasY - i * a);
+    line(i * a, canvasY - i * a, i * a, i * a + a);
+    line(i * a, i * a + a, (i + 1) * a, i * a + a);
+    a = mouseY / 10;
+  }
 }
 
 //scheduledMaintenance(); //keep last, manages downloads and reloads
