@@ -22,7 +22,7 @@ if (a>5) {
   }
   else if (a<=5) {
     frameRate(12);
-    a=canvasY/17
+    a=canvasY/random(17,15);
     b=200;
   }
 
@@ -40,8 +40,8 @@ if (a>5) {
   }
   fill(255);
   noStroke();
-  text(a,mouseX+10,mouseY+10);
-  text(b,mouseX-10,mouseY-10);
+  //text(a,mouseX+10,mouseY+10);
+  //text(b,mouseX-10,mouseY-10);
 }
 
 function vh(v) {
