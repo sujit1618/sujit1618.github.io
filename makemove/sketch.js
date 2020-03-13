@@ -175,24 +175,68 @@ function staticCircles(i, j) {
 
 function circlesEvents(i, j) {
   background(black);
-  strokeWeight(2.5);
+  strokeWeight(1.3);
 
   let gh = 0;
   let factor = 0.6;
   for (let f = 1; f <= i; f++) {
     for (let d = 1; d <= j; d++) {
       //fill('#ffa500'); //orange
-      fill(2.5 * event1Count(gh), random(190, 255) + event1Count(gh), random(0, 255) + event1Count(gh));
-      //noFill();
-      noStroke();
+      //fill(2.5 * event1Count(gh), random(190, 255) + event1Count(gh), random(0, 255) + event1Count(gh));
+      noFill();
+      //noStroke();
       //fill(black);
-      //stroke(white);
-      ellipse(canvasX / 2 - 46 * f, 35.5 * d, factor * random(2 + event1Count(gh), event1Count(gh) - 2), factor * random(2 + event1Count(gh), event1Count(gh) - 2));
-      fill(4.3 * event2Count(gh), random(50, 140) + event2Count(gh), random(0, 100) + event2Count(gh));
-      //noFill();
-      //stroke(white);
+      stroke(white);
+
+      let xPos1 = canvasX / 2 - 46 * f;
+      let yPos1 = 35.5 * d;
+      let xMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
+      let yMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
+
+      if(mouseX===xPos1+20 || mouseX===xPos1-20){
+        if(mouseY===yPos1+20 || mouseY===yPos1-20){
+          fill(white);
+          noStroke();
+          text('Event 1' ,mouseX+4,mouseY);
+          text(deviceName(i),mouseX+4,mouseY+10);
+          text(event1Lat(i),mouseX+4,mouseY+20);
+          text(event1Lon(i),mouseX+4,mouseY+30);
+        }
+      }
+
+      noFill();
+      stroke(white);
+      ellipse(xPos1, yPos1, xMag1, yMag1);
+
+      //fill(4.3 * event2Count(gh), random(50, 140) + event2Count(gh), random(0, 100) + event2Count(gh));
+
       //fill(255,56,76);
-      ellipse(canvasX / 2 + 46 * f, 35.5 * d, factor * random(2 + event2Count(gh), event2Count(gh) - 2), factor * random(2 + event2Count(gh), event2Count(gh) - 2));
+
+      let xPos2 = canvasX / 2 + 46 * f;
+      let yPos2 = 35.5 * d;
+      let xMag2 = factor * random(2 + event2Count(gh), event2Count(gh) - 2);
+      let yMag2 = factor * random(2 + event2Count(gh), event2Count(gh) - 2);
+
+      noStroke();
+      fill(white);
+     text(mouseX,mouseX,mouseY);
+     text(mouseY,mouseX,mouseY+10);
+
+      if(mouseX===xPos2+20 || mouseX===xPos2-20){
+        if(mouseY===yPos2+20 || mouseY===yPos2-20){
+          fill(white);
+          noStroke();
+          text('Event 2' ,mouseX+4,mouseY);
+          text(deviceName(i) ,mouseX+4,mouseY+10);
+          text(event2Lat(i),mouseX+4,mouseY+20);
+          text(event2Lon(i),mouseX+4,mouseY+30);
+        }
+      }
+
+      noFill();
+      stroke(white);
+      ellipse(xPos2,yPos2,xMag2,yMag2);
+
       noStroke();
       fill(white);
       //text(event1Count(gh), (canvasX/2)-46*f - 4.855, 35.5 * d); text(event2Count(gh), canvasX/2 + 46 * f - 4.855, 35.5*d);
