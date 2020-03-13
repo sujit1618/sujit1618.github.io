@@ -66,7 +66,7 @@ function setup() {
   frameRate(fps);
   downloadSheet();
   noFill();
-  bg = loadImage('http://127.0.0.1:8887/makemove/sketch2/assets/Picture4.png');
+  bg = loadImage('https://sujit1618.github.io/makemove/sketch2/assets/Picture4.png');
   for(let i=0;i<200;i++){
     redColor[i]=255-i;
     blueColor[i]=2*i;
