@@ -10,6 +10,7 @@
 
   /* Remove the margins if any */
   margin: 0;
+  padding: 0;
 
   /* Allow them to scroll down the document */
   overflow-y: hidden;
