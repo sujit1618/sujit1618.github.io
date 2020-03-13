@@ -3,6 +3,9 @@
   /* Break the flow */
   position: absolute;
   top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   /* Give them all the available space */
   width: 100%;
