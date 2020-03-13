@@ -29,7 +29,7 @@ if (a>5) {
 
 
   background(0, 0, 250);
-  strokeWeight(5);
+  strokeWeight(mouseX/100);
   stroke(0);
   for (let i = 0; i < a; i++) {
     line(i * a, i * a, canvasX - i * a, i * a);
