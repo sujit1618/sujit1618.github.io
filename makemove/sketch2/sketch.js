@@ -6,6 +6,8 @@
 // Device_name	Device_ID	User_number	Event_1_count	Event_1_timestamp	Event_1_lat	Event_1_lon	Event_1_duration_start	Event_1_duration_end	Event_1_duration	Event_1_duration_lat	Event_1_duration_lon	Event_2_count	Event_2_timestamp	Event_2_lat	Event_2_lon	Event_2_duration_start	Event_2_duration_end	Event_2_duration	Event_2_duration_lat	Event_2_duration_lon		Referenced	Current_time	random_1	random_2	lon	lat	blanks
 
 //chicago center
+
+let ourDeviceID = 10;
 let white = 255;
 let black = 0;
 let fps = 8;
@@ -38,6 +40,11 @@ var event2PosY = new Array(200);
 let sum1 = 0;
 let sum2 = 0;
 
+var redColor = new Array (200);
+var blueColor = new Array (200);
+var greenColor = new Array (200);
+
+
 //-------- Housekeeping variables start----------
 
 let test = 0;
@@ -48,7 +55,8 @@ let x1;
 let y1;
 let a = 10;
 //----------Housekeeping variables end -------------
-
+let count=1;
+let factor = 1;
 
 
 function setup() {
@@ -58,11 +66,30 @@ function setup() {
   frameRate(fps);
   downloadSheet();
   noFill();
+  bg = loadImage('http://127.0.0.1:8887/makemove/sketch2/assets/Picture4.png');
+  for(let i=0;i<200;i++){
+    redColor[i]=255-i;
+    blueColor[i]=2*i;
+    greenColor[i]=random(0,255);
+  }
 }
 
 function draw() {
-  circlesEvents(8, 25);
-  scheduledMaintenance(); //keep last, manages downloads and reloads
+  background(bg);
+  //background(255);
+  if (test > 0) {
+    minLat();
+    maxLat();
+    minLon();
+    maxLon();
+
+    mapTest2(200);
+
+    scheduledMaintenance(); //keep last, manages downloads and reloads
+    //circlesEvents(8, 25);
+
+  }
+
 }
 
 
@@ -77,7 +104,7 @@ function scheduledMaintenance() { //function to periodically trigger downloads a
   console.log("drawCount", drawCount);
   if (drawCount >= fps * sheetRefreshSeconds) {
     downloadSheet();
-    fill(random(0, 255), random(0, 255), random(0, 255));
+    randomFill();
     ellipse(vwt / 4, vht / 4, 10, 10);
     drawCount = 0;
   }
@@ -173,12 +200,13 @@ function staticCircles(i, j) {
   }
 }
 
+
 function circlesEvents(i, j) {
   background(black);
   strokeWeight(2.5);
 
   let gh = 0;
-  let factor = 0.6;
+
   for (let f = 1; f <= i; f++) {
     for (let d = 1; d <= j; d++) {
       //fill('#ffa500'); //orange
@@ -203,6 +231,61 @@ function circlesEvents(i, j) {
   }
 }
 
+
+
+function mapTest1() {
+  for (let i = 0; i < 200; i++) {
+    let y1 = map(10 ^ 6 * event1Lat(i), minLat(), maxLat(), 10, canvasY-10);
+    let x1 = map(10 ^ 6 * event1Lon(i), minLon(), maxLon(), 10, canvasX-10);
+    //console.log('x1= ',x1);
+    //console.log('y1= ',y1);
+    fill(100);
+    ellipse(x1, y1, 10, 10);
+    text(i, x1, y1);
+  }
+}
+
+
+function mapTest2(maxId) {
+  for (let i = 0; i <= maxId-1; i++) {
+
+    let y1 = canvasY*(maxLat()-1000000*event1Lat(i))/(maxLat()-minLat());
+    let x1 = canvasX*(maxLon()-1000000*event1Lon(i))/(maxLon()-minLon());
+
+    let y2 = canvasY*(maxLat()-1000000*event2Lat(i))/(maxLat()-minLat());
+    let x2 = canvasX*(maxLon()-1000000*event2Lon(i))/(maxLon()-minLon());
+
+    fill(redColor[i],greenColor[i],blueColor[i],190);
+    noStroke()
+    //fill(239,95,153,0.7*255);
+    ellipse(x1, y1, factor * random(2 + event1Count(i), event1Count(i) - 2),factor * random(2 + event1Count(i), event1Count(i) - 2));
+
+    //fill(178,245,97,0.7*255);
+    rectMode(CENTER);
+    rect(x2, y2, factor * random(2 + event2Count(i), event2Count(i) - 2),factor * random(2 + event2Count(i), event2Count(i) - 2));
+
+    fill(0,80,255);
+    noStroke();
+    let ourDevice_y = canvasY*(maxLat()-1000000*event1Lat(ourDeviceID))/(maxLat()-minLat());
+    let ourDevice_x = canvasX*(maxLon()-1000000*event1Lon(ourDeviceID))/(maxLon()-minLon());
+    ellipse(ourDevice_x,ourDevice_y,30,30);
+    fill(255,150,150);
+    textSize(21);
+    text('Us!',ourDevice_x - 8,ourDevice_y + 7);
+
+    //text(i, x1, y1);
+    //console.log('x1= ',x1);
+    //console.log('y1= ',y1);
+    //console.log('maxLon()=',maxLon());
+    //console.log('10^6*event1Lon(i)= ',1000000*event1Lon(i));
+    //console.log('event1Lon(i)= ',event1Lon(i));
+    //console.log('minLon()=', minLon());
+  }
+}
+
+function randomFill(){
+  fill(random(0, 255), random(0, 255), random(0, 255));
+}
 
 //---------- viewport related functions go here ------------
 
@@ -249,6 +332,44 @@ function userNumber(i) {
   }
 }
 
+
+//--sub:max-min location coordinates--
+
+function minLat() {
+  if (test > 0) {
+    let bucket = Number(data[0].min_lat);
+    //console.log(bucket);
+    return bucket;
+  }
+}
+
+function maxLat() {
+  if (test > 0) {
+    let bucket = Number(data[0].max_lat);
+    //console.log(bucket);
+    return bucket;
+  }
+}
+
+function minLon() {
+  if (test > 0) {
+    let bucket = Number(data[0].min_lon);
+    //console.log(bucket);
+    return bucket;
+  }
+}
+
+function maxLon() {
+  if (test > 0) {
+    let bucket = Number(data[0].max_lon);
+    //console.log(bucket);
+    return bucket;
+  }
+}
+
+
+//---sub:eventDetails
+
 function event1Count(i) {
   if (test > 0) {
     let bucket = Number(data[i].Event_1_count);
@@ -268,7 +389,7 @@ function event1Lat(i) {
 function event1Lon(i) {
   if (test > 0) {
     let bucket = Number(data[i].Event_1_lon);
-    //console.log(bucket);
+    //console.log('data[i].Event_1_lon= ', bucket);
     return bucket;
   }
 }
@@ -308,7 +429,7 @@ function event2Count(i) {
 function event2Lat(i) {
   if (test > 0) {
     let bucket = Number(data[i].Event_2_lat);
-    console.log(bucket);
+    //console.log(bucket);
     return bucket;
   }
 }
@@ -316,7 +437,7 @@ function event2Lat(i) {
 function event2Lon(i) {
   if (test > 0) {
     let bucket = Number(data[i].Event_2_lon);
-    console.log(bucket);
+    //console.log(bucket);
     return bucket;
   }
 }
