@@ -193,8 +193,8 @@ function circlesEvents(i, j) {
       let xMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
       let yMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
 
-      if(mouseX===xPos1+20 || mouseX===xPos1-20){
-        if(mouseY===yPos1+20 || mouseY===yPos1-20){
+      if(xPos1-mouseX<=20 || xPos1+mouseX>=20){
+        if(yPos1-mouseY<=20 || yPos1+mouseY>=20){
           fill(white);
           noStroke();
           text('Event 1' ,mouseX+4,mouseY);
@@ -219,19 +219,8 @@ function circlesEvents(i, j) {
 
       noStroke();
       fill(white);
-     text(mouseX,mouseX,mouseY);
-     text(mouseY,mouseX,mouseY+10);
-
-      if(mouseX===xPos2+20 || mouseX===xPos2-20){
-        if(mouseY===yPos2+20 || mouseY===yPos2-20){
-          fill(white);
-          noStroke();
-          text('Event 2' ,mouseX+4,mouseY);
-          text(deviceName(i) ,mouseX+4,mouseY+10);
-          text(event2Lat(i),mouseX+4,mouseY+20);
-          text(event2Lon(i),mouseX+4,mouseY+30);
-        }
-      }
+     //text(mouseX,mouseX,mouseY);
+     //text(mouseY,mouseX,mouseY+10);
 
       noFill();
       stroke(white);
