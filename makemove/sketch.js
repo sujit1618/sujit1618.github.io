@@ -22,21 +22,19 @@ let baseLatSouth = 41.861846;
 let baseLonWest = -87.637190;
 let baseLonEast = -87.613248;
 
-let lonRemap = baseLon / baseLat; //Remapping factor
-
 let canvasX = 1000; //canvas size X
 let canvasY = 1000; //canvas size Y
 
 var data = new Array(200); //Re-storing json in this
 
-var event1PosX = new Array(200);
-var event1PosY = new Array(200);
-
-var event2PosX = new Array(200);
-var event2PosY = new Array(200);
-
-let sum1 = 0;
-let sum2 = 0;
+var xPos1 = new Array(200);
+var xPos2 = new Array(200);
+var yPos1 = new Array(200);
+var yPos2 = new Array(200);
+var xMag1 = new Array(200);
+var xMag2 = new Array(200);
+var yMag1 = new Array(200);
+var yMag2 = new Array(200);
 
 //-------- Housekeeping variables start----------
 
@@ -44,9 +42,8 @@ let test = 0;
 
 let vht = 400;
 let vwt = 400;
-let x1;
-let y1;
-let a = 10;
+
+
 //----------Housekeeping variables end -------------
 
 
@@ -62,6 +59,9 @@ function setup() {
 
 function draw() {
   circlesEvents(8, 25);
+  console.log('xMag1[3]= ', xMag1[3]);
+
+
   scheduledMaintenance(); //keep last, manages downloads and reloads
 }
 
@@ -112,7 +112,7 @@ function gotData(stuff, tabletop) { //function which works inside update loop
   data = stuff;
 
   test = Number(data[199].Device_ID);
-  console.log(test);
+  console.log('test ', test);
   noFill();
   stroke(random(0, 255), random(0, 255), random(0, 255));
   ellipse(canvasX / 2, canvasY / 2, 20, 20);
@@ -123,115 +123,42 @@ function gotData(stuff, tabletop) { //function which works inside update loop
 
 //--------- animationiey functions go here ---------------
 
-function allPositions() {
-  for (let i = 1; i < 5; i++) {
-    stroke(100, 100, 255);
-    noFill();
-    event1PosX[i] = canvasX / 2 + 600 * lonRemap * (baseLon - event1Lon(i)); //longitudes change according to X axis
-    event1PosY[i] = canvasY / 2 + 600 * (baseLat - event1Lat(i)); //latitudes change according to Y axis
-    ellipse(event1PosX[i], event1PosY[i], event1Count(i), event1Count(i)); //x,y,diaX,diaY
-    text(deviceID(i), event1PosX[i], event1PosY[i]);
-    console.log(event1PosX[i]);
-    console.log(event1PosY[i]);
-  }
-}
+function circlesEvents(horizontal, vertical) {
 
-function eventCountsCompare(i, j) {
-
-  sum1 = 0;
-  sum2 = 0;
-
-  for (i; i < j - 1; i++) {
-    sum1 = sum1 + event1Count(i);
-    sum2 = sum2 + event2Count(i);
-  }
-
-  let percent1 = 100 * sum1 / (sum1 + sum2);
-
-  let percent2 = 100 * sum2 / (sum1 + sum2);
-
-  fill(white);
-  text(sum1, mouseX - 20, mouseY);
-  text(sum2, mouseX + 20, mouseY);
-
-  console.log("sum1", sum1);
-  console.log("sum2", sum2);
-}
-
-
-function staticCircles(i, j) {
-  let tempVar1 = 10 + event1Count(i);
-  let tempVar2 = 100 + event2Count(i);
-
-  for (i; i < j - 1; i++) {
-    noFill();
-    stroke(white);
-    ellipse(i + tempVar1, i + tempVar1, event1Count(i), event1Count(i));
-    ellipse(i + tempVar2, i + tempVar2, event2Count(i), event2Count(i));
-    tempVar1 = 100 + event1Count(i);
-    tempVar2 = 100 + event2Count(i);
-  }
-}
-
-function circlesEvents(i, j) {
   background(black);
   strokeWeight(1.3);
+  noFill();
+  stroke(white);
 
-  let gh = 0;
+  let count = 0;
   let factor = 0.6;
-  for (let f = 1; f <= i; f++) {
-    for (let d = 1; d <= j; d++) {
-      //fill('#ffa500'); //orange
-      //fill(2.5 * event1Count(gh), random(190, 255) + event1Count(gh), random(0, 255) + event1Count(gh));
-      noFill();
-      //noStroke();
-      //fill(black);
-      stroke(white);
 
-      let xPos1 = canvasX / 2 - 46 * f;
-      let yPos1 = 35.5 * d;
-      let xMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
-      let yMag1 = factor * random(2 + event1Count(gh), event1Count(gh) - 2);
 
-      if(xPos1-mouseX<=20 || xPos1+mouseX>=20){
-        if(yPos1-mouseY<=20 || yPos1+mouseY>=20){
-          fill(white);
-          noStroke();
-          text('Event 1' ,mouseX+4,mouseY);
-          text(deviceName(i),mouseX+4,mouseY+10);
-          text(event1Lat(i),mouseX+4,mouseY+20);
-          text(event1Lon(i),mouseX+4,mouseY+30);
-        }
-      }
+  for (let f = 1; f <= horizontal; f++) {
+    for (let d = 1; d <= vertical; d++) {
 
-      noFill();
-      stroke(white);
-      ellipse(xPos1, yPos1, xMag1, yMag1);
 
-      //fill(4.3 * event2Count(gh), random(50, 140) + event2Count(gh), random(0, 100) + event2Count(gh));
+      xPos1[count] = canvasX / 2 - 46 * f;
+      yPos1[count] = 35.5 * d;
+      xMag1[count] = factor * random(2 + event1Count(count), event1Count(count) - 2);
+      yMag1[count] = factor * random(2 + event1Count(count), event1Count(count) - 2);
 
-      //fill(255,56,76);
+      ellipse(xPos1[count], yPos1[count], xMag1[count], yMag1[count]);
 
-      let xPos2 = canvasX / 2 + 46 * f;
-      let yPos2 = 35.5 * d;
-      let xMag2 = factor * random(2 + event2Count(gh), event2Count(gh) - 2);
-      let yMag2 = factor * random(2 + event2Count(gh), event2Count(gh) - 2);
 
-      noStroke();
-      fill(white);
-     //text(mouseX,mouseX,mouseY);
-     //text(mouseY,mouseX,mouseY+10);
 
-      noFill();
-      stroke(white);
-      ellipse(xPos2,yPos2,xMag2,yMag2);
+      xPos2[count] = canvasX / 2 + 46 * f;
+      yPos2[count] = 35.5 * d;
+      xMag2[count] = 0.45*factor * random(2 + event2Count(count), event2Count(count) - 2);
+      yMag2[count] = 0.45*factor * random(2 + event2Count(count), event2Count(count) - 2);
 
-      noStroke();
-      fill(white);
-      //text(event1Count(gh), (canvasX/2)-46*f - 4.855, 35.5 * d); text(event2Count(gh), canvasX/2 + 46 * f - 4.855, 35.5*d);
-      fill(255, 255, 0);
-      //text(gh, canvasX/2-46*f - 4.855, 35.5 * d-4.855); text(gh, canvasX/2 + 46 * f - 4.855, d + 34.5 * d);
-      gh++;
+      rectMode(RADIUS);
+      rect(xPos2[count], yPos2[count], xMag2[count], yMag2[count]);
+
+
+      count++;
+
+
     }
   }
 }
