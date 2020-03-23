@@ -59,7 +59,16 @@ function setup() {
 
 function draw() {
   circlesEvents(8, 25);
-  console.log('xMag1[3]= ', xMag1[3]);
+
+  for(i=0;i<200;i++){
+    if((xPos1[i]-20)<mouseX<(xPos1[i]+20)){
+      if((yPos1[i]-20)<mouseY<(yPos1[i]+20)){
+        fill(0,255,100);
+        noStroke();
+        text(deviceID(i),mouseX+100,mouseY+100);
+      }
+    }
+  }
 
 
   scheduledMaintenance(); //keep last, manages downloads and reloads
@@ -89,6 +98,7 @@ function scheduledMaintenance() { //function to periodically trigger downloads a
 
   if (test > 0) {
     fill(white);
+    noStroke();
     text(data[6].Current_time, 50, canvasY - 20);
     text(fps * sheetRefreshSeconds - drawCount, canvasX - 50, canvasY - 20);
   }
@@ -144,6 +154,7 @@ function circlesEvents(horizontal, vertical) {
       yMag1[count] = factor * random(2 + event1Count(count), event1Count(count) - 2);
 
       ellipse(xPos1[count], yPos1[count], xMag1[count], yMag1[count]);
+      ellipse(xPos1[count],yPos1[count],5,5);
 
 
 
