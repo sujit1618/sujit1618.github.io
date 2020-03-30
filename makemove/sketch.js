@@ -154,7 +154,6 @@ function circlesEvents(horizontal, vertical) {
       yMag1[count] = factor * random(2 + event1Count(count), event1Count(count) - 2);
 
       ellipse(xPos1[count], yPos1[count], xMag1[count], yMag1[count]);
-      ellipse(xPos1[count],yPos1[count],5,5);
 
 
 
