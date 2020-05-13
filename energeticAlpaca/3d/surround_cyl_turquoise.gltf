@@ -17,9 +17,9 @@
             "mesh" : 0,
             "name" : "Torus",
             "scale" : [
-                3,
-                8.466235160827637,
-                3
+                30,
+                84.662353515625,
+                30
             ],
             "translation" : [
                 -0.0032100677490234375,
@@ -30,8 +30,6 @@
     ],
     "materials" : [
         {
-            "alphaCutoff" : 0.5,
-            "alphaMode" : "MASK",
             "doubleSided" : true,
             "name" : "Material.001",
             "pbrMetallicRoughness" : {
@@ -39,7 +37,7 @@
                     0.09542614966630936,
                     1,
                     0.5468589663505554,
-                    0.778571367263794
+                    1
                 ],
                 "metallicFactor" : 0,
                 "roughnessFactor" : 0.5
