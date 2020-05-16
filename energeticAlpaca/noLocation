@@ -51,7 +51,7 @@ Decimal Code
 
     <a-box color="#008880" depth="1" height="1" width="1"  animation-mixer position="10 2 50"> </a-box>
     <a-box color="#008080" depth="1" height="1" width="1"  animation-mixer position="-10 20 0"> </a-box>
-    <a-box color="#ffffff" depth="1" height="1" width="1"  animation-mixer position="0 0 0"> </a-box>
+    <a-box color="#ffffff" depth="1" height="1" width="1"  animation-mixer position="0 -2 0"> </a-box>
     <a-box color="#808080" depth="1" height="1" width="1"  animation-mixer position="40 12 50"> </a-box>
 
 
