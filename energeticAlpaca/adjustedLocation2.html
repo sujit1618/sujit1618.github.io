@@ -14,16 +14,20 @@
 <body style="margin: 0; overflow: hidden;">
 
 
-  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: true;" renderer="antialias: true; colorManagement: true;" >
+  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: true;" renderer="antialias: true; colorManagement: true;">
 
     <a-assets>
       <a-asset-item id="axes" src="3d/axesSpheres.gltf"> </a-asset-item>
-      <a-assets-item id="sphereCone" src = "3d/axesSpheresCone.gltf"></a-asset-item>
+      <a-assets-item id="sphereCone" src="3d/axesSpheresCone.gltf">
+        </a-asset-item>
     </a-assets>
+
+
 
 <!--
 
 || places ||
+
 City Pride Kothrud 18.499037, 73.820977 | tomato | 700 m
 
 Pu La Deshpande Udyaan 18.493245, 73.835422 | chartreuse | 1200 m
@@ -68,9 +72,8 @@ Decimal Code
 -->
 
 
-    <a-entity gltf-model="#axes" gps-projected-entity-place="latitude: 19.056971; longitude: 72.832214;"  animation-mixer position="0 -1.6 0"> </a-entity>
-    <a-entity gltf-model="#sphereCone" gps-projected-entity-place="latitude: 19.056971; longitude: 72.832214;"  animation-mixer position="0 -1.6 0"> </a-entity>
-
+    <a-entity gltf-model="#axes" gps-projected-entity-place="latitude: 19.056971; longitude: 72.832214;" animation-mixer position="0 -1.6 0"> </a-entity>
+    <a-entity gltf-model="#sphereCone" gps-projected-entity-place="latitude: 19.056971; longitude: 72.832214;" animation-mixer position="0 -1.6 0"> </a-entity>
 
 
     <a-camera gps-projected-camera rotation-reader></a-camera>
