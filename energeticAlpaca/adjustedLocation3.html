@@ -14,14 +14,17 @@
 <body style="margin: 0; overflow: hidden;">
 
 
-  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: true;" renderer="antialias: true; colorManagement: true;" >
+  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: true;" renderer="antialias: true; colorManagement: true;">
 
     <a-assets>
       <a-asset-item id="axes" src="3d/axesSpheres.gltf"> </a-asset-item>
-      <a-assets-item id="sphereCone" src = "3d/axesSpheresCone.gltf"></a-asset-item>
+      <a-assets-item id="sphereCone" src="3d/axesSpheresCone.gltf">
+        </a-asset-item>
+        <a-assets-item id="gradHatParticle1" src="3d/GradHat-particlesystem.gltf">
+          </a-asset-item>
     </a-assets>
 
-<!--
+    <!--
 
 
 || places ||
@@ -64,20 +67,10 @@ Decimal Code
  	Navy	#000080	(0,0,128)
 
 -->
-
-
-    <a-box color="#008080" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="120 0 -40"> </a-box>
-    <a-box color="#FF0000" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="120 0 -50"> </a-box>
-    <a-box color="#00FF00" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="37 0 -60"> </a-box>
-    <a-box color="#800000" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="62 0 -45"> </a-box>
-    <a-box color="#008080" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="45 0 -20"> </a-box>
-    <a-box color="tomato" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.499037; longitude: 73.820977;"  animation-mixer position="78 0 -90"> </a-box>
-
     <!--
 <a-box color="#800080" depth="100" height="100" width="100" gps-projected-entity-place="latitude: 18.491970; longitude: 73.823682;"  animation-mixer position="0 0 0"> </a-box>
 -->
-    <a-entity gltf-model="#axes" gps-projected-entity-place="latitude: 18.491970; longitude: 73.823682;"  animation-mixer position="0 -1.6 0"> </a-entity>
-    <a-entity gltf-model="#sphereCone" gps-projected-entity-place="latitude: 18.491970; longitude: 73.823682;"  animation-mixer position="0 -1.6 0"> </a-entity>
+    <a-entity gltf-model="#gradHatParticle1" gps-projected-entity-place="latitude: 18.491970; longitude: 73.823682;" animation-mixer position="0 0 0"> </a-entity>
 
 
 
