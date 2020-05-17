@@ -3,121 +3,28 @@
         "generator" : "Khronos glTF Blender I/O v1.0.5",
         "version" : "2.0"
     },
-    "extensionsUsed" : [
-        "KHR_lights_punctual"
-    ],
-    "extensionsRequired" : [
-        "KHR_lights_punctual"
-    ],
-    "extensions" : {
-        "KHR_lights_punctual" : {
-            "lights" : [
-                {
-                    "color" : [
-                        1,
-                        0.18905705213546753,
-                        0.7255806922912598
-                    ],
-                    "intensity" : 500,
-                    "type" : "point",
-                    "name" : "Light.004"
-                },
-                {
-                    "color" : [
-                        0.08515512943267822,
-                        0.09869848936796188,
-                        1
-                    ],
-                    "intensity" : 500,
-                    "type" : "point",
-                    "name" : "Light.008"
-                },
-                {
-                    "color" : [
-                        1,
-                        0.5082024335861206,
-                        0.06735247373580933
-                    ],
-                    "intensity" : 100,
-                    "type" : "point",
-                    "name" : "Light.007"
-                },
-                {
-                    "color" : [
-                        1,
-                        0.18905705213546753,
-                        0.7255806922912598
-                    ],
-                    "intensity" : 500,
-                    "type" : "point",
-                    "name" : "Light.006"
-                },
-                {
-                    "color" : [
-                        1,
-                        0.6632477641105652,
-                        0.0568186454474926
-                    ],
-                    "intensity" : 200,
-                    "type" : "point",
-                    "name" : "Light.005"
-                },
-                {
-                    "color" : [
-                        1,
-                        0.5082024335861206,
-                        0.06735247373580933
-                    ],
-                    "intensity" : 100,
-                    "type" : "point",
-                    "name" : "Light.001"
-                },
-                {
-                    "color" : [
-                        1,
-                        0.18905705213546753,
-                        0.7255806922912598
-                    ],
-                    "intensity" : 500,
-                    "type" : "point",
-                    "name" : "Light.002"
-                },
-                {
-                    "color" : [
-                        1,
-                        1,
-                        1
-                    ],
-                    "intensity" : 200,
-                    "type" : "point",
-                    "name" : "Light.003"
-                },
-                {
-                    "color" : [
-                        0.08515512943267822,
-                        0.09869848936796188,
-                        1
-                    ],
-                    "intensity" : 500,
-                    "type" : "point",
-                    "name" : "Light"
-                }
-            ]
-        }
-    },
     "scene" : 0,
     "scenes" : [
         {
             "name" : "Scene",
             "nodes" : [
+                0,
                 1,
+                2,
                 3,
+                4,
                 5,
+                6,
                 7,
+                8,
                 9,
+                10,
                 11,
+                12,
                 13,
+                14,
                 15,
+                16,
                 17,
                 18,
                 19,
@@ -200,318 +107,11 @@
                 96,
                 97,
                 98,
-                99,
-                100,
-                101,
-                102,
-                103,
-                104,
-                105,
-                106,
-                107,
-                108,
-                109,
-                110,
-                111,
-                112,
-                113,
-                114,
-                115,
-                116,
-                117
+                99
             ]
         }
     ],
     "nodes" : [
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 0
-                }
-            },
-            "name" : "Light.004_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                0
-            ],
-            "name" : "Light.004",
-            "rotation" : [
-                0.16907575726509094,
-                0.7558803558349609,
-                -0.27217137813568115,
-                0.570947527885437
-            ],
-            "translation" : [
-                -0.014732003211975098,
-                -6.8345794677734375,
-                0.4799565076828003
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 1
-                }
-            },
-            "name" : "Light.008_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                2
-            ],
-            "name" : "Light.008",
-            "rotation" : [
-                0.5461685657501221,
-                0.17829416692256927,
-                0.7833539247512817,
-                -0.23720812797546387
-            ],
-            "translation" : [
-                1.1523385047912598,
-                -9.137554168701172,
-                0.5999479293823242
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 2
-                }
-            },
-            "name" : "Light.007_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                4
-            ],
-            "name" : "Light.007",
-            "rotation" : [
-                0.5461685657501221,
-                0.17829416692256927,
-                0.7833539247512817,
-                -0.23720812797546387
-            ],
-            "translation" : [
-                -3.4917516708374023,
-                -13.070184707641602,
-                1.6650097370147705
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 3
-                }
-            },
-            "name" : "Light.006_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                6
-            ],
-            "name" : "Light.006",
-            "rotation" : [
-                0.5461685657501221,
-                0.17829416692256927,
-                0.7833539247512817,
-                -0.23720812797546387
-            ],
-            "translation" : [
-                1.8024615049362183,
-                -12.954553604125977,
-                0.8813228607177734
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 4
-                }
-            },
-            "name" : "Light.005_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                8
-            ],
-            "name" : "Light.005",
-            "rotation" : [
-                0.5461685657501221,
-                0.17829416692256927,
-                0.7833539247512817,
-                -0.23720812797546387
-            ],
-            "scale" : [
-                1.5799999237060547,
-                1,
-                1
-            ],
-            "translation" : [
-                0.18400272727012634,
-                -17.379716873168945,
-                0.330554723739624
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 5
-                }
-            },
-            "name" : "Light.001_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                10
-            ],
-            "name" : "Light.001",
-            "rotation" : [
-                0.16907575726509094,
-                0.7558803558349609,
-                -0.27217137813568115,
-                0.570947527885437
-            ],
-            "translation" : [
-                -1.0122666358947754,
-                -4.7328948974609375,
-                1.4997954368591309
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 6
-                }
-            },
-            "name" : "Light.002_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                12
-            ],
-            "name" : "Light.002",
-            "rotation" : [
-                0.16907575726509094,
-                0.7558803558349609,
-                -0.27217137813568115,
-                0.570947527885437
-            ],
-            "translation" : [
-                1.8024616241455078,
-                2.6179189682006836,
-                0.4799565076828003
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 7
-                }
-            },
-            "name" : "Light.003_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                14
-            ],
-            "name" : "Light.003",
-            "rotation" : [
-                0.16907575726509094,
-                0.7558803558349609,
-                -0.27217137813568115,
-                0.570947527885437
-            ],
-            "scale" : [
-                1.5799999237060547,
-                1,
-                1
-            ],
-            "translation" : [
-                0.33630335330963135,
-                7.542732238769531,
-                -0.1767977476119995
-            ]
-        },
-        {
-            "extensions" : {
-                "KHR_lights_punctual" : {
-                    "light" : 8
-                }
-            },
-            "name" : "Light_Orientation",
-            "rotation" : [
-                -0.7071067690849304,
-                0,
-                0,
-                0.7071067690849304
-            ]
-        },
-        {
-            "children" : [
-                16
-            ],
-            "name" : "Light",
-            "rotation" : [
-                0.16907575726509094,
-                0.7558803558349609,
-                -0.27217137813568115,
-                0.570947527885437
-            ],
-            "translation" : [
-                1.1523385047912598,
-                -1.0184533596038818,
-                1.6738810539245605
-            ]
-        },
         {
             "mesh" : 0,
             "name" : "particle.000",
@@ -1419,21 +1019,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 18,
+                        "node" : 0,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 18,
+                        "node" : 0,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 18,
+                        "node" : 0,
                         "path" : "scale"
                     }
                 }
@@ -1462,21 +1062,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 19,
+                        "node" : 1,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 19,
+                        "node" : 1,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 19,
+                        "node" : 1,
                         "path" : "scale"
                     }
                 }
@@ -1505,21 +1105,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 20,
+                        "node" : 2,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 20,
+                        "node" : 2,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 20,
+                        "node" : 2,
                         "path" : "scale"
                     }
                 }
@@ -1548,21 +1148,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 21,
+                        "node" : 3,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 21,
+                        "node" : 3,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 21,
+                        "node" : 3,
                         "path" : "scale"
                     }
                 }
@@ -1591,21 +1191,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 22,
+                        "node" : 4,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 22,
+                        "node" : 4,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 22,
+                        "node" : 4,
                         "path" : "scale"
                     }
                 }
@@ -1634,21 +1234,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 23,
+                        "node" : 5,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 23,
+                        "node" : 5,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 23,
+                        "node" : 5,
                         "path" : "scale"
                     }
                 }
@@ -1677,21 +1277,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 24,
+                        "node" : 6,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 24,
+                        "node" : 6,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 24,
+                        "node" : 6,
                         "path" : "scale"
                     }
                 }
@@ -1720,21 +1320,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 25,
+                        "node" : 7,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 25,
+                        "node" : 7,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 25,
+                        "node" : 7,
                         "path" : "scale"
                     }
                 }
@@ -1763,21 +1363,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 26,
+                        "node" : 8,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 26,
+                        "node" : 8,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 26,
+                        "node" : 8,
                         "path" : "scale"
                     }
                 }
@@ -1806,21 +1406,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 27,
+                        "node" : 9,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 27,
+                        "node" : 9,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 27,
+                        "node" : 9,
                         "path" : "scale"
                     }
                 }
@@ -1849,21 +1449,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 28,
+                        "node" : 10,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 28,
+                        "node" : 10,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 28,
+                        "node" : 10,
                         "path" : "scale"
                     }
                 }
@@ -1892,21 +1492,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 29,
+                        "node" : 11,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 29,
+                        "node" : 11,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 29,
+                        "node" : 11,
                         "path" : "scale"
                     }
                 }
@@ -1935,21 +1535,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 30,
+                        "node" : 12,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 30,
+                        "node" : 12,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 30,
+                        "node" : 12,
                         "path" : "scale"
                     }
                 }
@@ -1978,21 +1578,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 31,
+                        "node" : 13,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 31,
+                        "node" : 13,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 31,
+                        "node" : 13,
                         "path" : "scale"
                     }
                 }
@@ -2021,21 +1621,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 32,
+                        "node" : 14,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 32,
+                        "node" : 14,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 32,
+                        "node" : 14,
                         "path" : "scale"
                     }
                 }
@@ -2064,21 +1664,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 33,
+                        "node" : 15,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 33,
+                        "node" : 15,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 33,
+                        "node" : 15,
                         "path" : "scale"
                     }
                 }
@@ -2107,21 +1707,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 34,
+                        "node" : 16,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 34,
+                        "node" : 16,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 34,
+                        "node" : 16,
                         "path" : "scale"
                     }
                 }
@@ -2150,21 +1750,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 35,
+                        "node" : 17,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 35,
+                        "node" : 17,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 35,
+                        "node" : 17,
                         "path" : "scale"
                     }
                 }
@@ -2193,21 +1793,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 36,
+                        "node" : 18,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 36,
+                        "node" : 18,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 36,
+                        "node" : 18,
                         "path" : "scale"
                     }
                 }
@@ -2236,21 +1836,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 37,
+                        "node" : 19,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 37,
+                        "node" : 19,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 37,
+                        "node" : 19,
                         "path" : "scale"
                     }
                 }
@@ -2279,21 +1879,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 38,
+                        "node" : 20,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 38,
+                        "node" : 20,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 38,
+                        "node" : 20,
                         "path" : "scale"
                     }
                 }
@@ -2322,21 +1922,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 39,
+                        "node" : 21,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 39,
+                        "node" : 21,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 39,
+                        "node" : 21,
                         "path" : "scale"
                     }
                 }
@@ -2365,21 +1965,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 40,
+                        "node" : 22,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 40,
+                        "node" : 22,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 40,
+                        "node" : 22,
                         "path" : "scale"
                     }
                 }
@@ -2408,21 +2008,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 41,
+                        "node" : 23,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 41,
+                        "node" : 23,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 41,
+                        "node" : 23,
                         "path" : "scale"
                     }
                 }
@@ -2451,21 +2051,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 42,
+                        "node" : 24,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 42,
+                        "node" : 24,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 42,
+                        "node" : 24,
                         "path" : "scale"
                     }
                 }
@@ -2494,21 +2094,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 43,
+                        "node" : 25,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 43,
+                        "node" : 25,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 43,
+                        "node" : 25,
                         "path" : "scale"
                     }
                 }
@@ -2537,21 +2137,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 44,
+                        "node" : 26,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 44,
+                        "node" : 26,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 44,
+                        "node" : 26,
                         "path" : "scale"
                     }
                 }
@@ -2580,21 +2180,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 45,
+                        "node" : 27,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 45,
+                        "node" : 27,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 45,
+                        "node" : 27,
                         "path" : "scale"
                     }
                 }
@@ -2623,21 +2223,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 46,
+                        "node" : 28,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 46,
+                        "node" : 28,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 46,
+                        "node" : 28,
                         "path" : "scale"
                     }
                 }
@@ -2666,21 +2266,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 47,
+                        "node" : 29,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 47,
+                        "node" : 29,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 47,
+                        "node" : 29,
                         "path" : "scale"
                     }
                 }
@@ -2709,21 +2309,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 48,
+                        "node" : 30,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 48,
+                        "node" : 30,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 48,
+                        "node" : 30,
                         "path" : "scale"
                     }
                 }
@@ -2752,21 +2352,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 49,
+                        "node" : 31,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 49,
+                        "node" : 31,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 49,
+                        "node" : 31,
                         "path" : "scale"
                     }
                 }
@@ -2795,21 +2395,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 50,
+                        "node" : 32,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 50,
+                        "node" : 32,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 50,
+                        "node" : 32,
                         "path" : "scale"
                     }
                 }
@@ -2838,21 +2438,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 51,
+                        "node" : 33,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 51,
+                        "node" : 33,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 51,
+                        "node" : 33,
                         "path" : "scale"
                     }
                 }
@@ -2881,21 +2481,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 52,
+                        "node" : 34,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 52,
+                        "node" : 34,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 52,
+                        "node" : 34,
                         "path" : "scale"
                     }
                 }
@@ -2924,21 +2524,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 53,
+                        "node" : 35,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 53,
+                        "node" : 35,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 53,
+                        "node" : 35,
                         "path" : "scale"
                     }
                 }
@@ -2967,21 +2567,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 54,
+                        "node" : 36,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 54,
+                        "node" : 36,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 54,
+                        "node" : 36,
                         "path" : "scale"
                     }
                 }
@@ -3010,21 +2610,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 55,
+                        "node" : 37,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 55,
+                        "node" : 37,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 55,
+                        "node" : 37,
                         "path" : "scale"
                     }
                 }
@@ -3053,21 +2653,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 56,
+                        "node" : 38,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 56,
+                        "node" : 38,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 56,
+                        "node" : 38,
                         "path" : "scale"
                     }
                 }
@@ -3096,21 +2696,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 57,
+                        "node" : 39,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 57,
+                        "node" : 39,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 57,
+                        "node" : 39,
                         "path" : "scale"
                     }
                 }
@@ -3139,21 +2739,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 58,
+                        "node" : 40,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 58,
+                        "node" : 40,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 58,
+                        "node" : 40,
                         "path" : "scale"
                     }
                 }
@@ -3182,21 +2782,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 59,
+                        "node" : 41,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 59,
+                        "node" : 41,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 59,
+                        "node" : 41,
                         "path" : "scale"
                     }
                 }
@@ -3225,21 +2825,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 60,
+                        "node" : 42,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 60,
+                        "node" : 42,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 60,
+                        "node" : 42,
                         "path" : "scale"
                     }
                 }
@@ -3268,21 +2868,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 61,
+                        "node" : 43,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 61,
+                        "node" : 43,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 61,
+                        "node" : 43,
                         "path" : "scale"
                     }
                 }
@@ -3311,21 +2911,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 62,
+                        "node" : 44,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 62,
+                        "node" : 44,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 62,
+                        "node" : 44,
                         "path" : "scale"
                     }
                 }
@@ -3354,21 +2954,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 63,
+                        "node" : 45,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 63,
+                        "node" : 45,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 63,
+                        "node" : 45,
                         "path" : "scale"
                     }
                 }
@@ -3397,21 +2997,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 64,
+                        "node" : 46,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 64,
+                        "node" : 46,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 64,
+                        "node" : 46,
                         "path" : "scale"
                     }
                 }
@@ -3440,21 +3040,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 65,
+                        "node" : 47,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 65,
+                        "node" : 47,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 65,
+                        "node" : 47,
                         "path" : "scale"
                     }
                 }
@@ -3483,21 +3083,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 66,
+                        "node" : 48,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 66,
+                        "node" : 48,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 66,
+                        "node" : 48,
                         "path" : "scale"
                     }
                 }
@@ -3526,21 +3126,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 67,
+                        "node" : 49,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 67,
+                        "node" : 49,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 67,
+                        "node" : 49,
                         "path" : "scale"
                     }
                 }
@@ -3569,21 +3169,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 68,
+                        "node" : 50,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 68,
+                        "node" : 50,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 68,
+                        "node" : 50,
                         "path" : "scale"
                     }
                 }
@@ -3612,21 +3212,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 69,
+                        "node" : 51,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 69,
+                        "node" : 51,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 69,
+                        "node" : 51,
                         "path" : "scale"
                     }
                 }
@@ -3655,21 +3255,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 70,
+                        "node" : 52,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 70,
+                        "node" : 52,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 70,
+                        "node" : 52,
                         "path" : "scale"
                     }
                 }
@@ -3698,21 +3298,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 71,
+                        "node" : 53,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 71,
+                        "node" : 53,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 71,
+                        "node" : 53,
                         "path" : "scale"
                     }
                 }
@@ -3741,21 +3341,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 72,
+                        "node" : 54,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 72,
+                        "node" : 54,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 72,
+                        "node" : 54,
                         "path" : "scale"
                     }
                 }
@@ -3784,21 +3384,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 73,
+                        "node" : 55,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 73,
+                        "node" : 55,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 73,
+                        "node" : 55,
                         "path" : "scale"
                     }
                 }
@@ -3827,21 +3427,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 74,
+                        "node" : 56,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 74,
+                        "node" : 56,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 74,
+                        "node" : 56,
                         "path" : "scale"
                     }
                 }
@@ -3870,21 +3470,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 75,
+                        "node" : 57,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 75,
+                        "node" : 57,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 75,
+                        "node" : 57,
                         "path" : "scale"
                     }
                 }
@@ -3913,21 +3513,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 76,
+                        "node" : 58,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 76,
+                        "node" : 58,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 76,
+                        "node" : 58,
                         "path" : "scale"
                     }
                 }
@@ -3956,21 +3556,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 77,
+                        "node" : 59,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 77,
+                        "node" : 59,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 77,
+                        "node" : 59,
                         "path" : "scale"
                     }
                 }
@@ -3999,21 +3599,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 78,
+                        "node" : 60,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 78,
+                        "node" : 60,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 78,
+                        "node" : 60,
                         "path" : "scale"
                     }
                 }
@@ -4042,21 +3642,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 79,
+                        "node" : 61,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 79,
+                        "node" : 61,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 79,
+                        "node" : 61,
                         "path" : "scale"
                     }
                 }
@@ -4085,21 +3685,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 80,
+                        "node" : 62,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 80,
+                        "node" : 62,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 80,
+                        "node" : 62,
                         "path" : "scale"
                     }
                 }
@@ -4128,21 +3728,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 81,
+                        "node" : 63,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 81,
+                        "node" : 63,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 81,
+                        "node" : 63,
                         "path" : "scale"
                     }
                 }
@@ -4171,21 +3771,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 82,
+                        "node" : 64,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 82,
+                        "node" : 64,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 82,
+                        "node" : 64,
                         "path" : "scale"
                     }
                 }
@@ -4214,21 +3814,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 83,
+                        "node" : 65,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 83,
+                        "node" : 65,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 83,
+                        "node" : 65,
                         "path" : "scale"
                     }
                 }
@@ -4257,21 +3857,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 84,
+                        "node" : 66,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 84,
+                        "node" : 66,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 84,
+                        "node" : 66,
                         "path" : "scale"
                     }
                 }
@@ -4300,21 +3900,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 85,
+                        "node" : 67,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 85,
+                        "node" : 67,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 85,
+                        "node" : 67,
                         "path" : "scale"
                     }
                 }
@@ -4343,21 +3943,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 86,
+                        "node" : 68,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 86,
+                        "node" : 68,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 86,
+                        "node" : 68,
                         "path" : "scale"
                     }
                 }
@@ -4386,21 +3986,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 87,
+                        "node" : 69,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 87,
+                        "node" : 69,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 87,
+                        "node" : 69,
                         "path" : "scale"
                     }
                 }
@@ -4429,21 +4029,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 88,
+                        "node" : 70,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 88,
+                        "node" : 70,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 88,
+                        "node" : 70,
                         "path" : "scale"
                     }
                 }
@@ -4472,21 +4072,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 89,
+                        "node" : 71,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 89,
+                        "node" : 71,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 89,
+                        "node" : 71,
                         "path" : "scale"
                     }
                 }
@@ -4515,21 +4115,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 90,
+                        "node" : 72,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 90,
+                        "node" : 72,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 90,
+                        "node" : 72,
                         "path" : "scale"
                     }
                 }
@@ -4558,21 +4158,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 91,
+                        "node" : 73,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 91,
+                        "node" : 73,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 91,
+                        "node" : 73,
                         "path" : "scale"
                     }
                 }
@@ -4601,21 +4201,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 92,
+                        "node" : 74,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 92,
+                        "node" : 74,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 92,
+                        "node" : 74,
                         "path" : "scale"
                     }
                 }
@@ -4644,21 +4244,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 93,
+                        "node" : 75,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 93,
+                        "node" : 75,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 93,
+                        "node" : 75,
                         "path" : "scale"
                     }
                 }
@@ -4687,21 +4287,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 94,
+                        "node" : 76,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 94,
+                        "node" : 76,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 94,
+                        "node" : 76,
                         "path" : "scale"
                     }
                 }
@@ -4730,21 +4330,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 95,
+                        "node" : 77,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 95,
+                        "node" : 77,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 95,
+                        "node" : 77,
                         "path" : "scale"
                     }
                 }
@@ -4773,21 +4373,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 96,
+                        "node" : 78,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 96,
+                        "node" : 78,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 96,
+                        "node" : 78,
                         "path" : "scale"
                     }
                 }
@@ -4816,21 +4416,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 97,
+                        "node" : 79,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 97,
+                        "node" : 79,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 97,
+                        "node" : 79,
                         "path" : "scale"
                     }
                 }
@@ -4859,21 +4459,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 98,
+                        "node" : 80,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 98,
+                        "node" : 80,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 98,
+                        "node" : 80,
                         "path" : "scale"
                     }
                 }
@@ -4902,21 +4502,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 99,
+                        "node" : 81,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 99,
+                        "node" : 81,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 99,
+                        "node" : 81,
                         "path" : "scale"
                     }
                 }
@@ -4945,21 +4545,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 100,
+                        "node" : 82,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 100,
+                        "node" : 82,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 100,
+                        "node" : 82,
                         "path" : "scale"
                     }
                 }
@@ -4988,21 +4588,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 101,
+                        "node" : 83,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 101,
+                        "node" : 83,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 101,
+                        "node" : 83,
                         "path" : "scale"
                     }
                 }
@@ -5031,21 +4631,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 102,
+                        "node" : 84,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 102,
+                        "node" : 84,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 102,
+                        "node" : 84,
                         "path" : "scale"
                     }
                 }
@@ -5074,21 +4674,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 103,
+                        "node" : 85,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 103,
+                        "node" : 85,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 103,
+                        "node" : 85,
                         "path" : "scale"
                     }
                 }
@@ -5117,21 +4717,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 104,
+                        "node" : 86,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 104,
+                        "node" : 86,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 104,
+                        "node" : 86,
                         "path" : "scale"
                     }
                 }
@@ -5160,21 +4760,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 105,
+                        "node" : 87,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 105,
+                        "node" : 87,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 105,
+                        "node" : 87,
                         "path" : "scale"
                     }
                 }
@@ -5203,21 +4803,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 106,
+                        "node" : 88,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 106,
+                        "node" : 88,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 106,
+                        "node" : 88,
                         "path" : "scale"
                     }
                 }
@@ -5246,21 +4846,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 107,
+                        "node" : 89,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 107,
+                        "node" : 89,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 107,
+                        "node" : 89,
                         "path" : "scale"
                     }
                 }
@@ -5289,21 +4889,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 108,
+                        "node" : 90,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 108,
+                        "node" : 90,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 108,
+                        "node" : 90,
                         "path" : "scale"
                     }
                 }
@@ -5332,21 +4932,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 109,
+                        "node" : 91,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 109,
+                        "node" : 91,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 109,
+                        "node" : 91,
                         "path" : "scale"
                     }
                 }
@@ -5375,21 +4975,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 110,
+                        "node" : 92,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 110,
+                        "node" : 92,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 110,
+                        "node" : 92,
                         "path" : "scale"
                     }
                 }
@@ -5418,21 +5018,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 111,
+                        "node" : 93,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 111,
+                        "node" : 93,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 111,
+                        "node" : 93,
                         "path" : "scale"
                     }
                 }
@@ -5461,21 +5061,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 112,
+                        "node" : 94,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 112,
+                        "node" : 94,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 112,
+                        "node" : 94,
                         "path" : "scale"
                     }
                 }
@@ -5504,21 +5104,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 113,
+                        "node" : 95,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 113,
+                        "node" : 95,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 113,
+                        "node" : 95,
                         "path" : "scale"
                     }
                 }
@@ -5547,21 +5147,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 114,
+                        "node" : 96,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 114,
+                        "node" : 96,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 114,
+                        "node" : 96,
                         "path" : "scale"
                     }
                 }
@@ -5590,21 +5190,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 115,
+                        "node" : 97,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 115,
+                        "node" : 97,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 115,
+                        "node" : 97,
                         "path" : "scale"
                     }
                 }
@@ -5633,21 +5233,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 116,
+                        "node" : 98,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 116,
+                        "node" : 98,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 116,
+                        "node" : 98,
                         "path" : "scale"
                     }
                 }
@@ -5676,21 +5276,21 @@
                 {
                     "sampler" : 0,
                     "target" : {
-                        "node" : 117,
+                        "node" : 99,
                         "path" : "translation"
                     }
                 },
                 {
                     "sampler" : 1,
                     "target" : {
-                        "node" : 117,
+                        "node" : 99,
                         "path" : "rotation"
                     }
                 },
                 {
                     "sampler" : 2,
                     "target" : {
-                        "node" : 117,
+                        "node" : 99,
                         "path" : "scale"
                     }
                 }
