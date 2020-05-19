@@ -8,8 +8,8 @@
   <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> <!-- look-at functionality for assets -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> <!-- ar for a-fame -->
   <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> <!-- enabling animations in ar -->
-  
-<!--
+
+  <!--
 <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
 -->
 
@@ -21,16 +21,25 @@
   <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
     <a-assets>
-      <a-assets-item id="gradHatParticle" src="3d/GradHat-particlesystem.gltf"></a-asset-item>
-      <a-assets-item id="GoldBaloons" src="3d/Baloons_golden.gltf"></a-asset-item>
-      <a-assets-item id="SilverBaloons" src="3d/Baloons_silver.gltf"></a-asset-item>
-      <a-assets-item id="3DText2" src="3d/wishesScene.gltf"></a-asset-item>
+      <a-assets-item id="gradHatParticle" src="3d/GradHat-particlesystem.gltf">
+        </a-asset-item>
+        <a-assets-item id="GoldBaloons" src="3d/Baloons_golden.gltf">
+          </a-asset-item>
+          <a-assets-item id="SilverBaloons" src="3d/Baloons_silver.gltf">
+            </a-asset-item>
+            <a-assets-item id="3DText2" src="3d/wishesScene.gltf">
+              </a-asset-item>
     </a-assets>
 
     <!--
 <a-entity environment="preset: egypt"></a-entity>
 -->
 
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #FFBA8F;" position="0 10 -10"></a-entity>
+
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #c9faff;" position="0 10 10"></a-entity>
+
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #FF8FB6;" position="0 10 0"></a-entity>
 
     <a-entity gltf-model="#gradHatParticle" animation-mixer position="2.5 15 -2.5"> </a-entity>
     <a-entity gltf-model="#gradHatParticle" animation-mixer position="2.5 15 0"> </a-entity>
