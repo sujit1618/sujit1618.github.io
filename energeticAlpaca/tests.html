@@ -28,7 +28,7 @@
             event-set__enter="_event: mouseenter; visible: false"
            event-set__leave="_event: mouseleave; visible: true">
          </a-entity>
-    <a-entity gltf-model="#test2" animation-mixer position="0 0 0"
+    <a-entity gltf-model="#test2" animation-mixer position="0 0 0" visible: "false"
             event-set__enter="_event: mouseenter; visible: false"
            event-set__leave="_event: mouseleave; visible: true"> </a-entity>
     <a-entity gltf-model="#test3" animation-mixer position="0 0 0"
@@ -36,7 +36,7 @@
            event-set__leave="_event: mouseleave; visible: true"> </a-entity>
 
     <a-camera>
-      <a-cursor></a-cursor>
+      <a-cursor fuse="true" color="yellow"></a-cursor>
     </a-camera>
 
   </a-scene>
