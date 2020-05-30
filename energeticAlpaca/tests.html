@@ -25,15 +25,15 @@
 
 
     <a-entity gltf-model="#test1" animation-mixer position="0 0 0"
-            event-set__enter="_event: mouseenter; visible: false"
-           event-set__leave="_event: mouseleave; visible: true">
+            event-set__enter="_event: mouseenter; scale: 0.1 0.1 0.1"
+           event-set__leave="_event: mouseleave; scale: 1 1 1">
          </a-entity>
-    <a-entity gltf-model="#test2" animation-mixer position="0 0 0" visible: "false"
-            event-set__enter="_event: mouseenter; visible: false"
-           event-set__leave="_event: mouseleave; visible: true"> </a-entity>
+    <a-entity gltf-model="#test2" animation-mixer position="0 0 0"
+            event-set__enter="_event: mouseenter; scale: 0.1 0.1 0.1"
+           event-set__leave="_event: mouseleave; scale: 1 1 1"> </a-entity>
     <a-entity gltf-model="#test3" animation-mixer position="0 0 0"
-            event-set__enter="_event: mouseenter; visible: false"
-           event-set__leave="_event: mouseleave; visible: true"> </a-entity>
+            event-set__enter="_event: mouseenter; scale: 0.1 0.1 0.1"
+           event-set__leave="_event: mouseleave; scale: 1 1 1"> </a-entity>
 
     <a-camera>
       <a-cursor fuse="true" color="yellow"></a-cursor>
