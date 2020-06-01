@@ -11,12 +11,16 @@
 <body>
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
-    <a-box position="-3 0.6 -1" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1"></a-box>
-    <a-box position="-1 0.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1" ></a-box>
-    <a-box position="8 2 -7" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1" ></a-box>
-    <a-box position="-6 2.5 3" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1" ></a-box>
-    <a-box position="-1 1.5 5" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1" ></a-box>
-    <a-box position="-1 2.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6" color="#2b189b" event-set__enter="_event: mouseenter; color: #ec407a; scale: 1 1 1" ></a-box>
+    <a-assets>
+      <a-asset-item id="testModel" src="3d/mango1.gltf"> </a-asset-item>
+    </a-assets>
+
+    <a-asset-item id="testModel" position="-3 0.6 -1" rotation="0 45 0" scale="0.6 0.6 0.6"  event-set__enter="_event: mouseenter; scale: 1 1 1"></a-asset-item>
+    <a-asset-item id="testModel" position="-1 0.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6"  event-set__enter="_event: mouseenter; scale: 1 1 1" ></a-asset-item>
+    <a-asset-item id="testModel" position="8 2 -7" rotation="0 45 0" scale="0.6 0.6 0.6"  event-set__enter="_event: mouseenter; scale: 1 1 1" ></a-asset-item>
+    <a-asset-item id="testModel" position="-6 2.5 3" rotation="0 45 0" scale="0.6 0.6 0.6"  event-set__enter="_event: mouseenter; scale: 1 1 1" ></a-asset-item>
+    <a-asset-item id="testModel" position="-1 1.5 5" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1" ></a-asset-item>
+    <a-asset-item id="testModel" position="-1 2.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6"  event-set__enter="_event: mouseenter; scale: 1 1 1" ></a-asset-item>
 
     <a-camera rotation-reader>
       <a-cursor></a-cursor>
