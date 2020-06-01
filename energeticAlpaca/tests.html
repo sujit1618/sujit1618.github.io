@@ -12,9 +12,15 @@
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
     <a-assets>
-      <a-asset-item id="testModel" src="3d/glowy_box_9.gltf"> </a-asset-item>
+      <a-asset-item id="testModel" src="3d/mango1.gltf"> </a-asset-item>
     </a-assets>
 
+    <a-entity gltf-model="testModel" position="1 5 0"></a-entity>
+
+    <a-box height="1" depth="1" width="1" position="1 -5 0" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1" color="tomato"></a-box>
+
+
+    <!--
     <a-box height="1" depth="1" width="1" position="1 5 0" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1" color="tomato"></a-box>
     <a-entity gltf-model="testModel" position="1 5 0" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1"></a-entity>
     <a-entity gltf-model="testModel" position="-1 0.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1">
@@ -26,9 +32,10 @@
     <a-entity gltf-model="testModel" position="-1 1.5 5" rotation="0 45 0" scale="0.6 0.6 0.6">
     </a-entity>
     <a-entity gltf-model="testModel" position="-1 2.5 -3" rotation="0 45 0" scale="0.6 0.6 0.6" event-set__enter="_event: mouseenter; scale: 1 1 1">
+-->
     </a-entity>
 
-    <a-camera rotation-reader>
+    <a-camera rotation-reader >
       <a-cursor></a-cursor>
     </a-camera>
 
