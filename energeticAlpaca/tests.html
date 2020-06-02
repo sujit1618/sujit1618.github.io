@@ -5,35 +5,29 @@
   <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> <!-- ar for a-fame -->
   <script src="./tests_script.js"></script> <!-- javascript for button -->
-  <link rel="stylesheet" type="text/css" href="./tests_style.css" />
+  <link rel="stylesheet" type="text/css" href="./tests_style.css"/>
 
   <script>
-    AFRAME.registerComponent('change-color-on-hover', {
-      schema: {
-        color: {
-          default: 'red'
-        }
-      },
+  AFRAME.registerComponent('change-color-on-hover', {
+    schema: {
+      color: {default: 'red'}
+    },
 
-      init: function() {
-        var data = this.data;
-        var el = this.el; // <a-box>
-        var defaultColor = el.getAttribute('material').color;
+    init: function () {
+      var data = this.data;
+      var el = this.el;  // <a-box>
+      var defaultColor = el.getAttribute('material').color;
 
-        el.addEventListener('mouseenter', function() {
-          document.getElementByName('change').onclick = function() {
-            el.setAttribute('color', data.color);
-          }​;​
-        });
+      el.addEventListener('mouseenter', function () {
+        el.setAttribute('color', data.color);
+      });
 
-        el.addEventListener('mouseleave', function() {
-          document.getElementByName('change').onclick = function() {
-            el.setAttribute('color', defaultColor);
-          }​;​
-        });
-      }
-    });
-  </script>
+      el.addEventListener('mouseleave', function () {
+        el.setAttribute('color', defaultColor);
+      });
+    }
+  });
+</script>
 
 </head>
 
@@ -68,7 +62,7 @@
   </a-scene>
 
   <div class="centered">
-    <button name="change" data-action="change"></button>
+    <button data-action="change"></button>
   </div>
 
 </body>
