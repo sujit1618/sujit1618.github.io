@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "MangoScaled.001",
+            "name" : "MangoScaled.004",
             "rotation" : [
                 0.033634405583143234,
                 0.059266913682222366,
@@ -28,9 +28,9 @@
                 1.0799524784088135
             ],
             "translation" : [
-                6.891990661621094,
+                -17.86996078491211,
                 14.705202102661133,
-                43.15154266357422
+                -3.0549697875976562
             ]
         }
     ],
@@ -42,7 +42,7 @@
                 0,
                 0
             ],
-            "name" : "Material.005",
+            "name" : "Material.011",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     0.8000000715255737,
@@ -61,7 +61,7 @@
                 0,
                 0
             ],
-            "name" : "Material.006",
+            "name" : "Material.010",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     0.07998673617839813,
@@ -76,7 +76,7 @@
     ],
     "meshes" : [
         {
-            "name" : "BezierCurve.042",
+            "name" : "BezierCurve.047",
             "primitives" : [
                 {
                     "attributes" : {
