@@ -4,30 +4,6 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> <!-- ar for a-fame -->
-  <script src="./tests_script.js"></script> <!-- javascript for button -->
-  <link rel="stylesheet" type="text/css" href="./tests_style.css"/>
-
-  <script>
-  AFRAME.registerComponent('change-color-on-hover', {
-    schema: {
-      color: {default: 'red'}
-    },
-
-    init: function () {
-      var data = this.data;
-      var el = this.el;  // <a-box>
-      var defaultColor = el.getAttribute('material').color;
-
-      el.addEventListener('mouseenter', function () {
-        el.setAttribute('color', data.color);
-      });
-
-      el.addEventListener('mouseleave', function () {
-        el.setAttribute('color', defaultColor);
-      });
-    }
-  });
-</script>
 
 </head>
 
@@ -35,25 +11,17 @@
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
     <a-assets>
-      <a-asset-item id="testModel" src="3d/mango1.gltf"> </a-asset-item>
+      <a-asset-item id="mangoesTree" src="3d/mangoesonly.gltf"> </a-asset-item>
+      <a-asset-item id="leavesTree" src="3d/leavesonly.gltf"> </a-asset-item>
+      <a-asset-item id="trunkTree" src="3d/trunkonly.gltf"> </a-asset-item>
     </a-assets>
 
 
-    <a-box color="#EF2D5E" position="2 1 -4" change-color-on-hover="color: blue"></a-box>
 
-    <!--
-<a-entity gltf-model="#testModel" position="1 5 0" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
-
-    <a-entity gltf-model="#testModel" position="-1 0.5 -3" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
-
-    <a-entity gltf-model="#testModel" position="8 2 -7" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
-
-    <a-entity gltf-model="#testModel" position="-6 2.5 3" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
-
-    <a-entity gltf-model="#testModel" position="-1 1.5 5" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
-
-    <a-entity gltf-model="#testModel" position="-1 2.5 -3" rotation="0 45 0" scale="0.1 0.1 0.1" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5" event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5"></a-entity>
--->
+    <a-entity gltf-model="#trunkTree" position="1 5 0">
+      <a-entity gltf-model="#leavesTree" position="0 0 0"> </a-entity>
+      <a-entity gltf-model="#mangoesTree" position="0 0 0"> </a-entity>
+    </a-entity>
 
     <a-camera rotation-reader>
       <a-cursor color="#FFD761"></a-cursor>
