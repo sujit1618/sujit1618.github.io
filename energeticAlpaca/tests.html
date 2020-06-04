@@ -3,17 +3,58 @@
 <head>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+  <style>
+    .centered {
+      height: 20%;
+      justify-content: center;
+      position: fixed;
+      bottom: 0%;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0px auto;
+      left: 0;
+      right: 0;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+      background-color: transparent;
+      width: 81;
+      height: 81;
+      border-radius: 100%;
+      font-size: 12pt;
+      background-color: rgba(255, 215, 97, 0.4);
+      color: white;
+      outline: none;
+    }
+  </style>
+
 </head>
 
-  <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D2"
-             event-set__click="_event: click; color: #8FF7FF"
-             event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
+<body>
+  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: true;" renderer="antialias: true; colorManagement: true;" >
 
-      <a-camera>
-        <a-cursor fuse="false"></a-cursor>
-      </a-camera>
-    </a-scene>
-  </body>
-  </html>
+
+
+    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D2" event-set__click="_event: click; color: #8FF7FF" event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
+
+
+
+    <a-camera>
+      <a-cursor fuse="false">
+        <div class="centered">
+          <button>Select</button>
+        </div>
+      </a-cursor>
+    </a-camera>
+
+  </a-scene>
+
+</body>
+
+</html>
