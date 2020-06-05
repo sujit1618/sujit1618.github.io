@@ -39,12 +39,12 @@
   <script>
   AFRAME.registerComponent('link-on-click', {
     schema: {
-      link: {type: 'string', default: 'https://www.sujitjoshi.me'}
+      targetPage: {type: 'string', default: 'https://www.sujitjoshi.me'}
     },
 
     init: function () {
       this.el.addEventListener('click', function () {
-        window.open(this.data.link, '_blank');
+        window.open(this.data.targetPage, '_blank');
       });
     }
   });
@@ -65,7 +65,7 @@
 
 
 
-    <a-entity gltf-model="#trunkTree" scale="0.5 0.5 0.5" position="0 -1.6 -10" link-on-click="link : https://aframe.io/">
+    <a-entity gltf-model="#trunkTree" scale="0.5 0.5 0.5" position="0 -1.6 -10" link-on-click="targetPage : aframe.io">
       <a-entity gltf-model="#leavesTree" position="0 0 0"> </a-entity>
       <a-entity gltf-model="#mangoesTree" position="0 0 0"> </a-entity>
     </a-entity>
