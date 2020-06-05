@@ -33,6 +33,7 @@
       box-shadow: 0px 0px 5px #565656;
       color: #363636;
       outline: none;
+      z-index: -1;
     }
   </style>
 
@@ -148,11 +149,18 @@
 
 
     <a-camera rotation-reader>
-      <a-cursor color="#FFD761" fuse="false">
-        <div class="centered">
-          <button>Interact</button>
-        </div>
-      </a-cursor>
+      <a-entity cursor="fuse: false"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat">
+            <a-sphere scale="0.01 0.01 0.01" color="blue" position="0 -0.5 -1"></a-sphere>
+            <!--
+<div class="centered">
+              <button position="8 0 0">Interact</button>
+            </div>
+-->
+  </a-entity>
+
     </a-camera>
 
 
