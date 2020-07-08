@@ -4,137 +4,12 @@
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> <!-- ar for a-fame -->
-  <style>
-    .centered {
-      height: 20%;
-      justify-content: center;
-      position: fixed;
-      bottom: 0%;
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      margin: 0px auto;
-      left: 0;
-      right: 0;
-      z-index: -1;
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border-style: none;
-      width: 81;
-      height: 81;
-      border-radius: 100%;
-      font-size: 13;
-      background-image: linear-gradient(30deg, #ffffff, #d6d6d6);
-      box-shadow: 0px 0px 5px #565656;
-      color: #363636;
-      outline: none;
-      z-index: -1;
-    }
-  </style>
-
-<!--
-  <script>
-    AFRAME.registerComponent('href', {
-      schema: {
-        default: ''
-      },
-
-      boundClickHandler: undefined,
-
-      clickHandler: function hrefClickHandler() {
-        var url = this.data;
-        var target = this.el.getAttribute('target');
-        console.log('link to ' + url);
-        if (url && url[0] === '#') { // in-page anchor
-          var ele = document.querySelector(url);
-          var cams = document.querySelectorAll('a-camera');
-          if (ele && cams) {
-            var targetPosition = ele.getAttribute('position');
-            console.log('focus camera to position:' +
-              JSON.stringify(targetPosition));
-            cams[0].setAttribute('position', targetPosition);
-            window.location.hash = url;
-          } else {
-            console.log('#id or a-camera is not defined');
-          }
-        } else { // normal hyper link
-          if (target) {
-            var animation = '';
-            var exitAnimation = null;
-            console.log('target to ' + target);
-            if (target.indexOf('#') >= 0) {
-              var li = target.split('#');
-              target = li[0];
-              animation = li[1];
-              console.log('target to ' + target + ' & animate ' + animation);
-            }
-            switch (target) {
-              case '_blank':
-                if (animation) {
-                  exitAnimation = document.getElementById(animation);
-                  exitAnimation.addEventListener('animationend',
-                    function animationendHandler() {
-                      exitAnimation.removeEventListener('animationend',
-                        animationendHandler);
-                      window.open(url);
-                    });
-                  this.el.emit('href');
-                } else {
-                  window.open(url);
-                }
-                break;
-              case 'window':
-              default:
-                if (animation) {
-                  exitAnimation = document.getElementById(animation);
-                  exitAnimation.addEventListener('animationend',
-                    function animationendHandler() {
-                      exitAnimation.removeEventListener('animationend',
-                        animationendHandler);
-                      window.location.href = url;
-                    });
-                  this.el.emit('href');
-                } else {
-                  window.location.href = url;
-                }
-                break;
-            }
-          } else {
-            window.location.href = url;
-          }
-        }
-      },
-
-      /**
-       * Called once when component is attached. Generally for initial setup.
-       */
-      init: function() {
-        this.boundClickHandler = this.clickHandler.bind(this);
-        this.el.addEventListener('click', this.boundClickHandler);
-      },
-
-      /**
-       * Called when a component is removed (e.g., via removeAttribute).
-       * Generally undoes all modifications to the entity.
-       */
-      remove: function() {
-        this.el.removeEventListener('click', this.boundClickHandler);
-      }
-    });
-  </script>
--->
-
+  <script src="js/href-aframe.js"></script>
 </head>
 
 
 <body>
   <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
-
 
     <a-assets>
       <a-asset-item id="mangoesTree" src="3d/mangoesonly.gltf"> </a-asset-item>
@@ -142,39 +17,25 @@
       <a-asset-item id="trunkTree" src="3d/trunkonly.gltf"> </a-asset-item>
     </a-assets>
 
-
-
     <a-entity gltf-model="#trunkTree" scale="0.5 0.5 0.5" position="0 -1.6 -10" href="https://www.chitalebandhu.in/mango-burfi.html" target="_blank">
       <a-entity gltf-model="#leavesTree" position="0 0 0"> </a-entity>
       <a-entity gltf-model="#mangoesTree" position="0 0 0"> </a-entity>
     </a-entity>
-    <a-light type="ambient" intensity="0.01" decay="50"></a-light>
-
+    <a-light type="point" intensity="1" decay="20" position="0 100 100"></a-light>
 
     <a-camera rotation-reader>
-      <a-entity cursor="fuse: false"
-            position="0 0 -1"
-            geometry="primitive: circle; radius:0.02"
-            material="color: lightyellow; opacity:0.7; blending:additive">
-            <!--
-<a-sphere scale="0.06 0.06 0.01" color="red" position="-0.3 -0.5 -1" metalness="0.7"></a-sphere>
-            <a-sphere scale="0.06 0.06 0.01" color="skyblue" position="0.3 -0.5 -1" metalness="0.7"></a-sphere>
-            <a-sphere scale="0.06 0.06 0.01" color="green" position="0 -0.5 -1" metalness="0.7"></a-sphere>
--->
-            <a-light angle="10" type="spot" color="white" intensity="0.7" decay="2" position="0 0 1" rotation="0 0 0" penumbra="0.2" ></a-light>
 
-            <!--
-<div class="centered">
-              <button position="8 0 0">Interact</button>
-            </div>
--->
-  </a-entity>
+      <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02" material="color: lightyellow; opacity:0.7; blending:additive">
+        <a-light angle="10" type="spot" color="white" intensity="0" decay="2" position="0 0 1" rotation="0 0 0" penumbra="0.2"></a-light>
+      </a-entity>
+
+      <a-sphere scale="0.06 0.06 0.01" color="red" position="-0.3 -0.5 -2"></a-sphere>
+      <a-sphere scale="0.06 0.06 0.01" color="blue" position="0.3 -0.5 -2"></a-sphere>
+      <a-sphere scale="0.06 0.06 0.01" color="green" position="0 -0.5 -2"></a-sphere>
 
     </a-camera>
 
-
   </a-scene>
-
 
 </body>
 
