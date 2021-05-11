@@ -1,0 +1,215 @@
+body{
+    background-color: rgb(250, 250, 250);
+    font-weight: 300;
+}
+
+h2{
+    font-size: 24px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.body-wrapper{
+    display: grid;
+    grid-template-columns: 25vw auto;
+    grid-auto-rows: auto;
+    margin: 90px auto 0 auto;
+    row-gap: 48px;
+    column-gap: 32px;
+    padding: 0 36px;
+}
+.side-bar{
+    grid-column: 1 / span 1;
+    top: 37%;
+    left: 8.5%;
+    position: fixed;
+    scroll-behavior: smooth;
+}
+
+.side-bar ul li a{
+    display: block;
+    cursor: pointer;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) 0.1s;
+}
+.side-bar ul li a:hover{
+    /* font-weight: 400; */
+    text-decoration: underline;
+}
+
+.content-wrapper{
+    background-color: rgb(253, 253, 253);
+    min-height: 75vh;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #33333328;
+    padding: 48px;
+    grid-column: 2/span 2;
+}
+.header-wrapper{
+    display: grid;
+    margin: 0 auto 24px auto;
+    grid-template-columns: 50% auto auto;
+    grid-template-rows: auto;
+    column-gap: 22px;
+    border-bottom: #333 1px solid;
+    padding-bottom: 28px;
+}
+
+.contributors,
+.role{
+    font-size: 15px;
+}
+
+.caps-heading{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.nda{
+    padding: 12px 12px 36px 12px;
+    /* background: rgb(222, 255, 251); */
+    border-bottom: #333 1px solid;
+    font-weight: 300;
+}
+
+.impact-section{
+    margin: 36px 0 0 0;
+    font-size: 18px;
+    /* border-bottom: rgb(80, 80, 80) 1px dotted; */
+}
+
+.impact-sentence{
+    font-weight: 600;
+    margin: 12px 0;
+    font-size: 22px;
+}
+
+.image-para{
+    display: flex;
+    
+}
+.image-para-image{
+    margin: 0 0 0 36px;
+    display: block;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center left;
+}
+
+.stats-section{
+    margin: 56px 0;
+    padding: 33px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-auto-rows: auto auto;
+    column-gap: 24px;
+    row-gap: 28px;
+}
+
+.stat{
+    margin: auto;
+    text-align: center;
+    max-width: 350px;
+}
+.stats-number{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.description-container{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    margin: auto;
+}
+
+#impact-stat{
+    background-color: #ecf9ff;
+}
+
+#research-stat{
+    background-color: #ecfff8;
+}
+
+#ideation-stat{
+    background-color: #ecfeff;
+}
+#ideation-stat .stat{
+    grid-row: 1 / span 2;
+}
+#proto-test-stat{
+    background-color: #ecfff2;
+}
+#proto-test-stat .stat{
+    grid-row: 1 / span 2;
+}
+
+.content-section{
+    margin: 64px 0;
+    /* padding-bottom: 36px; */
+    /* border-bottom: rgb(80, 80, 80) 1px dotted; */
+}
+
+.image-section{
+    margin: 56px 0;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-auto-rows:auto;
+    column-gap: 24px;
+}
+
+.image-container-full{
+    grid-column: 1 / span 2;
+}
+
+.image-half{
+    width: 100%;
+    height: 80%;
+    /* object-fit: cover; */
+    /* box-shadow: 0px 0px 10px #33333328; */
+    border-radius: 5px;
+}
+
+.image-full{
+    width: 100%;
+    object-fit: fill;
+    /* box-shadow: 0px 0px 10px #33333328; */
+    border-radius: 5px;
+}
+
+.caption{
+    font-size: 15px;
+    padding: 8px;
+}
+
+.content-section .caps-heading{
+    margin: 24px 0 12px 0;
+}
+
+.in-content-list{
+    font-size: 18px;
+}
+
+li{
+    margin: 0 0 12px 0;
+}
+
+.next-project{
+    padding: 64px 12px;
+    display: block;
+    margin: 72px auto;
+    text-align: center;
+    border-top: 1px #333 solid;
+    border-bottom: 1px #333 solid;
+    transition: cubic-bezier(0.23, 1, 0.320, 1) 0.1s;
+}
+
+.next-project:hover{
+    font-weight: 400;
+}
+
+/* Covid home testing person- 965712233 */

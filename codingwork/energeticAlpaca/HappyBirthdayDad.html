@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Dad's birthday Party</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> <!-- a-frame -->
+  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> <!-- look-at functionality for assets -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> <!-- ar for a-fame -->
+  <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> <!-- enabling animations in ar -->
+
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+
+  <a-scene light="defaultLightsEnabled:true" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
+
+    <a-assets>
+      <a-assets-item id="GoldBaloons" src="3d/Baloons_golden.gltf"></a-asset-item>
+      <a-assets-item id="SilverBaloons" src="3d/Baloons_silver.gltf"></a-asset-item>
+      <a-assets-item id="3DText2" src="3d/wishesDad.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity light="type: point; intensity: 0.52; distance: 50; decay: 2; color: #FFBA8F;" position="0 5 -10" ></a-entity>
+
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #c9faff;" position="0 10 10" ></a-entity>
+
+    <a-entity light="type: point; intensity: 0.35; distance: 50; decay: 2; color: #FFFFFF;" position="-10 10 0" ></a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="2.5 15 -2.5"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="2.5 15 0"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="2.5 15 2.5"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="2.5 18 -2.5"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="2.5 18 0"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="2.5 18 2.5"> </a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="2.5 10 -2.5"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="2.5 10 0"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="2.5 10 2.5"> </a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 0 2.5"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 0 0"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 0 -2.5"> </a-entity>
+
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 15 2.5"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 15 0"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 15 -2.5"> </a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 9 2.5"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 9 0"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 9 -2.5"> </a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="8 0 -18"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 0 -22"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="1 0 -28"> </a-entity>
+
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="8 15 -18"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="5 15 -22"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="1 15 -28"> </a-entity>
+
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="8 9 -18"> </a-entity>
+    <a-entity gltf-model="#SilverBaloons" animation-mixer position="5 9 -22"> </a-entity>
+    <a-entity gltf-model="#GoldBaloons" animation-mixer position="1 9 -28"> </a-entity>
+
+    <a-entity gltf-model="#3DText2" animation-mixer position="0 0 0" scale="1 1 1"> </a-entity>
+
+    <a-camera gps-projected-camera rotation-reader></a-camera>
+
+  </a-scene>
+
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.0.5",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_lights_punctual"
+    ],
+    "extensionsRequired" : [
+        "KHR_lights_punctual"
+    ],
+    "extensions" : {
+        "KHR_lights_punctual" : {
+            "lights" : [
+                {
+                    "color" : [
+                        0.003257370088249445,
+                        1,
+                        0.7094310522079468
+                    ],
+                    "intensity" : 50,
+                    "spot" : {
+                        "innerConeAngle" : 0.3180443843457894,
+                        "outerConeAngle" : 0.6276575326919556
+                    },
+                    "type" : "spot",
+                    "name" : "Spot"
+                }
+            ]
+        }
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extensions" : {
+                "KHR_lights_punctual" : {
+                    "light" : 0
+                }
+            },
+            "name" : "Spot_Orientation",
+            "rotation" : [
+                -0.7071067690849304,
+                0,
+                0,
+                0.7071067690849304
+            ]
+        },
+        {
+            "children" : [
+                0
+            ],
+            "name" : "Spot",
+            "rotation" : [
+                0.12344667315483093,
+                -0.13563919067382812,
+                0.02192121185362339,
+                -0.9827931523323059
+            ],
+            "scale" : [
+                -0.3241269588470459,
+                -0.3241269588470459,
+                -0.3241269588470459
+            ],
+            "translation" : [
+                -0.022905051708221436,
+                0.8838049173355103,
+                0.03841989487409592
+            ]
+        }
+    ]
+}

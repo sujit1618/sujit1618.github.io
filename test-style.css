@@ -1,0 +1,126 @@
+body{
+    height: 120vh;
+    font-family: objektiv-mk2, sans-serif;
+}
+
+.wrapper{
+    margin: 0 auto 0 auto;
+}
+
+h1{
+    margin: 2% auto 2% auto;
+    font-size: 48px;
+    text-align: center;
+    padding: 0;
+}
+
+h2{
+    font-family: input-mono, monospace;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.project-container{
+    width: 760px;
+    margin: 0 auto;
+    /* background-blend-mode: multiply; */
+}
+
+.project-image{
+     /* background-color: aqua; */
+     height: 220px;
+     width: 400px;
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     opacity: 0.7;
+     border: 4px solid rgba(255, 255, 255, 0);
+     transition: ease 600ms;
+     z-index: 0;
+}
+
+.project-image:hover{
+    opacity: 1;
+    border: rgb(236, 168, 79) 4px solid;
+    z-index: 3;
+    transform: scale(120%);
+}
+
+@keyframes animProj1{
+    0%{transform: translateY(13px);}
+    100%{transform: translateY(-13px);}
+}
+@keyframes animProj2{
+    0%{transform: translateY(-11px);}
+    100%{transform: translateY(11px);}
+}
+@keyframes animProj3{
+    0%{transform: translateY(-13px);}
+    100%{transform: translateY(13px);}
+}
+@keyframes animProj4{
+    0%{transform: translateY(-13px);}
+    100%{transform: translateY(13px);}
+}
+@keyframes animProj5{
+    0%{transform: translateY(-16px);}
+    100%{transform: translateY(16px);}
+}
+@keyframes animProj6{
+    0%{transform: translateY(17px);}
+    100%{transform: translateY(-17px);}
+}
+
+#proj1{
+    /* background-color: rgb(153, 153, 255); */
+    position: absolute;
+    top: 58%;
+    left: 15%;
+    animation: animProj1 11s ease-in-out infinite alternate;
+    background-image: url(./images/home/smartbox.jpg);
+}
+#proj2{
+    /* background-color: rgb(153, 255, 162); */
+    position: absolute;
+    top: 31%;
+    left: 20%;
+    animation: animProj2 7s ease-in-out infinite alternate;
+    background-image: url(./images/home/prescription.jpg);
+}
+
+#proj3{
+    /* background-color: rgb(255, 153, 212); */
+    position: absolute;
+    top: 68%;
+    left: 38%;
+    animation: animProj3 13s ease-in-out infinite alternate;
+    background-image: url(./images/home/polling.jpg);
+}
+
+#proj4{
+    /* background-color: rgb(159, 221, 59); */
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    animation: animProj4 9s ease-in-out infinite alternate;
+    background-image: url(./images/home/nava-savhita.jpg);
+}
+
+#proj5{
+    /* background-color: rgb(255, 153, 153); */
+    position: absolute;
+    top: 69%;
+    left: 65%;
+    animation: animProj5 5s ease-in-out infinite alternate;
+    background-image: url(./images/home/5e62e5d06f973495ec8741f6_Untitled_18.gif);
+}
+#proj6{
+    /* background-color: rgb(255, 153, 153); */
+    position: absolute;
+    top: 46%;
+    right: 20%;
+    animation: animProj6 7s ease-in-out infinite alternate;
+    background-image: url(./images/home/prescription.jpg);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Particle System Component Example</title>
+    <meta name="description" content="Hello, World!">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Particle system uses 'default' preset, setting custom colors. -->
+      <a-entity position="20 0 -20" rotation="0 0 0" particle-system="color: #FFFF99,#FF9933"></a-entity>
+      <a-entity position="-20 0 -20" rotation="0 0 0" particle-system="color: #FF9933,#FFFF99"></a-entity>
+
+      <a-assets>
+        <a-asset-item id="cyl" src="3d/surround_cyl_turquoise.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-gltf-model src="#cyl" position="20 0 20" animation-mixer> </a-gltf-model>
+
+
+
+
+      <a-sky color="#87ceeb"></a-sky>
+    </a-scene>
+  </body>
+</html>

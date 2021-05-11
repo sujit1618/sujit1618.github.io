@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FairBahiKhata-Flex</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- google free fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@200;400;700&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header-bar-container">
+        <div class="header-bar-wrapper">
+            <nav><a href="#">
+                    <img class="header-bar-logo" src="images/LogoWithText-1.svg" alt="">
+                </a>
+                <ul class="header-bar-nav-items">
+                    <li>
+                        <a href="#">Preferences</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="content-nav">
+            <a class="content-nav-button dashboard" href="/index.html" style="border-color: #3468ec; color: #3468ec;">
+
+                <!-- material icon -->
+                <i class="material-icons md-18">home</i>
+
+                <!-- text -->
+                <div class="content-nav-button-label">Dashboard</div>
+
+            </a>
+            <div class="content-nav-button customers">
+
+                <!-- material icon -->
+                <i class="material-icons md-18">people</i>
+
+                <!-- text -->
+                <div class="content-nav-button-label">Customers</div>
+
+            </div>
+            <div class="content-nav-button">
+
+                <!-- material icon -->
+                <i class="material-icons md-18">list_alt</i>
+
+                <!-- text -->
+                <div class="content-nav-button-label">Orders</div>
+
+            </div>
+            <div class="content-nav-button">
+
+                <!-- material icon -->
+                <i class="material-icons md-18">shopping_cart</i>
+
+                <!-- text -->
+                <div class="content-nav-button-label">Online Shop</div>
+
+            </div>
+            <!-- <div class="content-nav-button">
+
+                
+                <i class="material-icons md-18">local_mall</i>
+
+             
+                <div class="content-nav-button-label">Products</div>
+
+            </div> -->
+        </div>
+        <div class="data-widget-container">
+            <div class="data-widget">
+                <div class="data-widget-title">Total Customers</div>
+                <div class="data-widget-value">12345</div>
+            </div>
+            <div class="data-widget">
+                <div class="data-widget-title">Total Balance</div>
+                <div class="data-widget-value">53,12,345.00</div>
+            </div>
+            <div class="data-widget">
+                <div class="data-widget-title">Payments Expected</div>
+                <div class="data-widget-value">53,12,345.00</div>
+            </div>
+            <div class="data-widget">
+                <div class="data-widget-title" style="color: #63AB06;">Payments Received</div>
+                <div class="data-widget-value">53,12,345.00</div>
+            </div>
+
+        </div>
+        <div class="customers-block">
+            <div class="modal">
+                <div class="flex-row-1">
+                    <h3>Customers</h3>
+                    <button class="button-available">+ Add Customer</button>
+                </div>
+                <div class="flex-row-1">
+                    <div class="search-container">
+                        <div class="form-field">
+                            <i class="material-icons md-16">search</i>
+                            <input class="search-input" id="search-input-customers-small" type="text"
+                                placeholder="Search..">
+                        </div>
+                        <button class="button-available">Search</button>
+                    </div>
+
+                </div>
+                <div class="modal-data-wrapper">
+                    <div class="modal">
+                        <div class="modal-grid-container">
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Sr. No.</div>
+                                <div class="modal-data-value">1</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Customer Name</div>
+                                <div class="modal-data-value">Sujit Joshi</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Balance</div>
+                                <div class="modal-data-value">33,27,371.37</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Mobile</div>
+                                <div class="modal-data-value">+91 87881 48805</div>
+                            </div>
+                            <button class="button-halfway">+ Payment</button>
+                            <button class="button-halfway">+ Order</button>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-grid-container">
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Sr. No.</div>
+                                <div class="modal-data-value">2</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Customer Name</div>
+                                <div class="modal-data-value">Aniruddha Pimpalkhare</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Balance</div>
+                                <div class="modal-data-value">33,27,371.37</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Mobile</div>
+                                <div class="modal-data-value">+91 87881 48805</div>
+                            </div>
+                            <button class="button-halfway">+ Payment</button>
+                            <button class="button-halfway">+ Order</button>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-grid-container">
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Sr. No.</div>
+                                <div class="modal-data-value">3</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Customer Name</div>
+                                <div class="modal-data-value">D. Vijayraghavan</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Balance</div>
+                                <div class="modal-data-value">33,27,371.37</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Mobile</div>
+                                <div class="modal-data-value">+91 87881 48805</div>
+                            </div>
+                            <button class="button-halfway">+ Payment</button>
+                            <button class="button-halfway">+ Order</button>
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-grid-container">
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Sr. No.</div>
+                                <div class="modal-data-value">4</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Customer Name</div>
+                                <div class="modal-data-value">Sujit Joshi</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Balance</div>
+                                <div class="modal-data-value">33,27,371.37</div>
+                            </div>
+
+                            <div class="modal-data-container">
+                                <div class="modal-data-label">Mobile</div>
+                                <div class="modal-data-value">+91 87881 48805</div>
+                            </div>
+                            <button class="button-halfway">+ Payment</button>
+                            <button class="button-halfway">+ Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
