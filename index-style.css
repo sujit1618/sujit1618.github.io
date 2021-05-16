@@ -1,11 +1,11 @@
 
 .bg-container{
     position: fixed;
-    background-image: url(./images/backgrounds/bg-5.svg);
+    background-image: url(./images/backgrounds/bg-6.svg);
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-position: 5px -30px;
+    background-position: 12px -44px;
     background-size: cover;
 }
 .body-wrapper{
