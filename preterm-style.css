@@ -2,15 +2,6 @@ body{
     /* background-color: rgb(250, 250, 250); */
     font-weight: 300;
 }
-.bg-container{
-    position: fixed;
-    background-image: url(./images/backgrounds/bg-7.jpg);
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-position: -15px 0px;
-    background-size: cover;
-}
 
 h2{
     font-size: 24px;
