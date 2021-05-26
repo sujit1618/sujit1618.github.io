@@ -102,20 +102,20 @@ p{
 
 .image-para{
     display: flex;
-    
+    align-items: center;
 }
 .image-para-image{
     margin: 0 0 0 36px;
     display: block;
-    width: 50%;
+    width: 40%;
     max-width: 500px;
     border-radius: 5px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center left;
 }
 
 .stats-section{
-    margin: 56px 0;
+    margin: 36px 0 0 0;
     padding: 33px;
     display: grid;
     grid-template-columns: 50% auto;
@@ -128,6 +128,7 @@ p{
     margin: auto;
     text-align: center;
     max-width: 350px;
+    font-size: 15px;
 }
 .stats-number{
     font-size: 22px;
@@ -139,10 +140,11 @@ p{
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
     margin: auto;
+    font-size: 15px;
 }
 
 #impact-stat{
-    background-color: #fff9d9;
+    background-color: #FFF4CC;
 }
 
 #research-stat{
@@ -171,7 +173,15 @@ p{
 .image-section{
     margin: 56px 0;
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: 49% 49%;
+    grid-auto-rows:auto;
+    column-gap: 24px;
+}
+.image-section-70-30{
+    margin: 56px 0;
+    display: grid;
+    grid-template-columns: 80% 19.6%;
+    /* grid-template-columns: auto auto; */
     grid-auto-rows:auto;
     column-gap: 24px;
 }
@@ -182,8 +192,8 @@ p{
 
 .image-half{
     width: 100%;
-    height: 80%;
-    /* object-fit: cover; */
+    height: 100%;
+    object-fit: contain;
     /* box-shadow: 0px 0px 10px #33333328; */
     border-radius: 5px;
 }
