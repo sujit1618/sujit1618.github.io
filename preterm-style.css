@@ -162,14 +162,14 @@ p{
 }
 
 .image-section{
-    margin: 56px 0;
+    margin: 48px 0 36px;
     display: grid;
     grid-template-columns: 49% 49%;
     grid-auto-rows:auto;
     column-gap: 24px;
 }
 .image-section-70-30{
-    margin: 56px 0;
+    margin: 48px 0 80px;
     display: grid;
     grid-template-columns: auto 23%;
     /* grid-template-columns: auto auto; */
@@ -197,6 +197,7 @@ p{
 }
 
 .caption{
+    display: block;
     font-size: 15px;
     padding: 8px;
 }
@@ -211,6 +212,10 @@ p{
 
 li{
     margin: 0 0 12px 0;
+}
+
+.body-ul{
+    font-size: 18px;
 }
 
 .next-project{
