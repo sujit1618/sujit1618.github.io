@@ -89,3 +89,9 @@ body{
 .projects-link{
     margin-right: 22px;
 }
+
+.resume-link :hover
+.resume-link :target{
+font-weight: 600;
+}
+
