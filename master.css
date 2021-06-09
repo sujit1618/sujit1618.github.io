@@ -95,3 +95,7 @@ body{
 font-weight: 600;
 }
 
+li{
+    line-height: 130%;
+}
+
