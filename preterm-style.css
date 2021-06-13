@@ -280,10 +280,19 @@
         /* background-blend-mode: exclusion; */
     }
 
+    li {
+        margin: 0 0 12px 0;
+    }
+
+    .side-bar ul li{
+        margin: 0 0 5px 0;
+    }
+
     .side-bar ul li a {
         display: block;
         cursor: pointer;
         transition: cubic-bezier(0.23, 1, 0.320, 1) 0.1s;
+        font-size: 13px;
     }
 
     .side-bar ul li a:hover {
@@ -324,6 +333,7 @@
         font-weight: 600;
         text-transform: uppercase;
         font-size: 10px;
+        margin-bottom: 5px;
     }
 
     .nda {
@@ -379,7 +389,7 @@
     }
 
     .stats-number {
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 600;
         margin-bottom: 8px;
     }
@@ -476,9 +486,7 @@
         font-size: 18px;
     }
 
-    li {
-        margin: 0 0 12px 0;
-    }
+    
 
     .body-ul {
         font-size: 15px;
