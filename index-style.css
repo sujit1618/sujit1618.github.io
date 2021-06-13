@@ -1,124 +1,259 @@
+@media only screen and (min-width: 769px) {
 
+    .body-wrapper {
+        display: grid;
+        grid-template-columns: 30vw auto;
+        grid-auto-rows: auto;
+        /* margin: 90px auto 0 auto; */
+        row-gap: 52px;
+        column-gap: 72px;
+        padding: 0 52px 0 0;
+        background-size: contain;
+    }
 
-.body-wrapper{
-    display: grid;
-    grid-template-columns: 30vw auto;
-    grid-auto-rows: auto;
-    /* margin: 90px auto 0 auto; */
-    row-gap: 52px;
-    column-gap: 72px;
-    padding: 0 52px 0 0;
-    background-size: contain;
-}
+    .bio-container {
+        position: fixed;
+        /* grid-column: 1 / span 1; */
+        width: calc(30vw - 44px);
+        padding: 90px 22px 0 22px;
+        margin: 0 auto 0 auto;
+        background-color: white;
+        box-shadow: 0px 0px 10px #33333350;
+        height: 100vh;
+        z-index: 1;
+    }
 
-.bio-container{
-    position: fixed;
-    /* grid-column: 1 / span 1; */
-    width: calc(30vw - 44px);
-    padding: 90px 22px 0 22px;
-    margin: 0 auto 0 auto;
-    background-color: white;
-    box-shadow: 0px 0px 10px #33333350;
-    height: 100vh;
-    z-index: 1;
-}
+    .bio-image-container {
+        margin: 24px auto 24px auto;
+    }
 
-.bio-image-container{
-    margin: 24px auto 24px auto;
-}
+    .bio-image {
+        margin: 0 auto;
+        display: block;
+        height: 10vw;
+        width: 10vw;
+        border-radius: 100%;
+    }
 
-.bio-image{
-    margin: 0 auto;
-    display: block;
-    height: 10vw;
-    width: 10vw;
-    border-radius: 100%;  
-}
+    .bio-paragraph-container {
+        width: 95%;
+        min-width: 200px;
+        margin: auto;
+    }
 
-.bio-paragraph-container{
-    width: 95%;
-    min-width: 200px;
-    margin: auto;
-}
+    .project-container {
+        padding: 32px;
+        display: grid;
+        grid-template-columns: 55% auto;
+        grid-template-rows: auto auto 20px;
+        grid-column: 2 / span 1;
+        box-shadow: 0px 0px 7px #33333344;
+        border-radius: 8px;
+        column-gap: 24px;
+        row-gap: 2px;
+        text-decoration: none;
+        transition: cubic-bezier(0.23, 1, 0.320, 1) 1.2s;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
 
-.project-container{
-    padding: 32px;
-    display: grid;
-    grid-template-columns: 55% auto;
-    grid-template-rows: auto auto 20px;
-    grid-column: 2 / span 1;
-    box-shadow: 0px 0px 7px #33333344;
-    border-radius: 8px;
-    column-gap: 24px;
-    row-gap: 2px;
-    text-decoration: none;
-    transition: cubic-bezier(0.23, 1, 0.320, 1) 1.2s;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255);
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-    -webkit-font-smoothing: subpixel-antialiased;
-}
+    .project-container:hover {
+        transform: scale(1.02);
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        box-shadow: 0px 0px 14px #33333318;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
 
-.project-container:hover{
-    transform: scale(1.02);
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(7px);
-    box-shadow: 0px 0px 14px #33333318;
-    -webkit-font-smoothing: subpixel-antialiased;
-}
+    .project-container p {
+        font-size: 16px;
+    }
 
-.project-container p{
-    font-size: 16px;
-}
-/* .project-container div{ */
+    /* .project-container div{ */
     /* background-color: aqua; */
-/* } */
+    /* } */
 
-.project-image-container{
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 3;
-    background-size: cover;
-    background-position: center;
-    min-height: 250px;
-    border-radius: 5px;
-}
-.project-container:first-of-type{
-    margin-top: 112px;
-}
+    .project-image-container {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+        background-size: cover;
+        background-position: center;
+        min-height: 250px;
+        border-radius: 5px;
+    }
 
-.project-container:last-of-type{
-    margin-bottom: 8vh;
-}
+    .project-container:first-of-type {
+        margin-top: 112px;
+    }
 
-#preterm .project-image-container{
-    background-image: url(./images/preterm/cover-1.jpeg);
-    /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
-}
-#pharmacy .project-image-container{
-    /* background-image: url(https://images.unsplash.com/photo-1543709533-c032159da7b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
-    background-image: url(./images/healthcare/healthcare-cover-image-3.jpeg);
-    /* background-image: url(https://images.unsplash.com/photo-1563213126-a4273aed2016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80); */
-}
+    .project-container:last-of-type {
+        margin-bottom: 8vh;
+    }
 
-#team3 .project-image-container{
-    background-position: 50% 80%;
-    background-image: url(./images/Deliveries/cover-1.jpeg);
-}
-#polling .project-image-container{
-    background-image: url(./images/home/polling.jpg);
-}
-#ayurveda .project-image-container{
-    background-image: url(./images/home/nava-savhita.jpg);
-}
-#bosch2020 .project-image-container{
-    background: url(./images/home/Bosch2020-2_2.gif);
-    background-position: center;
-    background-size: cover;
-}
+    #preterm .project-image-container {
+        background-image: url(./images/preterm/cover-1.jpeg);
+        /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
+    }
+
+    #pharmacy .project-image-container {
+        /* background-image: url(https://images.unsplash.com/photo-1543709533-c032159da7b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
+        background-image: url(./images/healthcare/healthcare-cover-image-3.jpeg);
+        /* background-image: url(https://images.unsplash.com/photo-1563213126-a4273aed2016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80); */
+    }
+
+    #team3 .project-image-container {
+        background-position: 50% 80%;
+        background-image: url(./images/Deliveries/cover-1.jpeg);
+    }
+
+    #polling .project-image-container {
+        background-image: url(./images/home/polling.jpg);
+    }
+
+    #ayurveda .project-image-container {
+        background-image: url(./images/home/nava-savhita.jpg);
+    }
+
+    #bosch2020 .project-image-container {
+        background: url(./images/home/Bosch2020-2_2.gif);
+        background-position: center;
+        background-size: cover;
+    }
 
 
-.project-role{
-    margin-bottom: 0px;
-    font-weight: 600;
+    .project-role {
+        margin-bottom: 0px;
+        font-weight: 600;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    .body-wrapper {
+        /* display: grid; */
+        /* grid-template-columns: 80vw; */
+        /* grid-auto-rows: auto; */
+        /* margin: 90px auto 0 auto; */
+        /* row-gap: 52px; */
+        /* column-gap: 72px; */
+        padding: 22px;
+        background-size: contain;
+    }
+
+    .bio-container {
+        /* position: fixed; */
+        /* grid-column: 1 / span 1; */
+        /* width: calc(30vw - 44px); */
+        padding: 90px 22px 22px 22px;
+        background-color: white;
+        box-shadow: 0px 0px 10px #33333350;
+        /* height: 100vh; */
+        z-index: 1;
+    }
+
+    .bio-image-container {
+        margin: 24px auto 24px auto;
+    }
+
+    .bio-image {
+        margin: 0 auto;
+        display: block;
+        height: 10vw;
+        width: 10vw;
+        border-radius: 100%;
+    }
+
+    .bio-paragraph-container {
+        width: 95%;
+        min-width: 200px;
+        margin: auto;
+    }
+
+    .project-container {
+        padding: 32px;
+        display: block;
+        grid-template-columns: 55% auto;
+        grid-template-rows: auto auto 20px;
+        box-shadow: 0px 0px 7px #33333344;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: cubic-bezier(0.23, 1, 0.320, 1) 1.2s;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        -webkit-font-smoothing: subpixel-antialiased;
+        margin: 22px auto 22px auto;
+    }
+
+    .project-container:hover {
+        transform: scale(1.02);
+        -webkit-backdrop-filter: blur(7px);
+        backdrop-filter: blur(7px);
+        box-shadow: 0px 0px 14px #33333318;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .project-container p {
+        font-size: 16px;
+    }
+
+    /* .project-container div{ */
+    /* background-color: aqua; */
+    /* } */
+
+    .project-image-container {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 3;
+        background-size: cover;
+        background-position: center;
+        min-height: 250px;
+        border-radius: 5px;
+    }
+
+    /* .project-container:first-of-type { */
+        /* margin-top: 22px; */
+    /* } */
+
+    .project-container:last-of-type {
+        margin-bottom: 8vh;
+    }
+
+    #preterm .project-image-container {
+        background-image: url(./images/preterm/cover-1.jpeg);
+        /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
+    }
+
+    #pharmacy .project-image-container {
+        /* background-image: url(https://images.unsplash.com/photo-1543709533-c032159da7b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
+        background-image: url(./images/healthcare/healthcare-cover-image-3.jpeg);
+        /* background-image: url(https://images.unsplash.com/photo-1563213126-a4273aed2016?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80); */
+    }
+
+    #team3 .project-image-container {
+        background-position: 50% 80%;
+        background-image: url(./images/Deliveries/cover-1.jpeg);
+    }
+
+    #polling .project-image-container {
+        background-image: url(./images/home/polling.jpg);
+    }
+
+    #ayurveda .project-image-container {
+        background-image: url(./images/home/nava-savhita.jpg);
+    }
+
+    #bosch2020 .project-image-container {
+        background: url(./images/home/Bosch2020-2_2.gif);
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    .project-role {
+        margin-bottom: 0px;
+        font-weight: 600;
+    }
 }
