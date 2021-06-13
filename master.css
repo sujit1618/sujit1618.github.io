@@ -184,7 +184,7 @@
 
     .bg-container {
         position: fixed;
-        background-image: url(./images/backgrounds/bg-8.svg) !important;
+        background-image: url(./images/backgrounds/bg-10.jpg) !important;
         shape-rendering: geometricPrecision;
         z-index: -1;
         width: 100%;
