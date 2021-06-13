@@ -286,6 +286,7 @@
 
     .side-bar ul li{
         margin: 0 0 5px 0;
+        font-size: 13px;
     }
 
     .side-bar ul li a {
