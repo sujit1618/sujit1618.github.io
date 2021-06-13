@@ -111,3 +111,19 @@ li{
     line-height: 130%;
 }
 
+.contact-container{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.contact-container a{
+display: block;
+}
+
+.in-text-icon{
+    display: block;
+    height: 15px;
+    margin: 0 8px 0 0;
+    padding: 2px 0 0 0;
+}
