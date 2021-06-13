@@ -79,21 +79,33 @@ body{
 
 .links-container{
     display: flex;
+    justify-content: space-between;
 }
 
 .links-container a{
     display: block;
 }
 
-
-.projects-link{
+.nav-link{
     margin-right: 22px;
 }
 
-.resume-link :hover
-.resume-link :target{
-font-weight: 600;
+.nav-link:last-of-type{
+    margin-right: 22px;
 }
+
+/* #resume-link{ */
+    /* margin-right: 0px; */
+/* } */
+
+#about-link{
+    display: none;
+}
+
+#menu-link{
+    display: none;
+}
+
 
 li{
     line-height: 130%;
