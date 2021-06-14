@@ -220,11 +220,12 @@
     }
 
     .links-container a {
-        display: block;
+        display: none;
     }
 
     .nav-link {
         margin-right: 22px;
+        text-align: left;
     }
 
     .nav-link:last-of-type {
@@ -232,11 +233,12 @@
     }
 
     #projects-link{
-        display: none;
+        display: block;
     }
 
     #resume-link{
-    display: none;
+    display: block;
+    margin: 0px;
     }
 
     #about-link {
@@ -244,9 +246,21 @@
     }
 
     #menu-link {
-        display: inline;
+        display: none;
     }
 
+    .burger-menu{
+        position: fixed;
+        top: 60px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        justify-content: space-between;
+        background-color: white;
+        box-shadow: 0px 0px 10px #3333333b;
+        padding: 24px;
+    }
 
     li {
         line-height: 130%;
