@@ -1,5 +1,7 @@
 $(document).ready(function(){
+	  
   $('#signup').submit(function(e) {
+	  
 	e.preventDefault();
 	let form = $(this);
 	$.ajax({
