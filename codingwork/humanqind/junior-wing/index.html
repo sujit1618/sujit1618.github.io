@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index-style.css">
+    <script src="./main.js"></script>
+    <title>Junior Wing | HumanQind</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jkx7eer.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo-container">
+            <img src="../images/HumanQind-2.webp" class="humanqind-logo">
+            <img src="../images/DAV.png" class="dav-logo">
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="card" id="screen1">
+            <h1>
+                Welcome to the next set of exercises!
+            </h1>
+            <h2>To begin, please enter the following details:</h2>
+            <div class="forms-set">
+                <div class="form-container">
+                    <label class="field-label">Student Name</label>
+                    <input class='single-line-form' id='studentName' type="text" required>
+                </div>
+                <div class="form-container">
+                    <label class="field-label">Admission Number</label>
+                    <input class='single-line-form' id='admissionNumber' type="text" required>
+                </div>
+            </div>
+
+            <button class="button-1" type="submit">Next</button>
+        </div>
+        <div class="card" id="screen2">
+            <h1>Exercise 1</h1>
+            <p>The first exercise is about recording the location of your residential address. This data will help us
+                plan travelling during re-opening.
+                <br><br>
+                <b>Instructions:</b>
+                <ol>
+                    <li>Please go to your residential address.</li>
+                    <li>When you are home, please click the button below.</li>
+                </ol>
+            </p>
+            <button class="button-1" type="submit">I am home</button>
+        </div>
+        <div class="card" id="screen3">
+            <h1>Exercise 1</h1>
+            <p>
+                <b>Instructions:</b>
+                <br>
+                When you are home, please click on the button below to record your location.
+                <br><br>
+                <img class='location-image' src="../images/home-location.jpg" alt="">
+            </p>
+            <button class="button-1" type="submit">Record Location</button>
+        </div>
+        <div class="card" id="screen4">
+            <h1>Exercise 1</h1>
+            <p>
+                <b>Instructions:</b>
+                <br>
+                When you are home, please click on the button below to record your location.
+                <br><br>
+                <img class='location-image' src="../images/home-location.jpg" alt="">
+            </p>
+            <div class="status">Location Recorded Successfully. Please press next to continue.</div>
+            <button class="button-1" type="submit">Next</button>
+        </div>
+        <div class="card" id="screen5">
+            <h1>Exercise 2</h1>
+            <p>The second exercise is only for students who travel by van to school.
+                <br><br>
+                <b> Does your child travel to the school by van?</b>
+                <br><br>
+                <div class="radio-container">
+                    <div class="radio-button">
+                        <input type="radio" id="yes" name="van-travel" value="yes">
+                          <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="no" name="van-travel" value="no">
+                          <label for="no">No</label>
+                    </div>
+                </div>
+
+                <br>
+                 
+                <br>
+            </p>
+            <button class="button-1" type="submit">Next</button>
+        </div>
+    </div>
+
+    <!-- ✅ -->
+
+</body>
+
+</html>
