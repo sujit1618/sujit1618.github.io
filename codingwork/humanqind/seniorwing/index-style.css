@@ -1,0 +1,210 @@
+body {
+    font-family: noto-sans-display, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    /* background-color: rgb(203, 240, 255); */
+    /* background-color: rgb(243, 243, 243); */
+    overflow-y:hidden;
+    overflow-x: scroll;
+    background-image: url(../images/bg-2.jpg);
+    background-position: 0 80px;
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: noto-sans-display, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-family: noto-sans-display, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.nav-bar {
+    width: 100%;
+    padding: 25px 0;
+    background-color: white;
+    box-shadow: 0px 2px 12px rgba(156, 149, 149, 0.342);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.dav-logo,
+.humanqind-logo {
+    display: block;
+    height: 4vh;
+}
+
+
+.card {
+    position: absolute;
+    top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 2px 12px rgba(156, 149, 149, 0.342);
+    padding: 22px;
+    z-index: 1;
+    border-radius: 5px;
+    max-width: 480px;
+}
+
+#screen1 {
+    z-index: 10;
+    /* display: none; */
+}
+
+#screen2 {
+    z-index: 9;
+    display: none;
+}
+
+#screen3 {
+    z-index: 8;
+    display: none;
+}
+
+#screen4 {
+    z-index: 7;
+    display: none;
+}
+#screen5 {
+    z-index: 6;
+    display: none;
+}
+#screen6 {
+    z-index: 5;
+    display: none;
+}
+#screen7 {
+    z-index: 4;
+    display: none;
+}
+#screen8 {
+    z-index: 4;
+    display: none;
+}
+#screen9 {
+    z-index: 3;
+    display: none;
+}
+#screen10 {
+    z-index: 2;
+    display: none;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.single-line-form {
+    margin-bottom: 22px;
+    font-family: noto-sans-display, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    width: calc(100% - 22px);
+    box-shadow: none;
+    border: rgb(150, 150, 150) 1px solid;
+    outline: 0px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    background-color: rgb(253, 253, 253);
+}
+
+.single-line-form:focus {
+    border: rgb(255, 196, 0) 2px solid;
+    outline: 0px;
+    background-color: white;
+}
+
+.location-image{
+    display: block;
+    margin: 22px auto;
+    width: 150px;
+}
+
+.status{
+    margin: 12px auto;
+    font-size: 15px;
+    background-color: rgb(213, 241, 156);
+    padding: 8px 16px;
+    text-align: center;
+    border: rgb(128, 175, 33) 3px solid;
+    border-radius: 12px;
+    line-height: 120%;
+}
+
+.radio-container{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.radio-button{
+    display: flex;
+    align-items: center;
+}
+
+.radio-button label{
+    font-size: 18px;
+}
+
+
+.button-1 {
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    background: rgb(255, 198, 12);
+    box-shadow: 0px 2px 20px rgba(228, 228, 228, 0.801);
+    color: rgb(43, 43, 43);
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    min-width: 120px;
+    border-radius: 12px;
+    margin: 22px auto;
+    transition: 300ms ease-in-out;
+}
+
+.button-1:hover,
+.button-1:focus,
+.button-1:active{
+    background: rgb(44, 44, 44);
+    box-shadow: 0px 0px 20px rgba(228, 228, 228, 0.801);
+    color: rgb(255, 198, 12);
+    
+}
+
+#but-9{
+    background-color: rgb(10, 173, 10);
+    color: rgb(255, 255, 255);
+}
