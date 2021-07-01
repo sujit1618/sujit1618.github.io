@@ -75,7 +75,7 @@ h2 {
 
 #screen1 {
     z-index: 10;
-    display: none;
+    /* display: none; */
 }
 
 #screen2 {
@@ -94,7 +94,27 @@ h2 {
 }
 #screen5 {
     z-index: 6;
-    /* display: none; */
+    display: none;
+}
+#screen6 {
+    z-index: 5;
+    display: none;
+}
+#screen7 {
+    z-index: 4;
+    display: none;
+}
+#screen8 {
+    z-index: 4;
+    display: none;
+}
+#screen9 {
+    z-index: 3;
+    display: none;
+}
+#screen9 {
+    z-index: 2;
+    display: none;
 }
 
 label {
