@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <button class="button-1" type="submit" id="but-1">Next</button>
+            <button class="button-1" type="submit" id="but-1" onclick="loadScreen2()">Next</button>
         </div>
         <div class="card" id="screen2">
             <h1>Exercise 1</h1>
@@ -49,7 +49,7 @@
                     <li>When you are home, please click the button below.</li>
                 </ol>
             </p>
-            <button class="button-1" type="submit" id="but-2">I am home</button>
+            <button class="button-1" type="submit" id="but-2" onclick="loadScreen3()">I am home</button>
         </div>
         <div class="card" id="screen3">
             <h1>Exercise 1</h1>
@@ -60,7 +60,7 @@
                 <br><br>
                 <img class='location-image' src="../images/home-location.jpg" alt="">
             </p>
-            <button class="button-1" type="submit" id="but-3">Record Location</button>
+            <button class="button-1" type="submit" id="but-3" onclick="homeLocation()">Record Location</button>
         </div>
         <div class="card" id="screen4">
             <h1>Exercise 1</h1>
@@ -72,7 +72,7 @@
                 <img class='location-image' src="../images/home-location.jpg" alt="">
             </p>
             <div class="status">Location Recorded Successfully. Please press next to continue.</div>
-            <button class="button-1" type="submit" id="but-4">Next</button>
+            <button class="button-1" type="submit" id="but-4" onclick="loadScreen5()">Next</button>
         </div>
         <div class="card" id="screen5">
             <h1>Exercise 2</h1>
@@ -92,7 +92,7 @@
                 </div>
                 <br>
             </p>
-            <button class="button-1" type="submit" id="but-5">Next</button>
+            <button class="button-1" type="submit" id="but-5" onclick="vanUsagePage()">Next</button>
         </div>
         <div class="card" id="screen6">
             <h1>Exercise 2</h1>
@@ -104,7 +104,7 @@
                     <li>When you are at the van stop, please click the button below.</li>
                 </ol>
             </p>
-            <button class="button-1" type="submit" id="but-6">I am at the van stop</button>
+            <button class="button-1" type="submit" id="but-6" onclick="loadScreen7()">I am at the van stop</button>
         </div>
         <div class="card" id="screen7">
             <h1>Exercise 2</h1>
@@ -115,7 +115,7 @@
                 <br><br>
                 <img class='location-image' src="../images/van-location.jpg" alt="">
             </p>
-            <button class="button-1" type="submit" id="but-7">Record Location</button>
+            <button class="button-1" type="submit" id="but-7" onclick="vanLocation()">Record Location</button>
         </div>
         <div class="card" id="screen8">
             <h1>Exercise 2</h1>
@@ -127,7 +127,7 @@
                 <img class='location-image' src="../images/van-location.jpg" alt="">
             </p>
             <div class="status">Location Recorded Successfully. Please press next to continue.</div>
-            <button class="button-1" type="submit"  id="but-8">Next</button>
+            <button class="button-1" type="submit"  id="but-8" onclick="loadScreen9()">Next</button>
         </div>
         <div class="card" id="screen9">
             <h1>
@@ -135,13 +135,13 @@
             </h1>
             <h2>Please click the button below to submit the form</h2>
 
-            <button class="button-1" type="submit"  id="but-9">Submit</button>
+            <button class="button-1" type="submit"  id="but-9" onclick="loadScreen10()">Submit</button>
         </div>
         <div class="card" id="screen10">
             <h1>
                 All details have been submitted successfully.
             </h1>
-            <h2>Please click the button below to close this form</h2>
+            <h1>Please click the button below to close this form</h1>
 
             <button class="button-1" type="submit" onclick="window.close()"  id="but-10">Close</button>
         </div>

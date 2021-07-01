@@ -113,7 +113,7 @@ h2 {
     z-index: 3;
     display: none;
 }
-#screen9 {
+#screen10 {
     z-index: 2;
     display: none;
 }
@@ -202,4 +202,9 @@ label {
     box-shadow: 0px 0px 20px rgba(228, 228, 228, 0.801);
     color: rgb(255, 198, 12);
     
+}
+
+#but-9{
+    background-color: rgb(10, 173, 10);
+    color: rgb(255, 255, 255);
 }
