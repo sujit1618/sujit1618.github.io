@@ -128,7 +128,7 @@ function loadScreen9() {
 
 function loadScreen10() {
     
-    let url = 'https://api.sheety.co/b5451f2c22c91b7055c9c9714d070461/test1Sheets/sheet1';
+    let url = 'https://api.sheety.co/6be24607ea458614398f92bf55d8da84/seniorWing/sheet1';
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen10').style.display = "block";
     let body = {
