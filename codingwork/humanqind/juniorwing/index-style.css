@@ -5,11 +5,12 @@ body {
     font-style: normal;
     padding: 0;
     margin: 0;
-    max-height: 100vh;
+    /* height: auto; */
+    /* max-height: 150vh; */
     /* background-color: rgb(203, 240, 255); */
     /* background-color: rgb(243, 243, 243); */
-    overflow-y:hidden;
-    overflow-x: scroll;
+    overflow-x:hidden;
+    scroll-behavior: auto;
     background-image: url(../images/bg-2.jpg);
     background-position: 0 80px;
     background-size: cover;
@@ -59,10 +60,8 @@ h2 {
 
 
 .card {
-    position: absolute;
-    top: 15vh;
-    margin-left: auto;
-    margin-right: auto;
+    
+    margin: 30px auto 120px auto;
     left: 0;
     right: 0;
     width: 80%;
