@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index-style.css">
+    <script src="./main.js"></script>
+    <title>Staff | HumanQind</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jkx7eer.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo-container">
+            <img src="../images/HumanQind-2.webp" class="humanqind-logo">
+            <img src="../images/DAV.png" class="dav-logo">
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="card" id="screen1">
+            <h1 id="h1">
+                Welcome to the bus route gps logger!
+            </h1>
+            <h2>To begin, please enter the following details:</h2>
+            <div class="forms-set">
+                <div class="form-container">
+                    <label class="field-label">Bus Route Number</label>
+                    <input class='single-line-form' id='staffName' type="text" required>
+                </div>
+                <div class="form-container">
+                    <label class="field-label">Bus Stop Name</label>
+                    <input class='single-line-form' id='employmentCode' type="text" required>
+                </div>
+            </div>
+
+            <button class="button-1" type="submit" id="but-1" onclick="loadScreen2()">Next</button>
+        </div>
+        <div class="card" id="screen2">
+            <h1>Exercise 1</h1>
+            <p>The first exercise is about recording the location of your residential address. This data will help us
+                plan travelling during re-opening.
+                <br><br>
+                <b>Instructions:</b>
+                <ol>
+                    <li>Please go to your residential address.</li>
+                    <li>When you are home, please click the button below.</li>
+                </ol>
+            </p>
+            <button class="button-1" type="submit" id="but-2" onclick="loadScreen3()">I am home</button>
+        </div>
+        <div class="card" id="screen3">
+            <h1>Exercise 1</h1>
+            <p>
+                <b>Instructions:</b>
+                <br>
+                When you are home, please click on the button below to record your location.
+                <br><br>
+                <img class='location-image' src="../images/home-location.jpg" alt="">
+            </p>
+            <button class="button-1" type="submit" id="but-3" onclick="homeLocation()">Record Location</button>
+        </div>
+        <div class="card" id="screen4">
+            <h1>Exercise 1</h1>
+            <p>
+                <b>Instructions:</b>
+                <br>
+                When you are home, please click on the button below to record your location.
+                <br><br>
+                <img class='location-image' src="../images/home-location.jpg" alt="">
+            </p>
+            <div class="status">Location Recorded Successfully. Please press next to continue.</div>
+            <button class="button-1" type="submit" id="but-4" onclick="loadScreen9()">Next</button>
+        </div>
+        <div class="card" id="screen9">
+            <h1>
+                Thank you very much for the details you have shared!
+            </h1>
+            <h2>Please click the button below to submit the form</h2>
+
+            <button class="button-1" type="submit"  id="but-9" onclick="loadScreen10()">Submit</button>
+        </div>
+        <div class="card" id="screen10">
+            <h1>
+                All details have been submitted successfully.
+            </h1>
+            <h2>You may now close this window. Thank you!</h2>
+        </div>
+    </div>
+
+    <!-- ✅ -->
+
+</body>
+
+</html>
