@@ -100,3 +100,7 @@ function loadScreen10() {
             console.log(json);
         });
 }
+
+function closeScreen(){
+    window.close();
+}
