@@ -103,4 +103,5 @@ function loadScreen10() {
 
 function closeScreen(){
     window.close();
+    window.open('','_self').close();
 }
