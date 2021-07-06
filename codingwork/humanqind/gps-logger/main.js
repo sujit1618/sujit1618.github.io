@@ -92,7 +92,3 @@ function submitData() {
 
 
 }
-
-function refresh(){
-    window.setInterval('refresh()', 10000);
-}
