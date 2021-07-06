@@ -19,9 +19,9 @@ function homeLocation() {
         const today = new Date();
         const date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
         const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        const dateAndTime = date + ' ' + time;
+        // const dateAndTime = date + ' ' + time;
 
-        homeBucket(latitude, longitude, dateAndTime);
+        homeBucket(latitude, longitude, date, time);
     }
 
     function error() {
@@ -37,11 +37,12 @@ function homeLocation() {
 
 }
 
-function homeBucket(lat, long, day) {
+function homeBucket(lat, long, date, time) {
     newLat = String(lat);
     newLong = String(long);
-    dateTime = day;
-    console.log(newLat, newLong, dateTime);
+    recordDate = date;
+    recordTime = time;
+    console.log(newLat, newLong, recordDate, recordTime);
     // document.getElementById('h1').innerHTML = lat + ',' + long;
 }
 
@@ -67,7 +68,8 @@ function submitData() {
         
         let body = {
             sheet1: {
-                dateTime,
+                recordDate,
+                recordTime,
                 busRouteNumber,
                 schedule,
                 busStopName,
