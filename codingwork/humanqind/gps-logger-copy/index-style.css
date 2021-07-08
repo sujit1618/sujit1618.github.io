@@ -118,41 +118,6 @@ h2 {
     display: none;
 }
 
-.form-container{
-    margin-bottom: 36px;
-}
-
-.dropdown-button{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content:space-between;
-    width: 100%;
-}
-
-.dropdown-label{
-    display: block;
-    font-size: 18px;
-}
-.dropdown-menu{
-    position: absolute;
-    display: none;
-    background-color: white;
-    border: #eee 2px solid;
-    box-shadow: 0px 2px 12px rgba(156, 149, 149, 0.342);
-    border-radius: 5px;
-    width: calc(100% - 44px);
-    padding: 22px;
-}
-
-.form-container:active .dropdown-menu{
-    display: block;
-}
-
-.dropdown-arrow{
-    display: block;
-}
-
 label {
     display: block;
     text-transform: uppercase;

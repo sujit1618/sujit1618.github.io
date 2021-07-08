@@ -3,6 +3,8 @@ let homeLong = 0;
 let staffName = '';
 let employmentCode = '';
 
+window.addEventListener('DOMContentLoaded', userAction);
+
 
 function loadScreen2() {
     staffName = document.getElementById('staffName').value;
@@ -70,7 +72,7 @@ function loadScreen9() {
 }
 
 function loadScreen10() {
-    
+
     let url = 'https://api.sheety.co/6be24607ea458614398f92bf55d8da84/staff/sheet1';
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen10').style.display = "block";
@@ -96,3 +98,42 @@ function loadScreen10() {
             console.log(json);
         });
 }
+
+function userAction(){
+    const routeUrl = 'http://dev.virtualearth.net/REST/v1/Routes?';
+    let wayPoint = {
+        1:{
+            latitude: '28.521145',
+            longitude: '77.1626807'
+        },
+        2:{
+            latitude: '28.5018069',
+            longitude: '77.1677462'
+        },
+        3:{
+            latitude: '28.498021',
+            longitude: '77.1592888'
+        },
+        4:{
+            latitude: '28.4903814',
+            longitude: '77.1404989'
+        }
+    };
+    let optimize = 'optimize = timeWithTraffic';
+    let optimizeWaypoints= 'optimizeWaypoints=true';
+    let maxSolns = 'maxSolns=3';
+    let key = 'key = AkVBUWL3G_-bC_ig5TLrGLMjgrd4Yh2-1Ur1lAmb-v240gu3h6jI9RoKGcPua1kQ';
+
+    console.log(wayPoint.id(1));
+
+    // 'wayPoint.1={wayPoint1}&viaWaypoint.2={viaWaypoint2}&waypoint.3={waypoint3}&wayPoint.n={waypointN}&heading={heading}&optimize={optimize}&avoid={avoid}&distanceBeforeFirstTurn={distanceBeforeFirstTurn}&routeAttributes={routeAttributes}&timeType={timeType}&dateTime={dateTime}&maxSolutions={maxSolutions}&tolerances={tolerances}&distanceUnit={distanceUnit}&key={BingMapsKey}'
+    // const response = await fetch(routeUrl, {
+    //   method: 'POST',
+    //   body: JSON.stringify(waypoints), // string or object
+    //   headers: {
+        // 'Content-Type': 'application/json'
+    //   }
+    // });
+    // const myJson = await response.json(); //extract JSON from the http response
+    // console.log(myJson);
+  }

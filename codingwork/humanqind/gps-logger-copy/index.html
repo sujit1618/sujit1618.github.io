@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index-style.css">
+    <script src="./main.js"></script>
+    <title>Bus Route Survey Form | HumanQind</title>
+    <link rel="stylesheet" href="https://use.typekit.net/jkx7eer.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo-container">
+            <img src="../images/HumanQind-2.webp" class="humanqind-logo">
+            <img src="../images/DAV.png" class="dav-logo">
+        </div>
+    </div>
+
+    <div class="body-container">
+        <div class="card" id="screen1">
+            <h1 id="h">
+                Welcome to the bus route gps logger.
+            </h1>
+            <h2>To begin, please enter the following details:</h2>
+            <div class="forms-set">
+                <div class="form-container">
+                    <label class="field-label">Bus Route Number</label>
+                    <input class='single-line-form' id='busRouteNumber' type="text" required>
+                </div>
+                <div class="form-container">
+                    <label class="field-label">Morning/ Evening/ Afternoon</label>
+                    <input class='single-line-form' id='schedule' type="text" required>
+                </div>
+                <div class="form-container">
+                    <label class="field-label">Bus Stop Name</label>
+                    <input class='single-line-form' id='busStopName' type="text" required>
+                </div>
+            </div>
+
+            <button class="button-1" type="submit" id="but-9" onclick="submitData()">Submit</button>
+        </div>
+
+        <div class="card" id="screen10">
+            <h1>
+                All details have been submitted successfully.
+            </h1>
+            <h2>Please click the link on the Whatsapp message to record a new bus stop.</h2>
+        </div>
+    </div>
+
+    <!-- ✅ -->
+
+</body>
+
+</html>
