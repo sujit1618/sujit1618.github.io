@@ -198,8 +198,8 @@ function submitData() {
                 recordDate,
                 recordTime,
                 busRouteNumber,
-                schedule,
                 busStopName,
+                schedule,
                 newLat,
                 newLong
             }
