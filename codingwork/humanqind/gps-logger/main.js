@@ -1,5 +1,5 @@
-let newLat = 0;
-let newLong = 0;
+let newLat = '';
+let newLong = '';
 let busRouteNumber = '';
 let schedule = '';
 let busStopName = '';
@@ -17,38 +17,6 @@ function route(div) {
 
     document.getElementById('bus-route-error').style.color = 'darkgreen';
     document.getElementById('bus-route-error').innerHTML = 'Saved';
-
-    // if (busRouteNumber === 'Route 01') {
-    // document.getElementById('route1').style.display='block';
-    // document.getElementById('route3').style.display='none';
-    // document.getElementById('route4').style.display='none';
-    // document.getElementById('route7').style.display='none';
-    // }
-    // if (busRouteNumber === 'Route 01') {
-    // let i = '1';
-    // showStop(i);
-    // }
-    // if (busRouteNumber === 'Route 03') {
-    // let i = '3';
-    // showStop(i);
-    // }
-    // if (busRouteNumber === 'Route 04') {
-    // let i = '4';
-    // showStop(i);
-    // }
-    // if (busRouteNumber === 'Route 07') {
-    // let i = '7';
-    // showStop(i);
-    // }
-    // if (busRouteNumber === 'Route 08') {
-    // let i = '8';
-    // showStop(i);
-    // }
-    // if (busRouteNumber === 'Route 09') {
-    // 
-    // 
-    // console.log(res);
-    // }
 
     let i = busRouteNumber.charAt(busRouteNumber.length - 2) + busRouteNumber.charAt(busRouteNumber.length - 1);
     console.log(i);
@@ -163,7 +131,6 @@ function homeLocation() {
         status.textContent = 'Locating…';
         navigator.geolocation.getCurrentPosition(success, error);
     }
-
 }
 
 function homeBucket(lat, long, date, time) {
@@ -190,7 +157,13 @@ function submitData() {
         document.getElementById('bus-stop-error').style.color = 'tomato';
     }
 
-    if (busRouteNumber !== '' && schedule !== '' && busStopName !== '') {
+    if (newLat === '') {
+        document.getElementById('but-9').innerHTML = 'Please Enable GPS Location and reload the page';
+        document.getElementById('but-9').style.backgroundColor = '#555';
+        console.log('GPS not working');
+    }
+
+    if (busRouteNumber !== '' && schedule !== '' && busStopName !== '' && newLat !== '') {
 
 
         let body = {
@@ -217,8 +190,13 @@ function submitData() {
             .then(json => {
                 console.log(json);
             });
+
+        document.getElementById('screen1').style.display = "none";
+        document.getElementById('screen10').style.display = "block";
+
     }
-    document.getElementById('screen1').style.display = "none";
-    document.getElementById('screen10').style.display = "block";
+
+    
+
 
 }
