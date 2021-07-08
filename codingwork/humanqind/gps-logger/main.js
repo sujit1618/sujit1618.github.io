@@ -158,7 +158,7 @@ function submitData() {
     }
 
     if (newLat === '') {
-        document.getElementById('but-9').innerHTML = 'Please Enable GPS Location and reload the page';
+        document.getElementById('but-9').innerHTML = 'Please Enable GPS Location and click on Whatsapp link again';
         document.getElementById('but-9').style.backgroundColor = '#555';
         console.log('GPS not working');
     }
