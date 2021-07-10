@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 24px;
+            font-weight:600;
+        }
+        div{
+            margin: 48px 0;
+        }
+
+        .menu-option{
+            margin: 12px 0;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div id="route01"> Route 01
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Sarojini Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Chankya Puri (Samrat Hotel Mother Dairy)</div>
+        <div class="menu-option" onclick="busStop(this)">Chankya Puri (British High Comm.)</div>
+        <div class="menu-option" onclick="busStop(this)">Sarojini Nagar(TPoint Naval School)</div>
+        <div class="menu-option" onclick="busStop(this)">Safderjung Enc (Delhi Police Pub Sch)</div>
+        <div class="menu-option" onclick="busStop(this)">Green Park (Arya Samag Mander)</div>
+        <div class="menu-option" onclick="busStop(this)">Safdaerjang Enclave ( N C C off )</div>
+        <div class="menu-option" onclick="busStop(this)">Safdarjang Enclave (Center 4 Sight )</div>
+        <div class="menu-option" onclick="busStop(this)">Mohamad Pur Colony ( Sec-2 Chruch)</div>
+        <div class="menu-option" onclick="busStop(this)">Mohamad Pur Village</div>
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sec-1 ( Main Market )</div>
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sector-4,& 5( Bus Stop )</div>
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sec- 4( Jain Mandir)</div>
+        <div class="menu-option" onclick="busStop(this)">Ber Sarai (DDA Flats)</div>
+        <div class="menu-option" onclick="busStop(this)">Katwaria saria (S V Peth)</div>
+        <div class="menu-option" onclick="busStop(this)">Katwaria Saria ( Mother Dairy)</div>
+    </div>
+
+    <div id="route03"> Route 03
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Madan GIR Police Chowki</div>
+        <div class="menu-option" onclick="busStop(this)">Pushp Vihar (Birla School)</div>
+        <div class="menu-option" onclick="busStop(this)">Pushp Vihar Sector 1( J Block )</div>
+        <div class="menu-option" onclick="busStop(this)">Saket ( J Block 27 Restrorent)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Prem Singh Off)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Hanumaan Mandir)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Coco Cola Factory)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Left Turn)</div>
+        <div class="menu-option" onclick="busStop(this)">Adhchini , ( S.T.C Bus Stop)</div>
+        <div class="menu-option" onclick="busStop(this)">Katwarea Saria Qutub Hotel</div>
+        <div class="menu-option" onclick="busStop(this)">Katwariya Saria ( Mother Dairy )</div>
+        <div class="menu-option" onclick="busStop(this)">Katwaria Saria(I S T E)</div>
+    </div>
+
+    <div id="route04"> Route 04
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Moti Bagh C N G Pamp</div>
+        <div class="menu-option" onclick="busStop(this)">Moti Bagh, (ABlock Gate no11 )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Vihar Gaun</div>
+        
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sec-7 (Malai Mander )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Vihar (Air India Colony )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Vihar (Near Water Tank)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (D- 6)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (C-1 Bus Stop)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (G D Goenka School )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (New Police Station )</div>
+    </div>
+
+    <div id="route07"> Route 07
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Maidan Garhi Vill,( U -Turn)</div>
+        <div class="menu-option" onclick="busStop(this)">Maidan Garhi (Lavnya Hospital )</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur Enclave, Ph-II( Vrinda School )</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur Enc.Ph-2 (Juice Shop )</div>
+        <div class="menu-option" onclick="busStop(this)">Andheria more kishan hatt</div>
+    </div>
+
+    <div id="route08"> Route 08
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Khaanpur PNB</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar nagar depot</div>
+        <div class="menu-option" onclick="busStop(this)">Khaanpur (Red light )</div>
+        <div class="menu-option" onclick="busStop(this)">Saket (Sainik Farm City Forest)</div>
+        <div class="menu-option" onclick="busStop(this)">Saket (Metro Station)</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur Enclave ( Affinity Saloon )</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur (A-1 Block )</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur ( Nanda Hospital )</div>
+        <div class="menu-option" onclick="busStop(this)">Tivoli Garden Main Gate</div>
+        <div class="menu-option" onclick="busStop(this)">Chatter Pur ( 100 ft Road Red Light.)</div>
+        <div class="menu-option" onclick="busStop(this)">chattarpur(100 ft road Kanwar singh tawar office)</div>
+    </div>
+
+    <div id="route09"> Route 09
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur Pahari (Bajaj Show room 100ft Road )</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur Pahari (100ft Road Gali No 25 )</div>
+        <div class="menu-option" onclick="busStop(this)">Rajpur Kurd (Tivoli Garden Side Entrence )</div>
+        <div class="menu-option" onclick="busStop(this)">Rajpur khurd (Zara Farm )</div>
+        <div class="menu-option" onclick="busStop(this)">ChatterPur ,Deena Bank</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur Mandir</div>
+    </div>
+
+    <div id="route17">Route 17
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Kotla (Yes Bank)</div>
+        <div class="menu-option" onclick="busStop(this)">Lodhi Road (Mausam Bhawan)</div>
+        <div class="menu-option" onclick="busStop(this)">Lodhi Road ( Lodhi Colony )</div>
+        <div class="menu-option" onclick="busStop(this)">Safderjung Terminal ( Below fly over)</div>
+        <div class="menu-option" onclick="busStop(this)">S N ( Enquary )</div>
+        <div class="menu-option" onclick="busStop(this)">S N ( Depot )</div>
+        <div class="menu-option" onclick="busStop(this)">R. K. Puram Sector-12 (Hyat Hotel Ring Road)</div>
+        <div class="menu-option" onclick="busStop(this)">R. K. Puram Sector-12 (Ring Road Bus Stand )</div>
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sec 9 (opp Shanti Niketan )</div>
+        <div class="menu-option" onclick="busStop(this)">R. K. Puram ( Sector-8 Shiv Shakti Mander )</div>
+        <div class="menu-option" onclick="busStop(this)">R. K. Puram Sector-(Karnatka Temple)</div>
+        <div class="menu-option" onclick="busStop(this)">R K Puram Sec 10 (Som Vihar)</div>
+        <div class="menu-option" onclick="busStop(this)">RK PURAM sec-5, main gate( Sec- 6 Mkt )</div>
+        <div class="menu-option" onclick="busStop(this)">Munirka Vill (Aggarwal Sweet Neer Vasant Vihar Deopt)</div>
+        <div class="menu-option" onclick="busStop(this)">Munirka village (Baba Gang Nath Temple)</div>
+        <div class="menu-option" onclick="busStop(this)">J N U Main Gate</div>
+    </div>
+
+    <div id="route19">Route 19
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Vihar</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur( Near Aggarwal Sweet NH_8 )</div>
+        <div class="menu-option" onclick="busStop(this)">Rang Puri ( Bus Stop N H -8)</div>
+        <div class="menu-option" onclick="busStop(this)">Rajokri Westend Green Society</div>
+        <div class="menu-option" onclick="busStop(this)">Rajokri ( Red Light N H _8 )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur (Bharam Putra House )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur (Relience Fresh )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur (Govt. School )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur (OBI Bank )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur (O B C Bank )</div>
+    </div>
+
+    <div id="route20">Route 20
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Fateh Pur ( F B Gali)</div>
+        
+        <div class="menu-option" onclick="busStop(this)">Dera More ( Patrol Pump)</div>
+        <div class="menu-option" onclick="busStop(this)">Fateh pur Harswroop Colony</div>
+        <div class="menu-option" onclick="busStop(this)">Fatehpur ( Piple Chowk)</div>
+        <div class="menu-option" onclick="busStop(this)">Fatehpur Asola ( Transformer )</div>
+        <div class="menu-option" onclick="busStop(this)">Fatehpur Farm (Green Medows)</div>
+        <div class="menu-option" onclick="busStop(this)">Satbari (Truck Mkt )</div>
+        <div class="menu-option" onclick="busStop(this)">ChatterPur (Radiance Motel )</div>
+        <div class="menu-option" onclick="busStop(this)">Satbari (DLF)</div>
+    </div>
+
+    <div id="route21">Route 21
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">AYA NAGAR (Sati Mata Mandir)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar (Police Chocki )</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar (Kalinga School )</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar (J. M .D garden)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar (Aditya Medecose Band Rd )</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar (Sport Stadium)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( Aggarwal Sweet Sunday Mkt )</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( M C D School )</div>
+    </div>
+
+    <div id="route22">Route 22
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Dwarka</div>
+        <div class="menu-option" onclick="busStop(this)">Dwarka(Sec -23 Bus Stop)</div>
+        <div class="menu-option" onclick="busStop(this)">Kapashera (H D F C Bank )</div>
+        <div class="menu-option" onclick="busStop(this)">Kapashera (Vir Public School)</div>
+        <div class="menu-option" onclick="busStop(this)">Smalka (Juice Corner )</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur ( I D B I Bank)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipal Pur ( Mata Chowk )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj ( E2 )</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (Rangpuri Pahari Near Ryan School)</div>
+        <div class="menu-option" onclick="busStop(this)">Masudpur (Puppy Pet Shop)</div>
+    </div>
+
+    <div id="route23">Route 23
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">New Manglapuri</div>
+        <div class="menu-option" onclick="busStop(this)">Sultanpur Village C R C Building</div>
+        <div class="menu-option" onclick="busStop(this)">Ghitorni Govt. School</div>
+        <div class="menu-option" onclick="busStop(this)">Ghitorni Red Light</div>
+    </div>
+
+    <div id="route24">Route 24
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Mandi Gaon ( D T C Bus Stand)</div>
+        <div class="menu-option" onclick="busStop(this)">Jonapur (Sambhu Bapu colony)</div>
+        <div class="menu-option" onclick="busStop(this)">Jona Pur (S B I)</div>
+        <div class="menu-option" onclick="busStop(this)">Jonapur (Sharma S T D)</div>
+        <div class="menu-option" onclick="busStop(this)">Gadaipur ( Green Field Farm )</div>
+        <div class="menu-option" onclick="busStop(this)">Sultan Pur Estate</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj Sec-A Pkt -B ( Bus Stop )</div>
+    </div>
+
+    <div id="route A">Route A
+        <div class="menu-option" onclick="busStop(this)">Saket (Sant Vihar) Delhi Metro Station</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Prem Singh Off)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Coca Cola Factory)</div>
+        <div class="menu-option" onclick="busStop(this)">Lado Sarai (Left Turn)</div>
+        <div class="menu-option" onclick="busStop(this)">Katwaria Sarai (Near Mother Dairy)</div>
+        <div class="menu-option" onclick="busStop(this)">Katwaria Sarai (Indian Society of Technical Education), Katwaria Sarai and Shani Mandir Light</div>
+    </div>
+
+    <div id="route B">Route B
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Vihar</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur,( near Vishal Mega Mart)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur ( Saptgiri Hotel )</div>
+        <div class="menu-option" onclick="busStop(this)">Rajokri Mode</div>
+        <div class="menu-option" onclick="busStop(this)">kapashera mode</div>
+        <div class="menu-option" onclick="busStop(this)">Samalka ( Radha Krishna Mandir)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur,( Near Kabir Bhawan)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur, (IDBI Bank)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur (Govt. School)</div>
+        <div class="menu-option" onclick="busStop(this)">Mahipalpur ( Near Aggarwal Sweets)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj, ( E-2)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj (C-1)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj D-6</div>
+        <div class="menu-option" onclick="busStop(this)">Masoodpur,, (Puppy Pet Shop)</div>
+        <div class="menu-option" onclick="busStop(this)">Masood Pur, (L.G Shop)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj, (Near Kake Da Dhaba)</div>
+        <div class="menu-option" onclick="busStop(this)">Vasant Kunj , (B-8 Gate no. 2)</div>
+    </div>
+
+    <div id="route C">Route C
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Ambedkar Nagar</div>
+        <div class="menu-option" onclick="busStop(this)">Fatehpur, (Market - II)</div>
+        <div class="menu-option" onclick="busStop(this)">Fatehpur Beri ,(Market - 1))</div>
+        <div class="menu-option" onclick="busStop(this)">Chandan Holla</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur Ext.,( Dena Bank)</div>
+        <div class="menu-option" onclick="busStop(this)">Rajpur Khurd ( Enterance 2, Near Oodles Banquet)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur ,( Nanda Hospital)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur,(Tivoli Garden Resort)</div>
+        <div class="menu-option" onclick="busStop(this)">Rajpur Khurd Enterance First (A - II Block)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur, ( Block A-2)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur ,(100 FT Road)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur, (Katyani Maa Mandir Gate)</div>
+        <div class="menu-option" onclick="busStop(this)">Sector-A Vasant Kunj</div>
+    </div>
+
+    <div id="route E">Route E
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Mandi Gaon</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( Ph.-5, Police Chowki)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( Ph.-4, Ashok Dairy Bandh Road)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( Ph.-5, Shiv Hansa Chowk, Stop-1)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar Ph.-5 , Shiv Hansa Chowk Stop-3)</div>
+        <div class="menu-option" onclick="busStop(this)">Aya Nagar ( Aggarwal Sweets)</div>
+        <div class="menu-option" onclick="busStop(this)">Ghitorni,( Red Light)</div>
+        <div class="menu-option" onclick="busStop(this)">Ghitorni,( Govt. School)</div>
+    </div>
+
+    <div id="route I">Route I
+        <div class="menu-option" onclick="busStop(this)">DAV Vasant Kunj</div>
+        <div class="menu-option" onclick="busStop(this)">Maidan Garhi (U Turn main Village)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur Enclave (Phase- I,Lavanya Aurvedic Hospital)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur Enclave (Vrinda School)</div>
+        <div class="menu-option" onclick="busStop(this)">Madian Garhi (Gali No. 34 & 35)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur 100ft road ( Choudhry Karan Singh Tawar Office)</div>
+        <div class="menu-option" onclick="busStop(this)">Chattarpur (100 FT Road, Opp.Ferns & Petals)</div>
+        <div class="menu-option" onclick="busStop(this)">Chatterpur( 100ft Road, Diwan Bajaj)</div>
+        <div class="menu-option" onclick="busStop(this)">Anderia More kisan hatt ( D T C Bus Stand)</div>
+        <div class="menu-option" onclick="busStop(this)">Sultanpur Metro Station</div>
+    </div>
+</body>
+</html>

@@ -37,6 +37,7 @@ function showStop(i) {
     document.getElementById('route22').style.display = 'none';
     document.getElementById('route23').style.display = 'none';
     document.getElementById('route24').style.display = 'none';
+    document.getElementById('route A').style.display = 'none';
     document.getElementById('route B').style.display = 'none';
     document.getElementById('route C').style.display = 'none';
     document.getElementById('route E').style.display = 'none';
