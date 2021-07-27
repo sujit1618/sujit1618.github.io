@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-image: url(./images/bg-1.jpeg); */
+    background-image: url(https://images.unsplash.com/photo-1504541891213-1b1dfdadb739?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.body-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 480px 300px;
+    padding: 60px;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.card{
+    backdrop-filter: blur(7px);
+    filter: opacity(0.8);
+    padding: 40px 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 36px;
+    font-weight: 800;
+    background: radial-gradient(91.4% 1868.19% at 10.59% 31.03%, rgba(251, 251, 251, 0.36) 0%, rgba(249, 249, 249, 0.396) 100%), radial-gradient(105.55% 2157.47% at 102.37% 100%, #F2F6F9 0%, #F7F7F8 100%);
+    border-radius: 44px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.11);
+}
+
+#card1{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+#card2{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+#card3{
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+#card4{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+#card5{
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+}

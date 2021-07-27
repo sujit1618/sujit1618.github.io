@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mover</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .body-grid{
+            margin: auto;
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
+            height: 600px;
+            width: 600px;
+            background-color: lightsalmon;
+        }
+        .block{
+            display: grid;
+            border: 1px lightskyblue dashed;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(224, 255, 255);
+            background-blend-mode: multiply;
+            cursor: pointer;
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+        }
+        #up{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+        #right{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 1;
+        }
+        #down{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            grid-column: 2 / span 1;
+            grid-row: 3 / span 1;
+        }
+        #left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="body-grid">
+        <div class="block" id="block-1">
+            <div class="arrow" id="up">
+                👆
+            </div>
+            <div class="arrow" id="right">
+                👉
+            </div>
+            <div class="arrow" id="down">
+                👇
+            </div>
+            <div class="arrow" id="left">
+                👈
+            </div>
+            
+        </div>
+        <div class="block" id="block-2"></div>
+        <div class="block" id="block-3"></div>
+    </div>
+</body>
+</html>

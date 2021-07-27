@@ -124,3 +124,10 @@ h2{
     animation: animProj6 7s ease-in-out infinite alternate;
     background-image: url(./images/home/prescription.jpg);
 }
+
+.superellipse{
+    margin-top: 500px;
+    height: 200px;
+    width: 800px;
+    background-color: radial-gradient(86.82% 1774.65% at 10.59% 31.03%, rgba(252, 254, 255, 0.2) 0%, rgba(246, 251, 248, 0.2) 100%), radial-gradient(105.55% 2157.47% at 102.37% 100%, #F7F6F4 0%, #FAFAFB 100%);
+}
