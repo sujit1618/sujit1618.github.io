@@ -29,8 +29,13 @@ function getHour(){
         document.getElementById('banner').style.display='none';
     }
 
+    // if (day===31) {
+        // document.getElementById('h2').innerHTML='Please click on the link below to go to the session';
+        // document.getElementById('banner').style.display='none';
+    // }
+
     else{
-        document.getElementById('h2').innerHTML='Session stream has <b>not started yet.</b> Please check back as per the scheduled time below:<br><br>';
+        document.getElementById('h2').innerHTML='Session stream has <b>not started yet.</b> Please check back as per the scheduled time below:<br>';
         document.getElementById('button').style.display='none';
         document.getElementById('banner').style.display='block';
     }
@@ -42,9 +47,12 @@ function openSession() {
     }
 
     if (day===31 && hour>=17 && hour<=19) {
-        // document.getElementById('h').innerHTML=session[1];
         window.open(session[1]);
     }
+
+    // if (day===31) {
+        // window.open(session[0]);
+    // }
 }
 
 function patience() {
