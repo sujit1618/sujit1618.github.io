@@ -30,7 +30,7 @@ function getHour(){
     }
 
     else{
-        document.getElementById('h2').innerHTML='Session stream has not started yet. Please check back as per the scheduled time';
+        document.getElementById('h2').innerHTML='Session stream has <b>not started yet.</b> Please check back as per the scheduled time below:<br><br>';
         document.getElementById('button').style.display='none';
         document.getElementById('banner').style.display='block';
     }
@@ -38,7 +38,7 @@ function getHour(){
 
 function openSession() {
     if (day===31 && hour>=11 && hour<=13) {
-        window.open(session[2]);
+        window.open(session[0]);
     }
 
     if (day===31 && hour>=17 && hour<=19) {
@@ -47,3 +47,7 @@ function openSession() {
     }
 }
 
+function patience() {
+    // window.open('https://www.youtube.com/watch?v=ydNJ3ZmBjQg');
+    window.open('./images/Banner.jpeg');
+}
