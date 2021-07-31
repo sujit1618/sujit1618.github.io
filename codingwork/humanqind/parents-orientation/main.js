@@ -33,5 +33,5 @@ function getHour(){
 }
 
 function openSession() {
-    window.open(session[0]);
+    window.open(session[1]);
 }
