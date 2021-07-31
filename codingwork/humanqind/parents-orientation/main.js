@@ -2,10 +2,10 @@ let dateTime;
 let day;
 let hour;
 let minutes;
-let session=['https://youtu.be/Fe6d9x_LcOA','https://youtu.be/ssLyfHbxEa8','sesh3','sesh4','sesh5'];
+let session=['https://youtu.be/2StYT58YxCc','https://youtu.be/ssLyfHbxEa8','sesh3','sesh4','sesh5'];
 
 
-window.addEventListener('DOMContentLoaded', getHour);
+// window.addEventListener('DOMContentLoaded', getHour);
 
 function getHour(){
     const today = new Date();
@@ -14,48 +14,24 @@ function getHour(){
     minutes = today.getMinutes();
 
     console.log(day+' '+hour+' '+minutes);
-    // const date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
-    // const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-    if (day===31 && hour<=13 && hour>=11) {
-        document.getElementById('h2').innerHTML='Please click on the link below to go to the session';
-        document.getElementById('banner').style.display='none';
-
-    }
-
-    if (day===31 && hour>=17 && hour<=19) {
-        // document.getElementById('h').innerHTML=session[1];
+    if (day===31 && hour<13) {
         document.getElementById('h2').innerHTML='Please click on the link below to go to the session';
         document.getElementById('banner').style.display='none';
     }
 
-    // if (day===31) {
-        // document.getElementById('h2').innerHTML='Please click on the link below to go to the session';
-        // document.getElementById('banner').style.display='none';
-    // }
+    if (day===31 && hour>17 && hour<19 ) {
+        document.getElementById('h2').innerHTML='Please click on the link below to go to the session';
+        document.getElementById('banner').style.display='none';
+    }
 
     else{
-        document.getElementById('h2').innerHTML='Session stream has <b>not started yet.</b> Please check back as per the scheduled time below:<br>';
+        document.getElementById('h2').innerHTML='Session stream has <b>not started yet.</b> Please check back as per the scheduled time below:<br><br>';
         document.getElementById('button').style.display='none';
         document.getElementById('banner').style.display='block';
     }
 }
 
 function openSession() {
-    if (day===31 && hour>=11 && hour<=13) {
-        window.open(session[0]);
-    }
-
-    if (day===31 && hour>=17 && hour<=19) {
-        window.open(session[1]);
-    }
-
-    // if (day===31) {
-        // window.open(session[0]);
-    // }
-}
-
-function patience() {
-    // window.open('https://www.youtube.com/watch?v=ydNJ3ZmBjQg');
-    window.open('./images/Banner.jpeg');
+    window.open(session[0]);
 }
