@@ -2,7 +2,7 @@ let dateTime;
 let day;
 let hour;
 let minutes;
-let session=['https://youtu.be/2StYT58YxCc','https://youtu.be/ssLyfHbxEa8','sesh3','sesh4','sesh5'];
+let session=['https://youtu.be/2StYT58YxCc','https://youtu.be/ssLyfHbxEa8','https://youtu.be/OP2YPug5V-M','sesh4','sesh5'];
 
 
 // window.addEventListener('DOMContentLoaded', getHour);
@@ -33,5 +33,5 @@ function getHour(){
 }
 
 function openSession() {
-    window.open(session[1]);
+    window.open(session[2]);
 }
