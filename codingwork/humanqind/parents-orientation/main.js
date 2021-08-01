@@ -33,5 +33,5 @@ function getHour(){
 }
 
 function openSession() {
-    window.open(session[3]);
+    window.open('https://youtu.be/nhdkG3aYlcQ');
 }
