@@ -16,19 +16,19 @@
     AFRAME.registerComponent('cursor-listener', {
       init: function () {
 
-        this.el.addEventListener('click', function (evt) {
+        this.el.addEventListener('mouseenter', function (evt) {
           address = this.getAttribute('url');
           console.log(address);
           document.getElementById('clickButton').innerHTML=address;
           console.log('I was clicked at: ', evt.detail.intersection.point);
-          window.open(address,_blank);
         });
         
       }
     });
 
     function goToLink(){
-      window.open(address,_blank);
+      window.open(address, '_blank');
+      document.getElementById('clickButton').innerHTML='click registered';
     }
 
   </script>
@@ -40,7 +40,7 @@
     <a-box cursor-listener position="-8 3 -4" rotation="0 45 0" color="#4CC3D9" url='https://www.sujitjoshi.com'></a-box>
 
     <a-camera rotation-reader>
-      <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02"
+      <a-entity id="cursorEnt" cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02"
         material="color: lightyellow; opacity:0.7;" rayOrigin: mouse>
       </a-entity>
     </a-camera>
