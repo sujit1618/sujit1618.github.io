@@ -31,8 +31,8 @@
     }
 
   </script>
-
-<a-scene style="top: 80px; bottom:80px;" vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
+<div style="margin-top: 200px; height:80vh;">
+  <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
     <a-box cursor-listener position="-1 0.5 -1" rotation="0 45 0" color="#4CC3D9" url='https://www.google.com'></a-box>
     <a-box cursor-listener position="1 0.5 -2" rotation="0 30 0" color="#325631" url='https://www.yahoo.com'></a-box>
@@ -45,6 +45,8 @@
     </a-camera>
 
   </a-scene>
+</div>
+
   <div style="display: block; position: absolute; top: 40px; left: 50%; right: 50%; min-width: 100px; text-align: center; background-color: rgb(63, 63, 63); color: white;">Point yellow cirlce to select and click button</div>
 <button id="clickButton" style="display: block; position: absolute; bottom: 40px; left: 50%; right: 50%;" onclick="goToLink()">Click Here</button>
 </body>
