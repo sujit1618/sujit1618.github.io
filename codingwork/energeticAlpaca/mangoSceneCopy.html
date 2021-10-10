@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   <!-- ar for a-fame -->
@@ -40,7 +40,7 @@
 
     <a-camera rotation-reader>
       <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02"
-        material="color: lightyellow; opacity:0.7;">
+        material="color: lightyellow; opacity:0.7;" rayOrigin: mouse>
       </a-entity>
     </a-camera>
 
