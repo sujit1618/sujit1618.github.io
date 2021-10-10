@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let url='';
+        
+        // Component to change to a sequential color on click.
+        AFRAME.registerComponent('cursor-listener', {
+            init: function () {
+                var lastIndex = -1;
+                var COLORS = ['red', 'green', 'blue'];
+                this.el.addEventListener('mouseenter', function (evt) {
+                    lastIndex = (lastIndex + 1) % COLORS.length;
+                    this.setAttribute('material', 'color', COLORS[lastIndex]);
+                    console.log('I was clicked at: ', evt.detail.intersection.point);
+                });
+            }
+        });
+    </script>
+    <a-scene>
+        <a-entity camera look-controls>
+            <a-entity cursor="fuse: false;" position="0 0 -1"
+                geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: black; shader: flat">
+            </a-entity>
+        </a-entity>
+
+        <a-entity id="box" cursor-listener geometry="primitive: box" material="color: blue"></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>

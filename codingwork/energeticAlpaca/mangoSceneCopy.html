@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <!-- ar for a-fame -->
+  <script src="js/href-aframe.js"></script>
+</head>
+
+
+<body>
+  <script>
+    let address = '';
+    AFRAME.registerComponent('cursor-listener', {
+      init: function () {
+
+        this.el.addEventListener('mouseenter', function (evt) {
+          address = this.getAttribute('url');
+          console.log(address);
+          document.getElementById('clickButton').innerHTML=address;
+          console.log('I was clicked at: ', evt.detail.intersection.point);
+        });
+        
+      }
+    });
+
+    function goToLink(){
+      window.open(address,_blank);
+    }
+
+  </script>
+
+<a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
+
+    <a-box cursor-listener position="-1 0.5 -1" rotation="0 45 0" color="#4CC3D9" url='https://www.google.com'></a-box>
+    <a-box cursor-listener position="1 0.5 -2" rotation="0 30 0" color="#325631" url='https://www.yahoo.com'></a-box>
+    <a-box cursor-listener position="-8 3 -4" rotation="0 45 0" color="#4CC3D9" url='https://www.sujitjoshi.com'></a-box>
+
+    <a-camera rotation-reader>
+      <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02"
+        material="color: lightyellow; opacity:0.7; blending:additive">
+      </a-entity>
+    </a-camera>
+
+  </a-scene>
+<button id="clickButton" style="display: block; position: absolute; bottom: 40px; left: 50%; right: 50%; min-width: 100px;" onclick="goToLink()">Click Here</button>
+</body>
+
+
+</html>
