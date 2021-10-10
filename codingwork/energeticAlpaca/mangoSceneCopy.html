@@ -10,7 +10,7 @@
 
 
 <body>
-
+  
   <script>
     let address = '';
     AFRAME.registerComponent('cursor-listener', {
@@ -19,25 +19,24 @@
         this.el.addEventListener('mouseenter', function (evt) {
           address = this.getAttribute('url');
           console.log(address);
-          document.getElementById('clickButton').innerHTML = address;
+          document.getElementById('clickButton').innerHTML=address;
           console.log('I was clicked at: ', evt.detail.intersection.point);
         });
-
+        
       }
     });
 
-    function goToLink() {
-      window.open(address, _blank);
+    function goToLink(){
+      window.open(address,_blank);
     }
+
   </script>
 
-  <a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;"
-    renderer="antialias: true; colorManagement: true;">
+<a-scene vr-mode-ui="enabled: false" embedded arjs="sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true; colorManagement: true;">
 
     <a-box cursor-listener position="-1 0.5 -1" rotation="0 45 0" color="#4CC3D9" url='https://www.google.com'></a-box>
     <a-box cursor-listener position="1 0.5 -2" rotation="0 30 0" color="#325631" url='https://www.yahoo.com'></a-box>
-    <a-box cursor-listener position="-8 3 -4" rotation="0 45 0" color="#4CC3D9" url='https://www.sujitjoshi.com'>
-    </a-box>
+    <a-box cursor-listener position="-8 3 -4" rotation="0 45 0" color="#4CC3D9" url='https://www.sujitjoshi.com'></a-box>
 
     <a-camera rotation-reader>
       <a-entity cursor="fuse: false" position="0 0 -1" geometry="primitive: circle; radius:0.02"
@@ -46,12 +45,9 @@
     </a-camera>
 
   </a-scene>
-
-  <div style="display: block; position: absolute; top: 40px; left: 50%; right: 50%; min-width: 100px; text-align: center; background-color: rgb(63, 63, 63); color: white;">
-    Point yellow cirlce to select and click button</div>
-
-    <button style="display: block; position: absolute; bottom: 40px; left: 50%; right: 50%;" onclick="goToLink()" id='clickButton'>Click Here</button>
-
+  <div style="display: block; position: absolute; top: 40px; left: 50%; right: 50%; min-width: 100px; text-align: center; background-color: rgb(63, 63, 63); color: white;">Point yellow cirlce to select and click button</div>
+<button id="clickButton" style="display: block; position: absolute; bottom: 40px; left: 50%; right: 50%; min-width: 100px;" onclick="goToLink()">Click Here</button>
+</body>
 
 
 </html>
