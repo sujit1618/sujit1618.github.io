@@ -4,6 +4,7 @@ let studentName = '';
 let admissionNumber = '';
 let divisionName = '';
 let className = '';
+let body;
 
 
 function loadScreen2() {
@@ -173,11 +174,11 @@ function divisionMenu() {
 
 function loadScreen10() {
     
-    let url = 'https://api.sheety.co/ce8c8894a7547b3bcc22ebdaed462b14/davvkSchoolAddress/staff';
+    let url = 'https://api.sheety.co/ce8c8894a7547b3bcc22ebdaed462b14/davvkSchoolAddress/parents';
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen10').style.display = "block";
-    let body = {
-        staff: {
+    body = {
+        parent: {
             className,
             divisionName,
             studentName,
