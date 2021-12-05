@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <!-- ----------------------------------------------- -->
+    <!-- Created for HumanQind Foundation by Sujit Joshi -->
+    <!-- ----------------------------------------------- -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +31,7 @@
             <div class="forms-set">
                 <div class="form-container">
                     <button class="dropdown-button" id="bus-route-button" onclick="busRouteMenu()">
-                        <p class="dropdown-label" id="bus-route-label">Class</p> <img class="dropdown-arrow"
+                        <p class="dropdown-label" id="bus-route-label">SELECT CLASS</p> <img class="dropdown-arrow"
                             src="../images/icons/icon/navigation/chevron_right_24px.svg" alt="">
                     </button>
                     <div class="dropdown-menu" id="bus-route-menu"> 
@@ -51,7 +54,7 @@
                 </div>
                 <div class="form-container">
                     <button class="dropdown-button" id="division-button" onclick="divisionMenu()">
-                        <p class="dropdown-label" id="division-label">Division</p> <img class="dropdown-arrow"
+                        <p class="dropdown-label" id="division-label">SELECT DIVISION</p> <img class="dropdown-arrow"
                             src="../images/icons/icon/navigation/chevron_right_24px.svg" alt="">
                     </button>
                     <div class="dropdown-menu" id="division-menu"> 
@@ -179,10 +182,17 @@
             <button class="button-1" type="submit"  id="but-9" onclick="loadScreen10()">Submit</button>
         </div>
         <div class="card" id="screen10">
-            <h1>
-                All details have been submitted successfully.
+            <h1 id="dataStatus">
+                Submitting Data.
             </h1>
-            <h2>You may now close this window. Thank you!</h2>
+            <h2 id="submittedDataText" style="font-weight: 600;">Please Wait.</h2>
+            <h2 id="classNameData"></h2>
+            <h2 id="DivisionNameData"></h2>
+            <h2 id="studentNameData"></h2>
+            <h2 id="admissionNumberData"></h2>
+            <h2 id="errorText"></h2>
+            <br>
+            <h2 id="closeWindowtext"></h2>
         </div>
     </div>
 

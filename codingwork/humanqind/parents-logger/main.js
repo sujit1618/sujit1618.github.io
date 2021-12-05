@@ -5,6 +5,7 @@ let admissionNumber = '';
 let divisionName = '';
 let className = '';
 let body;
+let errors;
 
 
 function loadScreen2() {
@@ -169,7 +170,6 @@ function divisionMenu() {
     } else {
         document.getElementById('division-menu').style.display = 'none';
     }
-    document.getElementById('bus-stop-menu').style.display = 'none';
 }
 
 function loadScreen10() {
@@ -199,6 +199,20 @@ function loadScreen10() {
         })
         .then((response) => response.json())
         .then(json => {
+            document.getElementById('dataStatus').innerHTML='Data Submitted Successfully';
+            document.getElementById('submittedDataText').innerHTML='Data Submitted For:';
+            document.getElementById('classNameData').innerHTML='Class: '+json.sheet1.className;
+            document.getElementById('DivisionNameData').innerHTML='Division: '+json.sheet1.divisionName;
+            document.getElementById('studentNameData').innerHTML='Student: '+json.sheet1.studentName;
+            document.getElementById('admissionNumberData').innerHTML='Adm. No.: '+json.sheet1.admissionNumber;
+            document.getElementById('closeWindowtext').innerHTML='You may now close this window. Thank you!';
+
+
+            // <p id="classNameData"></p>
+            // <p id="DivisionNameData"></p>
+            // <p id="studentNameData"></p>
+            // <p id="AdmissionNumberData"></p>
+
             console.log(json);
         });
 }
