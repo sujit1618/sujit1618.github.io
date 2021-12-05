@@ -205,7 +205,7 @@ function loadScreen10() {
             document.getElementById('DivisionNameData').innerHTML='Division: '+json.sheet1.divisionName;
             document.getElementById('studentNameData').innerHTML='Student: '+json.sheet1.studentName;
             document.getElementById('admissionNumberData').innerHTML='Adm. No.: '+json.sheet1.admissionNumber;
-            document.getElementById('closeWindowtext').innerHTML=' Thank you! You may now close this window.';
+            document.getElementById('closeWindowtext').innerHTML=' Thank you! You may close this window.';
 
 
             // <p id="classNameData"></p>
