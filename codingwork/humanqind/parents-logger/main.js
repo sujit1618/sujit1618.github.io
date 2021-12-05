@@ -174,11 +174,11 @@ function divisionMenu() {
 
 function loadScreen10() {
     
-    let url = 'https://api.sheety.co/ce8c8894a7547b3bcc22ebdaed462b14/davvkSchoolAddress/parents';
+    let url = 'https://api.sheety.co/ce8c8894a7547b3bcc22ebdaed462b14/davvkSchoolAddress/sheet1';
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen10').style.display = "block";
     body = {
-        parent: {
+        sheet1: {
             className,
             divisionName,
             studentName,
