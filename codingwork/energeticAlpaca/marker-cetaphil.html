@@ -33,14 +33,15 @@
   <!-- a-frame scene -->
   <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" light="defaultLightsEnabled: true">
+    <a-assets>
+      <video id="vid" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+    </a-assets>
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft type="nft" url="https://sujitjoshi.com/codingwork/ar/Models/mountain" smooth="true" smoothCount="10"
       smoothTolerance=".01" smoothThreshold="5">
-      <a-assets>
-        <video id="vid" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
-      </a-assets>
+     
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
       <a-box color="tomato" depth="10" height="10" width="10" position="0 0 0"></a-box>
       <a-box color="blue" depth="10" height="10" width="10" position="20 0 0"></a-box>
@@ -55,7 +56,7 @@
         <!-- position="15 -10 -40" href="https://sujitjoshi.com" onclick="console.log('clicjedddd')"> -->
       <!-- </a-entity> -->
 
-      <a-video autoplay="true" loop="false" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4" scale="32 18 20" position="15 -10 -40" rotation="90 0 0"></a-video>
+      <a-video autoplay="true" loop="false" src="#vid" scale="32 18 20" position="15 0 -40" rotation="90 0 0"></a-video>
 
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
