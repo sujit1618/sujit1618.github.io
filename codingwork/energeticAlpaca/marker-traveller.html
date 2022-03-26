@@ -1,6 +1,29 @@
+<html>
 <!-- import aframe and then ar.js with image tracking / location based features -->
 <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<script>
+  function logger(x) {
+    console.log(x);
+  }
+
+  function playVid(vidId) {
+    console.log(vidId);
+    var v = document.querySelector(vidId);
+    v.play();
+  }
+
+  function openSwiss(){
+    window.location='./videos/rhine.mp4';
+  }
+  function openSurf(){
+    window.location='https://www.youtube.com/watch?v=Uqmc0891L2U';
+  }
+  function openRoyalenf(){
+    window.location='https://www.royalenfield.com/in/en/motorcycles/continental-gt/';
+  }
+</script>
 
 <!-- style for the loader -->
 <style>
@@ -34,43 +57,48 @@
   <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" light="defaultLightsEnabled: true">
     <a-assets>
-      <video id="vid" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+      <video id="rhine" src="./videos/rhine.mp4"></video>
       <video id="vid2" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
       <video id="vid3" src="waves-2.mp4"></video>
     </a-assets>
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
-    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/ar/Models/mountain" smooth="true" smoothCount="10"
-      smoothTolerance=".01" smoothThreshold="5">
-     
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/swiss" smooth="true"
+      smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-box color="tomato" depth="10" height="10" width="10" position="0 0 0"></a-box>
-      <a-box color="blue" depth="10" height="10" width="10" position="20 0 0"></a-box>
-      <a-box color="green" depth="10" height="10" width="10" position="0 20 0"></a-box>
-      <a-box color="yellow" depth="10" height="10" width="10" position="0 0 20"></a-box>
-      <a-box color="white" depth="10" height="10" width="10" position="-20 0 0"></a-box>
-      <a-box color="purple" depth="10" height="10" width="10" position="0 -20 0"></a-box>
-      <a-box color="white" depth="10" height="10" width="10" position="0 0 -20"></a-box>
-      <!-- <a-box color="teal" depth="10" height="10" width="10" position="15 0 -40"></a-box> -->
+      <a-entity position="120 20 -300" onclick="console.log('logger logging')">
+        <a-box color="teal" depth="100" height="1" width="100" position="0 0 0" onclick="openSwiss()"></a-box>
+      </a-entity>
+      <!-- <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#rhine" scale="270 150 0" position="120 20 -300" rotation="90 180 0"></a-video> -->
+    </a-nft>
 
-      <!-- <a-entity gltf-model="https://sujitjoshi.com/codingwork/ar/Models/glowy_box1.gltf" scale="20 20 20" -->
-        <!-- position="15 -10 -40" href="https://sujitjoshi.com" onclick="console.log('clicjedddd')"> -->
-      <!-- </a-entity> -->
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/surfing" smooth="true"
+      smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
 
-      <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#vid3" scale="32 18 0" position="20 0 -40" rotation="90 180 0"></a-video>
-      <script>
-        
-        window.addEventListener('click', function () {
-        var v = document.querySelector('#vid3');
-        v.play();
-        });
-      </script>
+      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+      <a-entity position="120 20 -300" onclick="console.log('logger logging')">
+        <a-box color="orange" depth="100" height="1" width="100" position="0 0 0" onclick="openSurf()"></a-box>
+      </a-entity>
+
+    </a-nft>
+
+
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/royalenf" smooth="true"
+      smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+      <a-entity position="120 20 -300" onclick="console.log('logger logging')">
+        <a-box color="teal" depth="100" height="1" width="100" position="0 0 0" onclick="openRoyalenf()"></a-box>
+      </a-entity>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera fov="120"></a-entity>
+    <a-entity camera fov="120">
+      <a-entity text="value: ☝️; width: 10" cursor="fuse: false; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.35; radiusOuter: 0.352"
+      material="color: white; shader: flat; opacity: 0.1">
+      
+      </a-entity>
+    </a-entity>
   </a-scene>
 
-  
-
 </body>
+</html>
