@@ -35,6 +35,8 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" light="defaultLightsEnabled: true">
     <a-assets>
       <video id="vid" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+      <video id="vid2" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+      <video id="vid3" src="waves-2.mp4"></video>
     </a-assets>
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
@@ -56,10 +58,23 @@
         <!-- position="15 -10 -40" href="https://sujitjoshi.com" onclick="console.log('clicjedddd')"> -->
       <!-- </a-entity> -->
 
-      <a-video autoplay="true" loop="false" src="#vid" scale="32 18 20" position="15 20 -40" rotation="90 0 0"></a-video>
+      <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#vid3" scale="32 18 0" position="20 0 -40" rotation="90 180 0"></a-video>
+      <script>
+        window.addEventListener('load', function () {
+        var v = document.querySelector('#vid3');
+        v.play();
+        });
 
+        window.addEventListener('click', function () {
+        var v = document.querySelector('#vid3');
+        v.play();
+        });
+      </script>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera></a-entity>
+    <a-entity camera fov="120"></a-entity>
   </a-scene>
+
+  
+
 </body>
