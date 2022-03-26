@@ -1,0 +1,76 @@
+<!-- import aframe and then ar.js with image tracking / location based features -->
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+<!-- style for the loader -->
+<style>
+  .arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arjs-loader div {
+    text-align: center;
+    font-size: 1.25em;
+    color: white;
+  }
+</style>
+
+<body style="margin : 0px; overflow: hidden;">
+  <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
+  <div class="arjs-loader">
+    <div>Loading, please wait...</div>
+  </div>
+
+  <!-- a-frame scene -->
+  <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" light="defaultLightsEnabled: true">
+    <a-assets>
+      <video id="vid" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+      <video id="vid2" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
+      <video id="vid3" src="waves-2.mp4"></video>
+    </a-assets>
+    <!-- a-nft is the anchor that defines an Image Tracking entity -->
+    <!-- on 'url' use the path to the Image Descriptors created before. -->
+    <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/ar/Models/mountain" smooth="true" smoothCount="10"
+      smoothTolerance=".01" smoothThreshold="5">
+     
+      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+      <a-box color="tomato" depth="10" height="10" width="10" position="0 0 0"></a-box>
+      <a-box color="blue" depth="10" height="10" width="10" position="20 0 0"></a-box>
+      <a-box color="green" depth="10" height="10" width="10" position="0 20 0"></a-box>
+      <a-box color="yellow" depth="10" height="10" width="10" position="0 0 20"></a-box>
+      <a-box color="white" depth="10" height="10" width="10" position="-20 0 0"></a-box>
+      <a-box color="purple" depth="10" height="10" width="10" position="0 -20 0"></a-box>
+      <a-box color="white" depth="10" height="10" width="10" position="0 0 -20"></a-box>
+      <!-- <a-box color="teal" depth="10" height="10" width="10" position="15 0 -40"></a-box> -->
+
+      <!-- <a-entity gltf-model="https://sujitjoshi.com/codingwork/ar/Models/glowy_box1.gltf" scale="20 20 20" -->
+        <!-- position="15 -10 -40" href="https://sujitjoshi.com" onclick="console.log('clicjedddd')"> -->
+      <!-- </a-entity> -->
+
+      <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#vid3" scale="32 18 0" position="20 0 -40" rotation="90 180 0"></a-video>
+      <script>
+        
+        window.addEventListener('click', function () {
+        var v = document.querySelector('#vid3');
+        v.play();
+        });
+      </script>
+    </a-nft>
+    <!-- static camera that moves according to the device movemenents -->
+    <a-entity camera fov="120"></a-entity>
+  </a-scene>
+
+  
+
+</body>
