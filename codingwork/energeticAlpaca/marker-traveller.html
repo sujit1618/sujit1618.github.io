@@ -1,51 +1,32 @@
 <html>
-<!-- import aframe and then ar.js with image tracking / location based features -->
-<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <head><!-- import aframe and then ar.js with image tracking / location based features -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="./js/arControl.js"></script>
+    
+    <!-- style for the loader -->
 
-<script>
-  function logger(x) {
-    console.log(x);
-  }
+    <style>
+      .arjs-loader {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .arjs-loader div {
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+      }
+    </style></head>
 
-  function playVid(vidId) {
-    console.log(vidId);
-    var v = document.querySelector(vidId);
-    v.play();
-  }
-
-  function openSwiss(){
-    window.location='./videos/rhine.mp4';
-  }
-  function openSurf(){
-    window.location='https://www.youtube.com/watch?v=Uqmc0891L2U';
-  }
-  function openRoyalenf(){
-    window.location='https://www.royalenfield.com/in/en/motorcycles/continental-gt/';
-  }
-</script>
-
-<!-- style for the loader -->
-<style>
-  .arjs-loader {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arjs-loader div {
-    text-align: center;
-    font-size: 1.25em;
-    color: white;
-  }
-</style>
 
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
@@ -68,7 +49,7 @@
       smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
       <a-entity position="120 20 -300" onclick="console.log('logger logging')">
-        <a-box color="teal" depth="100" height="1" width="100" position="0 0 0" onclick="openSwiss()"></a-box>
+        <a-plane color="teal" height="100" width="100" position="0 0 0" onclick="openSwiss()"></a-plane>
       </a-entity>
       <!-- <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#rhine" scale="270 150 0" position="120 20 -300" rotation="90 180 0"></a-video> -->
     </a-nft>
@@ -87,14 +68,14 @@
     <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/royalenf" smooth="true"
       smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity position="120 20 -300" onclick="console.log('logger logging')">
-        <a-box color="teal" depth="100" height="1" width="100" position="0 0 0" onclick="openRoyalenf()"></a-box>
+      <a-entity text="value: ☝️; align: center; width: 3;font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt;" position="120 20 -300"  onclick="console.log('logger logging')">
+        <a-box color="teal" depth="100" height="1" width="100" opacity="0.3" position="0 200 0" onmouseenter="inHover()" onmouseleave="outHover()" onclick="openRoyalenf()"></a-box>
       </a-entity>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
-    <a-entity camera fov="120">
-      <a-entity text="value: ☝️; width: 10" cursor="fuse: false; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.35; radiusOuter: 0.352"
-      material="color: white; shader: flat; opacity: 0.1">
+    <a-entity camera fov="120" >
+      <a-entity id="cursorEnt" cursor="fuse: false; fuseTimeout: 500"  position="0 0 -1" scale="1 1.3 1" geometry="primitive: ring; radiusInner: 0.25; radiusOuter: 10; segmentsTheta: 120"
+      material="color: white; shader: flat; opacity: 0.3">
       
       </a-entity>
     </a-entity>
