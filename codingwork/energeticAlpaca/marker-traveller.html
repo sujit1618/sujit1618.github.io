@@ -41,6 +41,8 @@
       <video id="rhine" src="./videos/rhine.mp4"></video>
       <video id="vid2" src="https://sujitjoshi.com/codingwork/ar/Models/waves-1.mp4"></video>
       <video id="vid3" src="waves-2.mp4"></video>
+      <image id="pointer" src="./videos/mouse-hand.png"></image>
+      <a-asset-item id="button-1" src="./assets/openbutton3.glb"></a-asset-item>
     </a-assets>
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
@@ -49,7 +51,7 @@
       smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
       <a-entity position="120 20 -300" onclick="console.log('logger logging')">
-        <a-plane color="teal" height="100" width="100" position="0 0 0" onclick="openSwiss()"></a-plane>
+        <a-entity gltf-model="#button-1" scale="20 20 20" position="30 30 0" onmouseenter="inHover();" onmouseleave="outHover()" onclick="openSwiss()"></a-entity>
       </a-entity>
       <!-- <a-video crossorigin="anonymous" autoplay="true" loop="false" src="#rhine" scale="270 150 0" position="120 20 -300" rotation="90 180 0"></a-video> -->
     </a-nft>
@@ -59,7 +61,7 @@
 
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
       <a-entity position="120 20 -300" onclick="console.log('logger logging')">
-        <a-box color="orange" depth="100" height="1" width="100" position="0 0 0" onclick="openSurf()"></a-box>
+        <a-entity gltf-model="#button-1" scale="20 20 20" position="30 30 0" onmouseenter="inHover();" onmouseleave="outHover()" onclick="openSurf()"></a-entity>
       </a-entity>
 
     </a-nft>
@@ -68,18 +70,39 @@
     <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/royalenf" smooth="true"
       smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-      <a-entity text="value: ☝️; align: center; width: 3;font: https://cdn.aframe.io/fonts/Aileron-Semibold.fnt;" position="120 20 -300"  onclick="console.log('logger logging')">
-        <a-box color="teal" depth="100" height="1" width="100" opacity="0.3" position="0 200 0" onmouseenter="inHover()" onmouseleave="outHover()" onclick="openRoyalenf()"></a-box>
+      <a-entity position="120 20 -300"  onclick="console.log('logger logging')">
+        <a-entity gltf-model="#button-1" scale="12 12 12" position="-30 30 0" onmouseenter="inHover();" onmouseleave="outHover()" onclick="openRoyalenf()"></a-entity>
       </a-entity>
     </a-nft>
+
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/canon" smooth="true"
+      smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+      <a-entity position="120 20 -300"  onclick="console.log('logger logging')">
+        <a-entity gltf-model="#button-1" scale="15 15 15" position="30 -30 0" onmouseenter="inHover();" onmouseleave="outHover()" onclick="openCanon()"></a-entity>
+      </a-entity>
+    </a-nft>
+
+    <a-nft type="nft" url="https://sujitjoshi.com/codingwork/energeticAlpaca/markers/lakehotel" smooth="true"
+      smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
+      <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+      <a-entity position="120 20 -300"  onclick="console.log('logger logging')">
+        <a-entity gltf-model="#button-1" scale="17 17 17" position="-30 -30 0" onmouseenter="inHover();" onmouseleave="outHover()" onclick="openLakehotel()"></a-entity>
+      </a-entity>
+    </a-nft>
+
+
+
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera fov="120" >
-      <a-entity id="cursorEnt" cursor="fuse: false; fuseTimeout: 500"  position="0 0 -1" scale="1 1.3 1" geometry="primitive: ring; radiusInner: 0.25; radiusOuter: 10; segmentsTheta: 120"
-      material="color: white; shader: flat; opacity: 0.3">
-      
+      <a-entity id="cursorEnt" cursor="fuse: false; fuseTimeout: 500"  position="0 0 -1" rotation="0 0 0">
       </a-entity>
+      <a-circle id="selectionCirlce" radius="0.03" position="0 0 -0.99" material="color: teal; shader: flat; opacity: 0.0" ></a-circle>
+      <a-image  src="#pointer" width="0.04" height="0.04" position="0 0 -0.98"></a-image>
     </a-entity>
   </a-scene>
 
 </body>
+ <!-- geometry="primitive: cone; radius-bottom: 0.015; height: 0.04; radius-top: 0" -->
+<!-- material="color: white; shader: standard; opacity: 1 -->
 </html>
