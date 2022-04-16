@@ -51,7 +51,7 @@
         <a-assets>
             <a-asset-item id="spino" src="./spinosaurus.glb">
             </a-asset-item>
-            <a-asset-item id="chair" src="./velvet-chair9.glb">
+            <a-asset-item id="chair" src="./flat.glb">
             </a-asset-item>
             <a-mixin id="animations"
                 animation__click="property: components.material.material.color; type: color; to: blue; startEvents: click; dur: 500"
@@ -59,10 +59,10 @@
         </a-assets>
         <a-camera position="0 0.4 1"></a-camera>
 
-        <a-light id="dirlight" auto-shadow-cam intensity="0" light="castShadow:true;type:directional"
+        <a-light id="dirlight" auto-shadow-cam intensity="0.01" light="castShadow:true;type:directional"
             position="10 10 10"></a-light>
-        <a-light hide-on-enter-ar intensity="0.3" light="type:hemisphere;color:yellow;groundColor:blue;"
-            position="10 10 10"></a-light>
+        <!-- <a-light hide-on-enter-ar intensity="0.01" light="type:hemisphere;color:yellow;groundColor:blue;" -->
+            <!-- position="10 10 10"></a-light> -->
 
         <a-entity hide-on-enter-ar environment="lighting:none;shadow:true;"></a-entity>
 
@@ -85,10 +85,16 @@
     <div id="dom-overlay">
         <button onclick="rotateChairLeft()">Rotate Chair left 🔄</button>
         <button onclick="rotateChairRight()">Rotate Chair right 🔄</button>
+        <button onclick="scaleUp()">Scale Up</button>
+        <button onclick="scaleDown()">Scale Down</button>
         <script>
             let rx = 0;
             let ry = 0;
             let rz = 0;
+
+            let sx = 0;
+            let sy = 0;
+            let sz = 0;
 
             function rotateChairRight() {
                 rz = rz+30;
@@ -106,6 +112,32 @@
                 }
                 let rotation = String(rx) + " " + String(rz) + " " + String(ry);
                 document.getElementById('chairModel').setAttribute('rotation', rotation);
+            }
+
+            function scaleUp() {
+                sx = sx+2;
+                sy = sy+2;
+                sz = sz+2;
+                
+                let scale = String(sx) + " " + String(sz) + " " + String(sy);
+                document.getElementById('chairModel').setAttribute('scale', scale);
+            }
+
+            function scaleDown() {
+                sx = sx-2;
+                sy = sy-2;
+                sz = sz-2;
+
+                let a = sx*sy*sz;
+
+                if (a==0) {
+                    sx=1;
+                    sy=1;
+                    sz=1;
+                }
+                
+                let scale = String(sx) + " " + String(sz) + " " + String(sy);
+                document.getElementById('chairModel').setAttribute('scale', scale);
             }
         </script>
         <div id="dom-overlay-message">Enter AR to start.</div>
