@@ -53,7 +53,7 @@
                 src="./spinosaurus.glb">
             </a-asset-item>
             <a-asset-item id="chair"
-                src="./velvet-chair4.glb">
+                src="./velvet-chair9.glb">
             </a-asset-item>
             <a-mixin id="animations"
                 animation__click="property: components.material.material.color; type: color; to: blue; startEvents: click; dur: 500"
@@ -69,16 +69,17 @@
         <a-entity hide-on-enter-ar environment="lighting:none;shadow:true;"></a-entity>
 
         <!-- This plane is only visible in AR and follows the given target to provide it with shadows.-->
-        <a-entity material="shader:shadow; depthWrite:false; opacity:0.9;" visible="false"
-            geometry="primitive:shadow-plane;" shadow="cast:false;receive:true;"
-            ar-shadow-helper="target:#my-objects;light:#dirlight;" height="200" width="200" position="-0.1 0.5 -2"></a-entity>
+        <!-- <a-entity material="shader:shadow; depthWrite:false; opacity:0.9;" visible="false" -->
+            <!-- geometry="primitive:shadow-plane;" shadow="cast:false;receive:true;" -->
+            <!-- ar-shadow-helper="target:#my-objects;light:#dirlight;" height="200" width="200" position="-0.1 0.5 -2"></a-entity> -->
 
         <!-- This is hidden when the user first enters ar but becomes visible when the user can place it -->
         <a-entity hide-on-hit-test-start shadow id="my-objects" scale="1 1 1" position="0.2 -0.2 -0.4">
             <a-gltf-model shadow="cast: true" position="0.1 0 -2" scale="0.9 0.9 0.9" src="#chair">
             </a-gltf-model>
-            <a-gltf-model shadow="cast: false" position="-0.1 0.5 -2" scale="0.2 0.2 0.2" src="#spino">
-            </a-gltf-model>
+            <!-- <a-gltf-model shadow="cast: false" position="-0.1 0.5 -2" scale="0.2 0.2 0.2" src="#spino"> -->
+            <!-- </a-gltf-model>
+             -->
         </a-entity>
     </a-scene>
 
