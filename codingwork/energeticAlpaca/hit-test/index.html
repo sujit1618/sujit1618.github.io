@@ -83,16 +83,26 @@
     </a-scene>
 
     <div id="dom-overlay">
-        <button onclick="rotateChair()">Rotate Chair 🔄</button>
+        <button onclick="rotateChairLeft()">Rotate Chair left 🔄</button>
+        <button onclick="rotateChairRight()">Rotate Chair right 🔄</button>
         <script>
             let rx = 0;
             let ry = 0;
             let rz = 0;
 
-            function rotateChair() {
+            function rotateChairRight() {
                 rz = rz+30;
                 if (rz>=360) {
                     rz=0;
+                }
+                let rotation = String(rx) + " " + String(rz) + " " + String(ry);
+                document.getElementById('chairModel').setAttribute('rotation', rotation);
+            }
+
+            function rotateChairLeft() {
+                rz = rz-30;
+                if (rz<=0) {
+                    rz=360;
                 }
                 let rotation = String(rx) + " " + String(rz) + " " + String(ry);
                 document.getElementById('chairModel').setAttribute('rotation', rotation);
