@@ -158,13 +158,13 @@ function loadScreen10() {
 
 function prefilledform() {
     let url = 'https://docs.google.com/forms/d/e/1FAIpQLSekRoDUtU8-O3FepafQW9rOWtK-LUJ0x7Lak_hhCJumCJkFsg/viewform?usp=pp_url';
-    let q1 = '&entry.1591633300='; //radio
-    let q2 = '&entry.326955045='; //feedback
-    let q3 = '&entry.1696159737=';//suggestions
-    let q4 = '&entry.485428648='; //name
-    let q5 = '&entry.879531967='; //email
+    let radio = '&entry.1591633300='; //radio
+    let feedback = '&entry.326955045='; //feedback
+    let suggestions = '&entry.1696159737=';//suggestions
+    let name = '&entry.485428648='; //name
+    let email = '&entry.879531967='; //email
 
-    let prefilledUrl = url + q1 + 'Bug+Reports'+ q2 + studentName + q3 + admissionNumber + q4 + homeLat + q5 + homeLong;
+    let prefilledUrl = url + radio + 'Bug+Reportsss'+ feedback + studentName + suggestions + admissionNumber + name + homeLat + email + homeLong;
     window.open(prefilledUrl, '_blank');
 }
 
