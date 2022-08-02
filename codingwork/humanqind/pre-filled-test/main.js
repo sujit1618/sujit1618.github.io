@@ -164,8 +164,8 @@ function prefilledform() {
     let name = '&entry.485428648='; //name
     let email = '&entry.879531967='; //email
 
-    let prefilledUrl = url + radio + 'Bug+Reportsss'+ feedback + studentName + suggestions + admissionNumber + name + homeLat + email + homeLong;
-    window.open(prefilledUrl, '_blank');
+    let prefilledUrl = url + radio + 'Bug+Reportsss'+ feedback + '' + suggestions + '' + name + studentName + email + admissionNumber;
+    window.open(prefilledUrl);
 }
 
 // https://docs.google.com/forms/d/e/1FAIpQLSekRoDUtU8-O3FepafQW9rOWtK-LUJ0x7Lak_hhCJumCJkFsg/viewform?usp=pp_url
