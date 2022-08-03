@@ -49,9 +49,9 @@
         gltf-model="dracoDecoderPath: https://cdn.jsdelivr.net/npm/three@0.129.0/examples/js/libs/draco/gltf/;"
         ar-cursor raycaster="objects: #my-objects *">
         <a-assets>
-            <a-asset-item id="mangoesTree" src="3d/mangoesonly.gltf"> </a-asset-item>
-            <a-asset-item id="leavesTree" src="3d/leavesonly.gltf"> </a-asset-item>
-            <a-asset-item id="trunkTree" src="3d/trunkonly.gltf"> </a-asset-item>
+            <a-asset-item id="mangoesTree" src="./mangoesonly.gltf"> </a-asset-item>
+            <a-asset-item id="leavesTree" src="./leavesonly.gltf"> </a-asset-item>
+            <a-asset-item id="trunkTree" src="./trunkonly.gltf"> </a-asset-item>
         </a-assets>
         <a-camera position="0 0.4 1"></a-camera>
 
@@ -73,13 +73,11 @@
                 <a-entity gltf-model="#leavesTree" position="0 0 0" target="_blank"> </a-entity>
                 <a-entity gltf-model="#mangoesTree" position="0 0 0"> </a-entity>
               </a-entity>
-            </a-gltf-model>
-            
         </a-entity>
     </a-scene>
 
     <div id="dom-overlay">
-        <button onclick="rotateChairLeft()">Rotate Chair left 🔄</button>
+        <button onclick="rotateChairLeft()">Rotate tree Chair left 🔄</button>
         <button onclick="rotateChairRight()">Rotate Chair right 🔄</button>
         <button onclick="scaleUp()">Scale Up</button>
         <button onclick="scaleDown()">Scale Down</button>
