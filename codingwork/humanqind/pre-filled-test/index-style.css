@@ -214,3 +214,8 @@ label {
     background-color: rgb(10, 173, 10);
     color: rgb(255, 255, 255);
 }
+
+#locationHelp{
+    max-width: 400px;
+    width: 100%;
+}
