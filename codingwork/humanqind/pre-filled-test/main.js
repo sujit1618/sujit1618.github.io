@@ -10,18 +10,18 @@ let os;
 function loadScreen2() {
     getOS();
     document.getElementById('screen3').style.display = "none";
-    studentName = document.getElementById('studentName').value;
+    // studentName = document.getElementById('studentName').value;
     admissionNumber = document.getElementById('admissionNumber').value;
-    if (studentName === '') {
-        document.getElementById('studentName').placeholder = "This field is required";
-    }
+    // if (studentName === '') {
+        // document.getElementById('studentName').placeholder = "This field is required";
+    // }
     if (admissionNumber === '') {
         document.getElementById('admissionNumber').placeholder = "This field is required";
     }
-    if (admissionNumber !== '' && studentName !== '') {
+    if (admissionNumber !== '') {
         document.getElementById('screen1').style.display = "none";
         document.getElementById('screen2').style.display = "block";
-        console.log(studentName, admissionNumber);
+        console.log(admissionNumber);
 
         document.getElementById('locationHelp').display = 'block';
         document.getElementById('locationHelp').setAttribute('src', './images/' + os + '.png');
@@ -32,7 +32,7 @@ function loadScreen1() {
     hideAll();
     document.getElementById('screen1').style.display = "block";
     document.getElementById('screen2').style.display = "none";
-    document.getElementById('studentName').value = studentName;
+    // document.getElementById('studentName').value = studentName;
     document.getElementById('admissionNumber').value = admissionNumber;
 }
 
@@ -47,6 +47,8 @@ function loadScreen3() {
     hideAll();
     document.getElementById('screen2').style.display = "none";
     document.getElementById('screen3').style.display = "block";
+    document.getElementById('locationHelp2').display = 'block';
+    document.getElementById('locationHelp2').setAttribute('src', './images/' + os + '.png');
 }
 
 function homeLocation() {
@@ -97,12 +99,11 @@ function loadScreen9() {
 function loadScreen10() {
     hideAll();
 
-    let url = 'https://api.sheety.co/6be24607ea458614398f92bf55d8da84/seniorWing/sheet1';
+    let url = 'https://api.sheety.co/052409451a655b617d5a507bcc00ec4a/davVk/students';
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen10').style.display = "block";
     let body = {
-        sheet1: {
-            studentName,
+        student: {
             admissionNumber,
             homeLat,
             homeLong,
@@ -131,7 +132,7 @@ function prefilledform() {
     let name = '&entry.485428648='; //name
     let email = '&entry.879531967='; //email
 
-    let prefilledUrl = url + radio + 'Bug+Reports' + feedback + '' + suggestions + '' + name + studentName + email + admissionNumber;
+    let prefilledUrl = url + radio + 'Bug+Reports' + feedback + '' + suggestions + '' + email + admissionNumber;
     window.open(prefilledUrl);
 }
 
