@@ -195,6 +195,12 @@ label {
     transition: 300ms ease-in-out;
 }
 
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
 .button-1:hover,
 .button-1:focus,
 .button-1:active{
