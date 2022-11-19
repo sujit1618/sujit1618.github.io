@@ -4,11 +4,12 @@ let vanLat = 0;
 let vanLong = 0;
 let studentName = '';
 let admissionNumber = '';
+let os;
 
 
 function loadScreen2() {
-    hideAll();
     getOS();
+    document.getElementById('screen3').style.display = "none";
     studentName = document.getElementById('studentName').value;
     admissionNumber = document.getElementById('admissionNumber').value;
     if (studentName === '') {
@@ -21,6 +22,9 @@ function loadScreen2() {
         document.getElementById('screen1').style.display = "none";
         document.getElementById('screen2').style.display = "block";
         console.log(studentName, admissionNumber);
+
+        document.getElementById('locationHelp').display = 'block';
+        document.getElementById('locationHelp').setAttribute('src', './images/' + os + '.png');
     }
 }
 
@@ -30,7 +34,6 @@ function loadScreen1() {
     document.getElementById('screen2').style.display = "none";
     document.getElementById('studentName').value = studentName;
     document.getElementById('admissionNumber').value = admissionNumber;
-
 }
 
 // function loadScreen2(){
@@ -147,29 +150,23 @@ function hideAll() {
     document.getElementById('screen9').style.display = "none";
 }
 
-function getOS(){
-        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
-        // Windows Phone must come first because its UA also contains "Android"
-        if (/windows phone/i.test(userAgent)) {
-            console.log("Windows Phone");
-            return "Windows Phone";
-        }
-    
-        if (/android/i.test(userAgent)) {
-            console.log("Android");
-            return "Android";
-        }
-    
-        // iOS detection from: http://stackoverflow.com/a/9039885/177710
-        if (/Mac|iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            console.log("iOS");
-            return "iOS/Mac";
-        }
+function getOS() {
+    let userAgent = window.navigator.userAgent.toLowerCase();
+    let macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i;
+    let windowsPlatforms = /(win32|win64|windows|wince)/i;
+    let iosPlatforms = /(iphone|ipad|ipod)/i;
 
-        else{
-            console.log("other OS");
-        }
-    
-        return "unknown";
+    if (macosPlatforms.test(userAgent)) {
+        os = "chrome";
+    } else if (iosPlatforms.test(userAgent)) {
+        os = "ios";
+    } else if (windowsPlatforms.test(userAgent)) {
+        os = "chromee";
+    } else if (/android/.test(userAgent)) {
+        os = "android";
+    } else if (!os && /linux/.test(userAgent)) {
+        os = "chrome";
     }
+    console.log(os);
+    return os;
+}
