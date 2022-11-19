@@ -7,6 +7,8 @@ let admissionNumber = '';
 
 
 function loadScreen2() {
+    hideAll();
+    getOS();
     studentName = document.getElementById('studentName').value;
     admissionNumber = document.getElementById('admissionNumber').value;
     if (studentName === '') {
@@ -22,13 +24,14 @@ function loadScreen2() {
     }
 }
 
-    function loadScreen1() {
-        document.getElementById('screen1').style.display = "block";
-        document.getElementById('screen2').style.display = "none";
-        document.getElementById('studentName').value = studentName;
-        document.getElementById('admissionNumber').value = admissionNumber;
+function loadScreen1() {
+    hideAll();
+    document.getElementById('screen1').style.display = "block";
+    document.getElementById('screen2').style.display = "none";
+    document.getElementById('studentName').value = studentName;
+    document.getElementById('admissionNumber').value = admissionNumber;
 
-    }
+}
 
 // function loadScreen2(){
 // studentName = document.getElementById('studentName').value;
@@ -38,7 +41,7 @@ function loadScreen2() {
 // }
 
 function loadScreen3() {
-    
+    hideAll();
     document.getElementById('screen2').style.display = "none";
     document.getElementById('screen3').style.display = "block";
 }
@@ -76,17 +79,20 @@ function homeBucket(lat, long) {
 }
 
 function loadScreen4() {
+    hideAll();
     document.getElementById('screen9').style.display = "none";
     document.getElementById('screen4').style.display = "block";
     console.log(homeLat, homeLong);
 }
 
 function loadScreen9() {
+    hideAll();
     document.getElementById('screen4').style.display = "none";
     document.getElementById('screen9').style.display = "block";
 }
 
 function loadScreen10() {
+    hideAll();
 
     let url = 'https://api.sheety.co/6be24607ea458614398f92bf55d8da84/seniorWing/sheet1';
     document.getElementById('screen9').style.display = "none";
@@ -132,3 +138,38 @@ function prefilledform() {
 // &entry.1696159737=%3Csuggestions%3E
 // &entry.485428648=%3Cname%3E
 // &entry.879531967=%3Cemail%3E
+
+function hideAll() {
+    document.getElementById('screen1').style.display = "none";
+    document.getElementById('screen2').style.display = "none";
+    document.getElementById('screen3').style.display = "none";
+    document.getElementById('screen4').style.display = "none";
+    document.getElementById('screen9').style.display = "none";
+}
+
+function getOS(){
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+        // Windows Phone must come first because its UA also contains "Android"
+        if (/windows phone/i.test(userAgent)) {
+            console.log("Windows Phone");
+            return "Windows Phone";
+        }
+    
+        if (/android/i.test(userAgent)) {
+            console.log("Android");
+            return "Android";
+        }
+    
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/Mac|iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            console.log("iOS");
+            return "iOS/Mac";
+        }
+
+        else{
+            console.log("other OS");
+        }
+    
+        return "unknown";
+    }
