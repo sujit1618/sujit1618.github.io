@@ -10,7 +10,7 @@ body {
     /* background-color: rgb(243, 243, 243); */
     /* overflow-y:hidden; */
     overflow-x: scroll;
-    background-image: url(../images/bg-2.jpg);
+    background-image: url(./images/bg-2.jpg);
     background-position: 0 80px;
     background-size: cover;
 }

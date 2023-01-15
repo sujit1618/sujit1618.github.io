@@ -1,0 +1,2 @@
+
+let consentText = "The following questionnaire will collect data of the students that include their age, gender and home address. No names or any other data to reveal the identity of the student will be collected. This data collected will be securely stored by HumanQind Design Foundation and will only be used for research and data analysis as part of the Safe School Zone Project. This data will not be used for any commercial purposes. Please give your consent for the collection of the data.";
