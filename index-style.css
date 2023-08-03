@@ -93,6 +93,11 @@
         margin-bottom: 8vh;
     }
 
+    #dse .project-image-container {
+        background-image: url(./images/DSE/digital_service_experience__6_.jpg);
+        /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
+    }
+
     #preterm .project-image-container {
         background-image: url(./images/preterm/cover-1.jpeg);
         /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
@@ -222,6 +227,11 @@
 
     .project-container:last-of-type {
         margin-bottom: 8vh;
+    }
+
+    #dse .project-image-container {
+        background-image: url(./images/DSE/digital_service_experience__6_.jpg);
+        /* background-image: url(https://images.unsplash.com/photo-1597807182771-63d8c428243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80); */
     }
 
     #preterm .project-image-container {
