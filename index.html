@@ -8,6 +8,7 @@
 <!--  -->
 <!--  -->
 <!-- Written in html, css, and javascript for loading speed. Uses fullstory for analytics -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,25 +24,93 @@
         window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
         window['_fs_org'] = '1337AQ';
         window['_fs_namespace'] = 'FS';
-        (function(m,n,e,t,l,o,g,y){
-            if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
-            g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
-            o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
-            y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
-            g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
-            g.anonymize=function(){g.identify(!!0)};
-            g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
-            g.log = function(a,b){g("log",[a,b])};
-            g.consent=function(a){g("consent",!arguments.length||a)};
-            g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
-            g.clearUserCookie=function(){};
-            g.setVars=function(n, p){g('setVars',[n,p]);};
-            g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
-            if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
-            g._v="1.3.0";
-        })(window,document,window['_fs_namespace'],'script','user');
-        </script>
-    <!-- full story script ends --> 
+        (function (m, n, e, t, l, o, g, y) {
+            if (e in m) {
+                if (m.console && m.console.log) {
+                    m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');
+                }
+                return;
+            }
+            g = m[e] = function (a, b, s) {
+                g.q ? g.q.push([a, b, s]) : g._api(a, b, s);
+            };
+            g.q = [];
+            o = n.createElement(t);
+            o.async = 1;
+            o.crossOrigin = 'anonymous';
+            o.src = 'https://' + _fs_script;
+            y = n.getElementsByTagName(t)[0];
+            y.parentNode.insertBefore(o, y);
+            g.identify = function (i, v, s) {
+                g(l, {
+                    uid: i
+                }, s);
+                if (v) g(l, v, s)
+            };
+            g.setUserVars = function (v, s) {
+                g(l, v, s)
+            };
+            g.event = function (i, v, s) {
+                g('event', {
+                    n: i,
+                    p: v
+                }, s)
+            };
+            g.anonymize = function () {
+                g.identify(!!0)
+            };
+            g.shutdown = function () {
+                g("rec", !1)
+            };
+            g.restart = function () {
+                g("rec", !0)
+            };
+            g.log = function (a, b) {
+                g("log", [a, b])
+            };
+            g.consent = function (a) {
+                g("consent", !arguments.length || a)
+            };
+            g.identifyAccount = function (i, v) {
+                o = 'account';
+                v = v || {};
+                v.acctId = i;
+                g(o, v)
+            };
+            g.clearUserCookie = function () {};
+            g.setVars = function (n, p) {
+                g('setVars', [n, p]);
+            };
+            g._w = {};
+            y = 'XMLHttpRequest';
+            g._w[y] = m[y];
+            y = 'fetch';
+            g._w[y] = m[y];
+            if (m[y]) m[y] = function () {
+                return g._w[y].apply(this, arguments)
+            };
+            g._v = "1.3.0";
+        })(window, document, window['_fs_namespace'], 'script', 'user');
+    </script>
+
+    <script>
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                document.getElementById('resume-link').setAttribute('href', './files/Resume-SujitJoshi-ServiceDesigner.pdf');
+                console.log("mobile rresume");
+            } else {
+                
+                document.getElementById('resume-link').setAttribute('href', './resume.html');
+                console.log("goig to html");
+            }
+        }
+        window.onload = function fonload(params) {
+            var x = window.matchMedia("(max-width: 768px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+        }
+    </script>
+    <!-- full story script ends -->
 </head>
 
 <body>
@@ -53,7 +122,7 @@
         </a>
         <div class="links-container">
             <a href="" class="nav-link" id="projects-link"><b>Projects</b></a>
-            <a href="./resume" target="_blank" class="nav-link" id="resume-link">Resume</a>
+            <a href="" target="_blank" class="nav-link" id="resume-link">Resume</a>
             <a href="" class="nav-link" id="about-link">About</a>
             <a href="" class="nav-link" id="menu-link"><img src="./images/icons/menu.svg" alt=""></a>
         </div>
@@ -74,33 +143,41 @@
                     find me cycling on my favorite trail, digging into a new book, or deep down a rabbit hole in the
                     world of javascript.
 
-                    <br><br>Do reach out at 
+                    <br><br>Do reach out at
                     <br>
-                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/mail.svg" alt=""><a href="mailto:sujit.joshi.00@gmail.com" target="_blank">• sujit.joshi.00@gmail.com •</a></div>
-                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/linkedin.svg" alt=""><a href="https://www.linkedin.com/in/sujitjoshi00/" target="_blank">• @sujitjoshi00 •</a></div>
-                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/instagram.svg" alt=""><a href="https://www.instagram.com/sujitbujit/" target="_blank">• @sujitbujit •</a></div>
+                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/mail.svg" alt=""><a
+                            href="mailto:sujit.joshi.00@gmail.com" target="_blank">• sujit.joshi.00@gmail.com •</a>
+                    </div>
+                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/linkedin.svg" alt=""><a
+                            href="https://www.linkedin.com/in/sujitjoshi00/" target="_blank">• @sujitjoshi00 •</a></div>
+                    <div class="contact-container"><img class="in-text-icon" src="./images/icons/instagram.svg"
+                            alt=""><a href="https://www.instagram.com/sujitbujit/" target="_blank">• @sujitbujit •</a>
+                    </div>
                     <br>
-                © All Rights Reserved.
+                    © All Rights Reserved.
                 </p>
             </div>
         </div>
-        <a href="https://ifdesign.com/en/winner-ranking/project/digital-service-experience/542754" class="project-container" id="dse" style="filter: opacity(1);" target="_blank">
+        <a href="https://ifdesign.com/en/winner-ranking/project/digital-service-experience/542754"
+            class="project-container" id="dse" style="filter: opacity(1);" target="_blank">
             <h2>Digital Service Experience: <br> Platform for Hospital Operations
-            <br>
-            <img style="display: inline; margin-top: 12px; height: 50px;" src="./images/DSE/iFawardLogo.jpg" alt=""></h2>
-                
+                <br>
+                <img style="display: inline; margin-top: 12px; height: 50px;" src="./images/DSE/iFawardLogo.jpg" alt="">
+            </h2>
+
             <p class="project-collab-info">As part of Services & Solutions Delivery, Philips Experience Design</p>
             <p class="project-role">Service Designer • Researcher</p>
             <div class="project-image-container"></div>
         </a>
         <a href="./preterm" class="project-container" id="preterm" style="filter: opacity(1);">
-            <h2>Finding ways to reduce preterm pregnancies in vulnerable populations: 
+            <h2>Finding ways to reduce preterm pregnancies in vulnerable populations:
                 <br> A Research Methods Case Study</h2>
-            <p class="project-collab-info">In collaboration with our client's research team while working with Panorama Innovation</p>
+            <p class="project-collab-info">In collaboration with our client's research team while working with Panorama
+                Innovation</p>
             <p class="project-role">Researcher</p>
             <div class="project-image-container"></div>
         </a>
-        
+
         <a href="./healthcare" class="project-container" id="pharmacy">
             <h2>Streamlining the doctor and pharmacy experience for patients from a health insurance
                 carrier</h2>
@@ -116,7 +193,7 @@
             <p class="project-role">Service Designer • Researcher</p>
             <div class="project-image-container"></div>
         </a>
-        
+
         <a href="./nava-samvhita" class="project-container" id="ayurveda" style="filter: opacity(1);">
             <h2>Finding new pathways for innovation by reimagining history</h2>
             <p class="project-collab-info">In collaboration with Dr. Eeshani Bendale for my Master's thesis project at
@@ -124,21 +201,21 @@
             <p class="project-role">Researcher • Futurist</p>
             <div class="project-image-container"></div>
         </a>
-       
+
         <!-- <a href="" class="project-container" id="polling" style="filter: opacity(0.5);"> -->
-            <!-- <h2>Imagining a new polling experience for voters through proposal-centered elections</h2> -->
-            <!-- <p class="project-collab-info">In collaboration with Aimee Martinez for an alumni exhibition at School of -->
-                <!-- the Art Institute of Chicago</p> -->
-            <!-- <p class="project-role">Researcher • Service Designer • User Experience Designer</p> -->
-            <!-- <div class="project-image-container"></div> -->
+        <!-- <h2>Imagining a new polling experience for voters through proposal-centered elections</h2> -->
+        <!-- <p class="project-collab-info">In collaboration with Aimee Martinez for an alumni exhibition at School of -->
+        <!-- the Art Institute of Chicago</p> -->
+        <!-- <p class="project-role">Researcher • Service Designer • User Experience Designer</p> -->
+        <!-- <div class="project-image-container"></div> -->
         <!-- </a> -->
         <!--  -->
         <!-- <a href="" class="project-container" id="bosch2020" style="filter: opacity(0.5);"> -->
-            <!-- <h2>Designing data visualizations for a public IoT experiment</h2> -->
-            <!-- <p class="project-collab-info">Commissioned by Bosch and School of the Art Institute of Chicago for South by -->
-                <!-- Southwest 2020</p> -->
-            <!-- <p class="project-role">Technologist</p> -->
-            <!-- <div class="project-image-container"></div> -->
+        <!-- <h2>Designing data visualizations for a public IoT experiment</h2> -->
+        <!-- <p class="project-collab-info">Commissioned by Bosch and School of the Art Institute of Chicago for South by -->
+        <!-- Southwest 2020</p> -->
+        <!-- <p class="project-role">Technologist</p> -->
+        <!-- <div class="project-image-container"></div> -->
         <!-- </a> -->
 
     </div>
