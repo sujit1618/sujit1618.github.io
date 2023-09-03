@@ -29,7 +29,7 @@
         position: fixed;
         scroll-behavior: smooth;
         background-color: rgba(255, 255, 255, 0.959);
-        padding: 22px 36px 22px 22px;
+        padding: 22px 22px 22px 22px;
         box-shadow: 0px 0px 10px #3333330e;
         border-radius: 5px;
         /* background-blend-mode: exclusion; */
