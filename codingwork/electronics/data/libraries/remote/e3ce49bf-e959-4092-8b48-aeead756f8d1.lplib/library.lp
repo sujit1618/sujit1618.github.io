@@ -1,0 +1,13 @@
+(librepcb_library e3ce49bf-e959-4092-8b48-aeead756f8d1
+ (name "Molex")
+ (description "Connectors, sockets and more (unofficial).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.0.3")
+ (created 2016-09-28T21:48:03Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/Molex.lplib")
+ (dependency 6ccc516c-21b7-4cd5-9cf2-7a04cfa361c6)
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "Molex")
+)

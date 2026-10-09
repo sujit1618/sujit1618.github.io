@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSV Card Exporter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      margin: 10px 0;
+      padding: 8px;
+    }
+    #preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      height: 200px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      page-break-after: always;
+    }
+    .card h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSV Card Exporter</h1>
+  <input type="file" id="csvFile" accept=".csv" />
+  <br />
+  <label>Start Row: <input type="number" id="startRow" value="1" /></label>
+  <label>End Row: <input type="number" id="endRow" value="10" /></label>
+  <br />
+  <button onclick="generatePreview()">Preview Cards</button>
+  <button onclick="downloadPDF()">Download PDF</button>
+
+  <div id="preview"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script>
+    let csvData = [];
+
+    document.getElementById('csvFile').addEventListener('change', function (e) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const lines = reader.result.split('\n').map(line => line.trim()).filter(Boolean);
+        csvData = lines.slice(1).map(line => {
+          const [type, content] = line.split(',');
+          return { type, content };
+        });
+        alert('CSV loaded with ' + csvData.length + ' rows.');
+      };
+      reader.readAsText(e.target.files[0]);
+    });
+
+    function generatePreview() {
+      const start = parseInt(document.getElementById('startRow').value) - 1;
+      const end = parseInt(document.getElementById('endRow').value);
+      const container = document.getElementById('preview');
+      container.innerHTML = '';
+
+      csvData.slice(start, end).forEach((row, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3>${row.type.toUpperCase()}</h3><p>${row.content}</p>`;
+        container.appendChild(card);
+      });
+    }
+    // Update CSV parsing to include 'score' and ensure first and second columns are 'type' and 'content'
+    // (Already handled in the code below: [type, content, score] = line.split(',');)
+    document.getElementById('csvFile').addEventListener('change', function (e) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const lines = reader.result.split('\n').map(line => line.trim()).filter(Boolean);
+        csvData = lines.slice(1).map(line => {
+          const [type, content, score] = line.split(',');
+          return { type, content, score };
+        });
+        alert('CSV loaded with ' + csvData.length + ' rows.');
+      };
+      reader.readAsText(e.target.files[0]);
+    });
+
+    // Automatically select and load './content.csv' by default
+    window.addEventListener('DOMContentLoaded', function () {
+      fetch('./content.csv')
+        .then(response => {
+          if (!response.ok) throw new Error('No default CSV found.');
+          return response.text();
+        })
+        .then(text => {
+          const lines = text.split('\n').map(line => line.trim()).filter(Boolean);
+          csvData = lines.slice(1).map(line => {
+            const [type, content, score] = line.split(',');
+            return { type, content, score };
+          });
+          alert('Default CSV loaded with ' + csvData.length + ' rows.');
+          generatePreview();
+        })
+        .catch(() => {
+          // No default CSV found, do nothing
+        });
+    });
+
+    // Update preview to show score
+    function generatePreview() {
+      const start = parseInt(document.getElementById('startRow').value) - 1;
+      const end = parseInt(document.getElementById('endRow').value);
+      const container = document.getElementById('preview');
+      container.innerHTML = '';
+
+      csvData.slice(start, end).forEach((row, index) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<h3><strong>Type:</strong> ${row.type ? row.type.toUpperCase() : ''}</h3>
+                          <p><strong>Prompt:</strong> ${row.content || ''}</p>
+                          <p><strong>Score:</strong> ${row.score || ''}</p>`;
+        container.appendChild(card);
+      });
+    }
+    async function downloadPDF() {
+      const { PDFDocument, rgb } = PDFLib;
+      const pdfDoc = await PDFDocument.create();
+      const cards = document.querySelectorAll('.card');
+
+      for (let card of cards) {
+        const page = pdfDoc.addPage([400, 300]);
+        const { width, height } = page.getSize();
+        const type = card.querySelector('h3').textContent;
+        const content = card.querySelector('p').textContent;
+
+        page.drawText(type, {
+          x: 50,
+          y: height - 50,
+          size: 20,
+          color: rgb(0, 0.5, 0.8),
+        });
+
+        page.drawText(content, {
+          x: 50,
+          y: height - 100,
+          size: 14,
+          color: rgb(0, 0, 0),
+        });
+      }
+
+      const pdfBytes = await pdfDoc.save();
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'cards.pdf';
+      link.click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+(librepcb_package_category 1741d1fa-9ca8-4bbf-a282-f84601d51afb
+ (name "CUI Devices")
+ (description "")
+ (keywords "cui,cuidevices")
+ (author "Danilo Bargen")
+ (version "0.1")
+ (created 2019-11-06T22:52:41Z)
+ (deprecated false)
+ (parent 194951ec-03dd-412a-9828-70c40bbdd22d)
+)

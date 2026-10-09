@@ -1,0 +1,13 @@
+(librepcb_library a23a8760-705e-4496-a8f6-213c4b9a4a74
+ (name "Sensirion")
+ (description "Digital sensors (unofficial).")
+ (keywords "sensirion,humidity,temperature,gas,sensor,sensors")
+ (author "LibrePCB")
+ (version "0.3.1")
+ (created 2018-12-02T16:07:33Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/Sensirion.lplib")
+ (dependency 326f091b-b715-44bf-b385-b613cd60d9f3)
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "Sensirion")
+)

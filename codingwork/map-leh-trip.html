@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>J&K and Ladakh Route Map</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map { height: 100vh; width: 100%; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([34.2, 77.5], 7);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const stops = [
+      { day: "01", name: "Srinagar (Nagin Lake)", coords: [34.1173, 74.8021] },
+      { day: "02", name: "Drass", coords: [34.4300, 75.7500] },
+      { day: "02", name: "Kargil", coords: [34.5553, 76.1349] },
+      { day: "03", name: "Mulbek", coords: [34.4786, 76.4186] },
+      { day: "03", name: "Lamayuru", coords: [34.2833, 76.6744] },
+      { day: "03", name: "Leh", coords: [34.1526, 77.5771] },
+      { day: "04", name: "Hall of Fame", coords: [34.1550, 77.5850] },
+      { day: "04", name: "Magnetic Hill", coords: [34.1716, 77.4910] },
+      { day: "04", name: "Sindhu Sangam", coords: [34.0700, 77.6500] },
+      { day: "04", name: "Gurudwara Pathar Sahib", coords: [34.1710, 77.4915] },
+      { day: "04", name: "Shanti Stupa", coords: [34.1650, 77.5847] },
+      { day: "05", name: "Khardung La", coords: [34.3300, 77.6000] },
+      { day: "05", name: "Sumur", coords: [34.6633, 77.4625] },
+      { day: "06", name: "Turtuk", coords: [34.7650, 76.8310] },
+      { day: "06", name: "Thang", coords: [34.8500, 76.8500] },
+      { day: "06", name: "Hunder", coords: [34.5586, 77.5856] },
+      { day: "07", name: "Pangong Lake", coords: [33.7416, 78.9068] },
+      { day: "08", name: "Maan", coords: [33.8000, 78.9500] },
+      { day: "08", name: "Mirak", coords: [33.8200, 78.9800] },
+      { day: "08", name: "Chushul", coords: [33.8500, 78.9500] },
+      { day: "08", name: "Razang La Memorial", coords: [33.8600, 78.9400] },
+      { day: "08", name: "Tsagala Pass", coords: [33.8700, 78.9200] },
+      { day: "08", name: "Hanley", coords: [32.6936, 78.0211] },
+      { day: "09", name: "Umling La", coords: [32.6930, 78.4750] },
+      { day: "10", name: "Loma Bend", coords: [33.0500, 78.2500] },
+      { day: "10", name: "Mahe Bridge", coords: [32.9500, 78.2500] },
+      { day: "10", name: "Tsomoriri Lake", coords: [32.9957, 78.2654] },
+      { day: "10", name: "Chumathang", coords: [33.0000, 78.0000] },
+      { day: "11", name: "Leh", coords: [34.1526, 77.5771] }
+    ];
+
+    stops.forEach(stop => {
+      L.marker(stop.coords).addTo(map)
+        .bindPopup(`<b>Day ${stop.day}</b><br>${stop.name}`);
+    });
+
+    const route = stops.map(stop => stop.coords);
+    L.polyline(route, { color: 'blue', weight: 4 }).addTo(map);
+  </script>
+</body>
+</html>

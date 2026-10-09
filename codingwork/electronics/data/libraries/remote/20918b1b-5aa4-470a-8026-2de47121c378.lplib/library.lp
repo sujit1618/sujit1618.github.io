@@ -1,0 +1,13 @@
+(librepcb_library 20918b1b-5aa4-470a-8026-2de47121c378
+ (name "Diodes Incorporated")
+ (description "Discrete, digital and analog semiconductors (unofficial).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.3.1")
+ (created 2018-12-02T15:33:33Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/Diodes_Incorporated.lplib")
+ (dependency 326f091b-b715-44bf-b385-b613cd60d9f3)
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "Diodes Incorporated")
+)

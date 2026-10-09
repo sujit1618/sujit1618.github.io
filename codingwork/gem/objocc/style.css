@@ -1,0 +1,56 @@
+/* Affects the entire HTML body */
+body {
+    font-family: Arial, sans-serif; /* Sets a common, readable font for any text elements */
+    margin: 0; /* Removes the default browser margin around the body, crucial for full-screen apps */
+    overflow: hidden; /* Prevents scrollbars from appearing, ensuring the AR view isn't scrollable */
+}
+
+/* Styles for the loading screen overlay */
+#loading-screen {
+    position: fixed; /* Positions the loading screen relative to the viewport, so it stays in place even if content scrolls (though scrolling is disabled) */
+    top: 0; /* Aligns the loading screen to the top of the viewport */
+    left: 0; /* Aligns the loading screen to the left of the viewport */
+    width: 100%; /* Makes the loading screen cover the full width of the viewport */
+    height: 100%; /* Makes the loading screen cover the full height of the viewport */
+    background-color: rgba(255, 255, 255, 0.95); /* Sets a semi-transparent white background */
+    z-index: 10000; /* Ensures the loading screen is on top of all other content */
+    display: flex; /* Enables Flexbox layout for centering its children */
+    flex-direction: column; /* Stacks flex children vertically */
+    justify-content: center; /* Centers children along the main axis (vertical in this case) */
+    align-items: center; /* Centers children along the cross axis (horizontal in this case) */
+    text-align: center; /* Centers text within the children */
+    color: #333; /* Sets the default text color for the loading screen */
+}
+
+/* Styles for the text message within the loading screen */
+#loader-text {
+    font-size: 1.2em; /* Makes the loading text slightly larger */
+    margin-bottom: 20px; /* Adds some space below the text, before the spinner */
+}
+
+/* Styles for the animated spinner */
+.spinner {
+    border: 8px solid #f3f3f3; /* Defines the track of the spinner (light grey) */
+    border-top: 8px solid #3498db; /* Defines the moving part of the spinner (blue) */
+    border-radius: 50%; /* Makes the spinner a circle */
+    width: 60px; /* Sets the width of the spinner */
+    height: 60px; /* Sets the height of the spinner */
+    animation: spin 1s linear infinite; /* Applies the 'spin' animation, making it rotate continuously */
+}
+
+/* Defines the 'spin' animation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Start of the animation: no rotation */
+    100% { transform: rotate(360deg); } /* End of the animation: one full rotation */
+}
+
+/*
+   A-Frame creates a <canvas> element for rendering the 3D scene.
+   This rule ensures that the canvas (identified by the class .a-canvas, which A-Frame adds)
+   takes up the full width and height of its container (the <body> in this case).
+   The !important flag is used to override any default A-Frame inline styles if necessary.
+*/
+.a-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

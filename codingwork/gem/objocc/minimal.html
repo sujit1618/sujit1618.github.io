@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minimal AR.js Local Test (JSARToolKit5 Attempt)</title>
+    <script src="./vendor/aframe-v1.3.0.min.js"></script>
+    <script src="./vendor/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene
+        arjs="sourceType: webcam;
+              debugUIEnabled: true;
+              detectionMode: mono_and_matrix;
+              matrixCodeType: 3x3;
+              cameraParametersUrl: ./vendor/camera_para.dat;
+              artoolkitParameters: { artoolkitUrl: ./vendor/artoolkit.min.js };"
+        renderer="logarithmicDepthBuffer: true;"
+        vr-mode-ui="enabled: false">
+
+        <a-box position='0 0.5 0' material='color: green;'></a-box> <a-marker-camera preset='hiro'></a-marker-camera>
+    </a-scene>
+</body>
+</html>

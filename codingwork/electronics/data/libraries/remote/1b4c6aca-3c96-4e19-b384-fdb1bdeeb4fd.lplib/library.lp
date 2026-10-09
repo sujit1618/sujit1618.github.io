@@ -1,0 +1,12 @@
+(librepcb_library 1b4c6aca-3c96-4e19-b384-fdb1bdeeb4fd
+ (name "C&K")
+ (description "Switch technology and high reliability connector products (unofficial).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.2.1")
+ (created 2019-07-31T20:01:44Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/CK.lplib")
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "C&K")
+)

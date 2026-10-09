@@ -1,0 +1,395 @@
+type,content,score
+activity,Bicycle ride,1
+activity,Cooking for others,2
+activity,Freestyle dancing,2
+activity,Public singing,4
+activity,Drawing or sketching,2
+activity,Competitive sports,3
+activity,Speech delivery,4
+activity,Helping strangers,2
+activity,Gardening,3
+activity,Furniture assembly,2
+activity,Repair work,3
+activity,Deep cleaning,2
+activity,Letter writing,3
+activity,Book reading,1
+activity,Getting lost,3
+activity,Dancing in rain,3
+activity,Board game playing,2
+activity,All-nighter,3
+activity,Recipe experimentation,2
+activity,Stage performance,4
+activity,Skill learning,2
+activity,Teaching others,2
+activity,Surprise planning,3
+activity,Receiving surprise,3
+activity,Long walk with someone,2
+activity,Natural water swimming,3
+activity,Daring challenge,4
+activity,Meditation,2
+activity,Group celebration,2
+activity,Handmade gift creation,3
+activity,Pet playtime,2
+activity,Dance style exploration,3
+activity,Road trip,3
+activity,Protest participation,4
+activity,Volunteering,3
+activity,Hair transformation,3
+activity,Deep conversation,2
+activity,Language practice,2
+activity,Confidence boost,3
+activity,Item misplacement,1
+activity,Childhood game,2
+activity,Making someone laugh,2
+activity,Public crying,4
+activity,Partner dancing,3
+activity,School project,2
+activity,Silly moment,2
+activity,Fashion experiment,3
+activity,Neighborhood exploration,2
+activity,Restaurant visit,1
+activity,Wedding attendance,3
+activity,Funeral attendance,3
+activity,Birthday celebration,2
+activity,Religious ceremony,3
+activity,Live performance viewing,3
+activity,Train travel,2
+activity,Airplane travel,3
+activity,Boat ride,3
+activity,Camping outdoors,3
+activity,Stargazing,2
+activity,Fireworks display,3
+activity,Zoo exploration,3
+activity,Amusement park visit,3
+activity,Historical site visit,3
+activity,Museum exploration,3
+activity,Beach day,2
+activity,Mountain hike,3
+activity,Temple visit,3
+activity,Friend’s house visit,2
+activity,Relative’s house visit,2
+activity,Clothing shopping,2
+activity,Grocery run,1
+activity,Classroom session,2
+activity,Workshop attendance,3
+activity,Concert experience,3
+activity,Festival experience,3
+activity,Reunion gathering,3
+activity,Job interview,3
+activity,Counseling session,3
+activity,Sports event,3
+activity,Party attendance,3
+activity,Retreat experience,4
+activity,Seminar participation,3
+activity,Book club meeting,3
+activity,Yoga class,3
+activity,Dance class,3
+activity,Cooking class,3
+activity,Meditation session,3
+activity,Therapy session,3
+activity,Graduation walk,3
+activity,Farewell hug,3
+activity,Baby shower gift,3
+activity,Naming ritual,4
+activity,Cultural performance,3
+activity,Fashion showcase,4
+activity,Film premiere,4
+activity,Poetry slam,4
+activity,Storytelling session,3
+activity,Community meetup,3
+activity,Charity fundraiser,3
+activity,Surprise celebration,3
+activity,Secret gift exchange,3
+activity,Midnight snack run,2
+activity,Early morning workout,2
+activity,Late night walk,2
+activity,Kite flying,3
+activity,Ice skating,4
+activity,Rock climbing,4
+activity,Snowball fight,4
+activity,Sandcastle building,3
+activity,Firework watching,3
+activity,River rafting,4
+activity,Zip-lining,4
+activity,Hot air balloon ride,5
+activity,Horseback riding,4
+activity,Scuba diving,5
+activity,Snorkeling,4
+activity,Paragliding,5
+activity,Bungee jumping,5
+activity,Skydiving,5
+activity,Canoeing,4
+activity,Paddleboarding,4
+activity,Jet skiing,4
+activity,Surfing,4
+activity,Wakeboarding,4
+activity,Sailing,4
+activity,Fishing,3
+activity,Archery,4
+activity,Axe throwing,4
+activity,Paintball match,4
+activity,Laser tag battle,4
+activity,Escape room puzzle,4
+activity,Puzzle solving,2
+activity,Treasure hunt,4
+activity,Costume party,3
+activity,Theme park visit,3
+activity,Haunted house tour,4
+activity,Carnival ride,3
+activity,Ferris wheel ride,3
+activity,Rollercoaster ride,3
+activity,Ice cream making,3
+activity,Chocolate tasting,3
+activity,Wine tasting,3
+activity,Coffee brewing,2
+activity,Tea ceremony,4
+activity,Cocktail mixing,3
+activity,Baking session,2
+activity,Cooking competition,4
+activity,Food truck visit,3
+activity,Farmers market shopping,3
+activity,Grocery shopping,1
+activity,Thrift store browsing,3
+activity,Antique hunting,4
+activity,Bookstore browsing,2
+activity,Library visit,2
+activity,Museum tour,3
+activity,Art gallery visit,3
+activity,Historical site tour,3
+activity,Zoo visit,3
+activity,Aquarium visit,3
+activity,Botanical garden walk,3
+activity,Nature trail hike,3
+activity,Wildlife safari,4
+activity,Birdwatching,3
+activity,Sunrise watching,2
+activity,Sunset watching,2
+activity,Rain walk,2
+activity,Snow play,4
+activity,Forest walk,3
+activity,Lake swim,3
+activity,River crossing,4
+activity,Bridge walk,2
+activity,Tunnel walk,3
+activity,Rooftop stargazing,3
+activity,Balcony coffee moment,2
+activity,Hammock nap,3
+activity,Bonfire gathering,3
+activity,Tent setup,3
+activity,Sleeping under stars,4
+activity,Rain shelter wait,3
+activity,Bus window reflection,2
+activity,Train window daydream,2
+activity,Airport goodbye,3
+activity,Arrival at new city,3
+activity,First day at school,3
+activity,Last day at job,3
+activity,Graduation ceremony,3
+activity,Farewell party,3
+activity,Baby shower,3
+activity,Naming ceremony,4
+activity,Cultural event,3
+activity,Fashion show,4
+activity,Film screening,3
+activity,Poetry reading,3
+activity,Storytelling circle,3
+activity,Community gathering,3
+activity,Charity event,3
+activity,Surprise party,3
+scenario,Sudden downpour,1
+scenario,Foggy morning,2
+scenario,Lightning storm,2
+scenario,Scorching afternoon,1
+scenario,Snowfall,4
+scenario,Strong wind,2
+scenario,Hailstorm,4
+scenario,Rainbow arch,3
+scenario,Starry night sky,2
+scenario,Sunrise over hills,3
+scenario,Sunset at sea,3
+scenario,Thunder rumble,2
+scenario,Forest silence,3
+scenario,Echoing canyon,4
+scenario,Childhood scent,2
+scenario,Cozy living room,1
+scenario,Traffic standstill,2
+scenario,Open field solitude,3
+scenario,Petrichor,2
+scenario,Misty lake,3
+scenario,Beach bonfire,3
+scenario,Forest canopy,3
+scenario,Desert dunes,4
+scenario,Marketplace chaos,3
+scenario,Rooftop sunset,3
+scenario,Foreign cityscape,3
+scenario,Train compartment,2
+scenario,Library silence,2
+scenario,Clinic waiting room,2
+scenario,School corridor,2
+scenario,Worship hall,3
+scenario,Airport terminal,2
+scenario,Festival crowd,3
+scenario,Power outage darkness,3
+scenario,Candle-lit room,3
+scenario,Hilltop view,3
+scenario,Underground tunnel,4
+scenario,Botanical garden,3
+scenario,Storm shelter,4
+scenario,Overpass view,3
+scenario,Boat deck,3
+scenario,Village square,3
+scenario,Hotel lobby,2
+scenario,Roadside eatery,2
+scenario,Train station rush,2
+scenario,Classroom buzz,2
+scenario,Museum hallway,3
+scenario,Cinema aisle,2
+scenario,Haunted hallway,4
+scenario,Festival lanterns,3
+scenario,Bus ride with strangers,2
+scenario,Tent in storm,4
+scenario,Incense-filled room,3
+scenario,Concert venue lights,3
+scenario,Silent vigil,4
+scenario,Flashing lights,2
+scenario,Gusty winds,2
+scenario,Autumn leaves,2
+scenario,Snow-covered slope,4
+scenario,Echoing hallway,3
+scenario,Dim corridor,3
+scenario,Colorful bazaar,3
+scenario,Cultural celebration,3
+scenario,Unfamiliar aroma,3
+scenario,Historic monument,3
+scenario,Roaming animals,3
+scenario,Laughter-filled room,2
+scenario,Silent sanctuary,3
+scenario,Flowing stream,3
+scenario,Sandy beach,2
+scenario,Flickering bulbs,2
+scenario,Ancient ruins,4
+scenario,Futuristic building,4
+scenario,Perfume-filled space,3
+scenario,Food stall aromas,2
+scenario,Spiritual retreat,4
+scenario,Chaotic street,2
+scenario,Calming waterfall,3
+scenario,Textile bazaar,3
+scenario,Mirror maze,4
+scenario,Chanting crowd,3
+scenario,Playground laughter,2
+scenario,Animal shelter,3
+scenario,Wind chime garden,3
+scenario,Antique bookstore,3
+scenario,Ritual ceremony,4
+scenario,Unexpected silence,3
+scenario,Graffiti tunnel,4
+scenario,Flowing curtains,2
+scenario,Ticking clocks,2
+scenario,Dripping faucet,2
+scenario,Glowing embers,3
+scenario,Plush cushions,2
+scenario,Photo wall,2
+scenario,Ringing bells,2
+scenario,Dancing shadows,3
+scenario,Rooftop silence,3
+scenario,Textile patterns,2
+scenario,Floating lanterns,3
+scenario,Waterfall mist,3
+scenario,Forest canopy light,3
+scenario,Neon-lit street,2
+scenario,Rooftop gathering,3
+scenario,Desert heat,4
+scenario,Alleyway café,2
+scenario,Candle-lit dinner,2
+scenario,Crowded metro,2
+scenario,Temple courtyard,3
+scenario,Food market chaos,2
+scenario,Fog-covered bridge,3
+scenario,Dim café interior,2
+scenario,Abandoned building,4
+scenario,Street mural,2
+scenario,Windy rooftop,3
+scenario,Schoolyard buzz,2
+scenario,Dusty attic,3
+scenario,Lantern-lit street,3
+scenario,Mountain trail,3
+scenario,Crashing waves,3
+scenario,Festival tent crowd,3
+scenario,Hospital corridor,2
+scenario,Shrine interior,3
+scenario,Bookstore corner,2
+scenario,Railway station platform,2
+scenario,Textile shop colors,2
+scenario,Smoky kitchen,2
+scenario,Graffiti wall,2
+scenario,Whispering gallery,4
+scenario,Balcony view,2
+scenario,Meditation hall,3
+scenario,Elevator crowd,2
+scenario,Temple steps,3
+scenario,Parade street,3
+scenario,Garden path,2
+scenario,Mountain pass,3
+scenario,Roadside stall,2
+scenario,Valley mist,3
+scenario,Train platform,2
+scenario,Village road,2
+scenario,College campus,2
+scenario,Lantern-lit alley,3
+scenario,Museum courtyard,3
+scenario,Beach wind,2
+scenario,Rooftop café,2
+scenario,Prayer room silence,3
+scenario,Art gallery ambiance,3
+scenario,Yoga studio calm,3
+scenario,Music venue lights,3
+scenario,Forest trail breeze,3
+scenario,Protest march crowd,4
+scenario,Wedding venue décor,3
+scenario,Bus stop chatter,2
+scenario,Garden bench solitude,3
+scenario,Mountain cabin interior,3
+scenario,City square bustle,2
+scenario,Lakeside dock,3
+scenario,Temple rituals,3
+scenario,Forest clearing,3
+scenario,Rooftop terrace,3
+scenario,Street corner gathering,2
+scenario,Hilltop shrine,3
+scenario,School entrance,2
+scenario,Bridge crossing,2
+scenario,Bell tower sounds,3
+scenario,Street musician performance,3
+scenario,Rooftop garden,3
+scenario,Art studio mess,3
+scenario,Shrine courtyard,3
+scenario,Village square gathering,3
+scenario,Lantern-lit path,3
+scenario,Textile market colors,3
+scenario,Incense shop aroma,3
+scenario,Candle-lit meditation space,3
+scenario,Neon-lit alley,2
+scenario,Mirror-filled room,4
+scenario,Bell tower echoes,3
+scenario,Photo gallery wall,3
+scenario,Spice market scents,2
+scenario,Old bookshop shelves,3
+scenario,Ritual space ambiance,3
+scenario,Children’s playground,2
+scenario,Wind chime sounds,2
+scenario,Old photograph wall,2
+scenario,Bell-filled corridor,3
+scenario,Shadow-lit room,3
+scenario,Spice-scented kitchen,2
+scenario,Pillow-filled lounge,2
+scenario,Dripping ceiling,3
+scenario,Echoing hallway,3
+scenario,Soft pillow corner,2
+scenario,Spice rack display,2
+scenario,Old photo album,2
+scenario,Bell-filled shrine,3
+scenario,Shadow dance performance,4
+scenario,Incense-lit corridor,3
+scenario,Temple bell tower,3
+scenario,Rooftop meditation,3

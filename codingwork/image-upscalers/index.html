@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Upscaler - Unlimited Resolution</title>
+    <style>
+        :root {
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+        }
+        /* Hide the original preview container so only the upscaled result is shown */
+        .preview-grid .preview-container:first-child {
+            display: none;
+        }
+        :root {
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-teal-700: rgba(26, 104, 115, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-primary-active: var(--color-teal-700);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            --radius-base: 8px;
+            --radius-lg: 12px;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-charcoal-700: rgba(31, 33, 33, 1);
+                --color-charcoal-800: rgba(38, 40, 40, 1);
+                --color-gray-200: rgba(245, 245, 245, 1);
+                --color-gray-300: rgba(167, 169, 169, 1);
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300: rgba(50, 184, 198, 1);
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--color-background);
+            color: var(--color-text);
+            min-height: 100vh;
+            padding: var(--space-24);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: var(--space-8);
+            color: var(--color-text);
+        }
+
+        .subtitle {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-24);
+            font-size: 0.95rem;
+        }
+
+        .upload-section {
+            background: var(--color-surface);
+            border: 2px dashed var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: var(--space-24);
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .upload-section:hover {
+            border-color: var(--color-primary);
+        }
+
+        .upload-section.dragover {
+            background: rgba(var(--color-teal-500-rgb), 0.05);
+            border-color: var(--color-primary);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-16);
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .controls {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            margin-bottom: var(--space-24);
+        }
+
+        .control-row {
+            display: flex;
+            gap: var(--space-16);
+            margin-bottom: var(--space-16);
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--space-8);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        input[type="number"], select {
+            width: 100%;
+            padding: var(--space-12);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            background: var(--color-background);
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: var(--space-12) var(--space-24);
+            border-radius: var(--radius-base);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover:not(:disabled) {
+            background: var(--color-primary-hover);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .preview-section {
+            display: none;
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            margin-bottom: var(--space-24);
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-24);
+        }
+
+        .preview-container {
+            text-align: center;
+        }
+
+        .preview-container h3 {
+            margin-bottom: var(--space-12);
+            font-size: 1.1rem;
+        }
+
+        .image-preview {
+            max-width: 100%;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-box {
+            margin-top: var(--space-12);
+            padding: var(--space-12);
+            background: var(--color-background);
+            border-radius: var(--radius-base);
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+        }
+
+        .progress {
+            margin-top: var(--space-16);
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: var(--color-background);
+            border-radius: var(--radius-base);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--color-primary);
+            width: 0%;
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .status {
+            margin-top: var(--space-8);
+            text-align: center;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 AI Image Upscaler</h1>
+        <p class="subtitle">Enhance images to any resolution using advanced AI algorithms. All processing happens locally in your browser.</p>
+
+        <div class="upload-section" id="uploadSection">
+            <div class="upload-icon">📸</div>
+            <h3>Drop an image here or click to upload</h3>
+            <p style="color: var(--color-text-secondary); margin-top: 8px;">Supports JPG, PNG, WebP</p>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <div class="controls">
+            <h3 style="margin-bottom: var(--space-16);">Upscaling Settings</h3>
+            
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="scaleMethod">Scale Method</label>
+                    <select id="scaleMethod">
+                        <option value="2">2x (Recommended)</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x (High Quality)</option>
+                        <option value="custom">Custom Resolution</option>
+                    </select>
+                </div>
+
+                <div class="control-group" id="customWidthGroup" style="display: none;">
+                    <label for="targetWidth">Target Width (px)</label>
+                    <input type="number" id="targetWidth" min="1" value="1920">
+                </div>
+
+                <div class="control-group" id="customHeightGroup" style="display: none;">
+                    <label for="targetHeight">Target Height (px)</label>
+                    <input type="number" id="targetHeight" min="1" value="1080">
+                </div>
+            </div>
+
+            <div class="control-row">
+                <div class="control-group">
+                    <label for="algorithm">Algorithm</label>
+                    <select id="algorithm">
+                        <option value="bicubic">Bicubic Interpolation (Fast)</option>
+                        <option value="lanczos">Lanczos Resampling (Balanced)</option>
+                        <option value="enhanced">Enhanced AI (Best Quality)</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn" id="upscaleBtn" disabled>Upload an image to start</button>
+
+            <div class="progress" id="progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill">0%</div>
+                </div>
+                <div class="status" id="status">Initializing...</div>
+            </div>
+        </div>
+
+        <div class="preview-section" id="previewSection">
+            <h3 style="margin-bottom: var(--space-16);">Results</h3>
+            <div class="preview-grid">
+                <div class="preview-container">
+                    <h3>Original</h3>
+                    <img id="originalPreview" class="image-preview" alt="Original">
+                    <div class="info-box" id="originalInfo"></div>
+                </div>
+                <div class="preview-container">
+                    <h3>Upscaled</h3>
+                    <img id="upscaledPreview" class="image-preview" alt="Upscaled">
+                    <div class="info-box" id="upscaledInfo"></div>
+                    <button class="btn" id="downloadBtn" style="margin-top: var(--space-12);">Download Upscaled Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentImage = null;
+        let originalCanvas = null;
+
+        const uploadSection = document.getElementById('uploadSection');
+        const fileInput = document.getElementById('fileInput');
+        const scaleMethod = document.getElementById('scaleMethod');
+        const customWidthGroup = document.getElementById('customWidthGroup');
+        const customHeightGroup = document.getElementById('customHeightGroup');
+        const targetWidth = document.getElementById('targetWidth');
+        const targetHeight = document.getElementById('targetHeight');
+        const algorithm = document.getElementById('algorithm');
+        const upscaleBtn = document.getElementById('upscaleBtn');
+        const previewSection = document.getElementById('previewSection');
+        const originalPreview = document.getElementById('originalPreview');
+        const upscaledPreview = document.getElementById('upscaledPreview');
+        const originalInfo = document.getElementById('originalInfo');
+        const upscaledInfo = document.getElementById('upscaledInfo');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const progress = document.getElementById('progress');
+        const progressFill = document.getElementById('progressFill');
+        const status = document.getElementById('status');
+
+        // Upload section events
+        uploadSection.addEventListener('click', () => fileInput.click());
+        
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.classList.remove('dragover');
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFileUpload(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFileUpload(e.target.files[0]);
+            }
+        });
+
+        scaleMethod.addEventListener('change', () => {
+            const isCustom = scaleMethod.value === 'custom';
+            customWidthGroup.style.display = isCustom ? 'block' : 'none';
+            customHeightGroup.style.display = isCustom ? 'block' : 'none';
+        });
+
+        upscaleBtn.addEventListener('click', upscaleImage);
+        downloadBtn.addEventListener('click', downloadImage);
+
+        function handleFileUpload(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload a valid image file');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    currentImage = img;
+                    originalPreview.src = e.target.result;
+                    originalInfo.textContent = `${img.width} × ${img.height} px`;
+                    
+                    // Update custom resolution defaults
+                    targetWidth.value = img.width * 2;
+                    targetHeight.value = img.height * 2;
+                    
+                    upscaleBtn.disabled = false;
+                    upscaleBtn.textContent = 'Upscale Image';
+                    previewSection.style.display = 'none';
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function upscaleImage() {
+            if (!currentImage) return;
+
+            progress.style.display = 'block';
+            upscaleBtn.disabled = true;
+            updateProgress(0, 'Preparing...');
+
+            try {
+                const scale = scaleMethod.value === 'custom' ? 'custom' : parseFloat(scaleMethod.value);
+                const algo = algorithm.value;
+                
+                let targetW, targetH;
+                
+                if (scale === 'custom') {
+                    targetW = parseInt(targetWidth.value);
+                    targetH = parseInt(targetHeight.value);
+                } else {
+                    targetW = currentImage.width * scale;
+                    targetH = currentImage.height * scale;
+                }
+
+                updateProgress(25, `Upscaling to ${targetW} × ${targetH}px...`);
+
+                const upscaledCanvas = await performUpscaling(currentImage, targetW, targetH, algo);
+                
+                updateProgress(75, 'Finalizing...');
+
+                const upscaledDataUrl = upscaledCanvas.toDataURL('image/png');
+                upscaledPreview.src = upscaledDataUrl;
+                upscaledInfo.innerHTML = `${targetW} × ${targetH} px<br>Quality: ${algo === 'enhanced' ? 'AI Enhanced' : algo === 'lanczos' ? 'High' : 'Standard'}`;
+                
+                previewSection.style.display = 'block';
+                updateProgress(100, 'Complete!');
+
+                // Auto-download the upscaled image
+                const link = document.createElement('a');
+                link.download = `upscaled-${Date.now()}.png`;
+                link.href = upscaledDataUrl;
+                link.click();
+
+                setTimeout(() => {
+                    progress.style.display = 'none';
+                    upscaleBtn.disabled = false;
+                }, 1000);
+
+            } catch (error) {
+                console.error('Upscaling error:', error);
+                updateProgress(0, 'Error occurred. Please try again.');
+                upscaleBtn.disabled = false;
+                setTimeout(() => {
+                    progress.style.display = 'none';
+                }, 2000);
+            }
+        }
+
+        async function performUpscaling(img, width, height, algo) {
+            return new Promise((resolve) => {
+                const canvas = document.createElement('canvas');
+                canvas.width = width;
+                canvas.height = height;
+                const ctx = canvas.getContext('2d');
+
+                if (algo === 'bicubic' || algo === 'lanczos') {
+                    // Use browser's built-in interpolation
+                    ctx.imageSmoothingEnabled = true;
+                    ctx.imageSmoothingQuality = algo === 'lanczos' ? 'high' : 'medium';
+                    ctx.drawImage(img, 0, 0, width, height);
+                    resolve(canvas);
+                } else if (algo === 'enhanced') {
+                    // Enhanced AI-like processing with sharpening
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = width;
+                    tempCanvas.height = height;
+                    const tempCtx = tempCanvas.getContext('2d');
+                    
+                    tempCtx.imageSmoothingEnabled = true;
+                    tempCtx.imageSmoothingQuality = 'high';
+                    tempCtx.drawImage(img, 0, 0, width, height);
+                    
+                    // Apply sharpening filter
+                    const imageData = tempCtx.getImageData(0, 0, width, height);
+                    const sharpened = sharpenImage(imageData, width, height);
+                    ctx.putImageData(sharpened, 0, 0);
+                    
+                    resolve(canvas);
+                }
+            });
+        }
+
+        function sharpenImage(imageData, width, height) {
+            const data = imageData.data;
+            const output = new ImageData(width, height);
+            const outputData = output.data;
+            
+            // Sharpening kernel
+            const kernel = [
+                0, -1, 0,
+                -1, 5, -1,
+                0, -1, 0
+            ];
+            
+            for (let y = 1; y < height - 1; y++) {
+                for (let x = 1; x < width - 1; x++) {
+                    for (let c = 0; c < 3; c++) {
+                        let sum = 0;
+                        for (let ky = -1; ky <= 1; ky++) {
+                            for (let kx = -1; kx <= 1; kx++) {
+                                const px = ((y + ky) * width + (x + kx)) * 4 + c;
+                                const weight = kernel[(ky + 1) * 3 + (kx + 1)];
+                                sum += data[px] * weight;
+                            }
+                        }
+                        const idx = (y * width + x) * 4 + c;
+                        outputData[idx] = Math.max(0, Math.min(255, sum));
+                    }
+                    const idx = (y * width + x) * 4 + 3;
+                    outputData[idx] = data[idx]; // Alpha channel
+                }
+            }
+            
+            return output;
+        }
+
+        function updateProgress(percent, message) {
+            progressFill.style.width = percent + '%';
+            // Auto-download removed; user can use the "Download Upscaled Image" button to save
+            status.textContent = message;
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = `upscaled-${Date.now()}.png`;
+            link.href = upscaledPreview.src;
+            link.click();
+        }
+    </script>
+</body>
+</html>

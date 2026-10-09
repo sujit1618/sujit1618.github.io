@@ -1,0 +1,10 @@
+(librepcb_package_category 5900f253-de00-40fa-ad14-b0b68fc77e0a
+ (name "Panasonic")
+ (description "")
+ (keywords "")
+ (author "Danilo Bargen")
+ (version "0.1")
+ (created 2019-04-19T18:52:48Z)
+ (deprecated false)
+ (parent 194951ec-03dd-412a-9828-70c40bbdd22d)
+)

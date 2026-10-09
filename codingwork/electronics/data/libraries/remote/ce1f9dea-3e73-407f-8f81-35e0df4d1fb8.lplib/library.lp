@@ -1,0 +1,12 @@
+(librepcb_library ce1f9dea-3e73-407f-8f81-35e0df4d1fb8
+ (name "Tubes")
+ (description "Vacuum / electron tubes library (including nixie tubes).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.1.3")
+ (created 2019-10-27T20:21:23Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/Tubes.lplib")
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "")
+)

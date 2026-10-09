@@ -1,0 +1,13 @@
+(librepcb_library 1fcb0725-d2e8-4f5d-892c-d1efb44d2963
+ (name "ST Microelectronics")
+ (description "Integrated circuits, sensors and more (unofficial).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.2")
+ (created 2016-09-28T21:48:03Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/STMicroelectronics.lplib")
+ (dependency 326f091b-b715-44bf-b385-b613cd60d9f3)
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "ST Microelectronics")
+)

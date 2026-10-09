@@ -1,0 +1,13 @@
+(librepcb_library abc02f43-9d05-44cd-ab26-59d8d59a775c
+ (name "GCT")
+ (description "Connectors from Global Connector Technology (unofficial).")
+ (keywords "")
+ (author "LibrePCB")
+ (version "0.1")
+ (created 2025-04-08T23:08:58Z)
+ (deprecated false)
+ (url "https://github.com/LibrePCB-Libraries/GCT.lplib")
+ (dependency 6ccc516c-21b7-4cd5-9cf2-7a04cfa361c6)
+ (dependency a9ddf0c6-9b1c-4730-b300-01b4f192ad40)
+ (manufacturer "GCT")
+)
